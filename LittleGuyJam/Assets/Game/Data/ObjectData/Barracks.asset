@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69a4c68b41336d54b85cdfdc24a2a6c5, type: 3}
-  m_Name: Player1
+  m_Script: {fileID: 11500000, guid: b4b0952d2f049bb4ba4b21b251d2ad7d, type: 3}
+  m_Name: Barracks
   m_EditorClassIdentifier: 
-  position: {x: 0, y: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 0, y: 0, z: 0}
+  ResourceCost: 15
+  UnitTypePrefab: {fileID: 8668562598083124505, guid: 51dd11546b9396c4ba5828b0d5fb3f4f, type: 3}
