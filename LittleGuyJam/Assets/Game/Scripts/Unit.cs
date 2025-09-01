@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using static UnitManager;
-[RequireComponent(typeof(UnitData))]
 
 public class Unit : MonoBehaviour
 {

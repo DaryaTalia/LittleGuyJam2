@@ -60,11 +60,33 @@ public class UnitManager : MonoBehaviour
                         u.CurrentState = UnitStates.Inactive;
                     }
 
+                    // Derived Variables
+
+                    if (u.Role == Unit.UnitRole.resource)
+                    {
+                        if(!!u.IsMoving && u.TargetAssigned)
+                        {
+                            ResourceUnit r = u.GetComponent<ResourceUnit>();
+
+                            if(r.HasResources)
+                            {
+                                //u.CurrentState == 
+                            }
+                        }
+                    }
+
+                    if (u.Role == Unit.UnitRole.melee || u.Role == Unit.UnitRole.ranged)
+                    {
+
+                    }
+
                     break;
                 }
             case UnitStates.Move:
                 {
                     Debug.Log(name + " in state 'Move' ");
+
+                    // Unit Variables
 
                     if (!u.TargetAssigned)
                     {
@@ -74,6 +96,18 @@ public class UnitManager : MonoBehaviour
                     if (u.Health <= 0)
                     {
                         u.CurrentState = UnitStates.Inactive;
+                    }
+
+                    // Derived Variables
+
+                    if (u.Role == Unit.UnitRole.resource)
+                    {
+
+                    }
+
+                    if (u.Role == Unit.UnitRole.melee || u.Role == Unit.UnitRole.ranged)
+                    {
+
                     }
 
                     break;
