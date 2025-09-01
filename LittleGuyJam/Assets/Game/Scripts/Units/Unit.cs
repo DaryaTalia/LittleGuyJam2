@@ -6,10 +6,10 @@ public class Unit : MonoBehaviour
 {
     public enum UnitAlignment { player, enemy };
 
+    public enum UnitRole { resource, melee, ranged };
+
     [SerializeField]
     UnitAlignment alignment;
-
-    public enum UnitRole { resource, melee, ranged };
 
     [SerializeField]
     UnitRole role;
@@ -17,30 +17,19 @@ public class Unit : MonoBehaviour
     [SerializeField]
     UnitStates currentState;
 
-    [SerializeField]
     public UnitData data;
 
     [SerializeField]
     float health;
+
     [SerializeField]
     bool canMove;
+
     [SerializeField]
     bool isMoving;
 
     bool targetAssigned;
     Vector3 target;
-
-    public bool TargetAssigned
-    {
-        get { return targetAssigned; }
-        set { targetAssigned = value; }
-    }
-
-    public Vector3 Target
-    {
-        get { return target; }
-        set { target = value; }
-    }
 
     public Unit(UnitAlignment _a)
     {
@@ -59,23 +48,34 @@ public class Unit : MonoBehaviour
     {
         if (CurrentState == UnitManager.UnitStates.Hold)
         {
+            Debug.Log(name + " StartCoroutine 'Hold' ");
+
             StartCoroutine(Hold());
         }
-        else if (CurrentState == UnitManager.UnitStates.Move)
+        
+        if (CurrentState == UnitManager.UnitStates.Move && !isMoving)
         {
             Debug.Log(name + " StartCoroutine 'Move' ");
 
             StartCoroutine(Move());
         }
-        else if (CurrentState == UnitManager.UnitStates.Inactive)
-        {
-            StopAllCoroutines();
-        }
     }
 
     public IEnumerator Hold()
     {
+        if (targetAssigned)
+        {
+            Debug.Log(name + " Target Assigned, can Move ");
+            canMove = true;
+        }
+
         yield return 0;
+
+        if (!targetAssigned)
+        {
+            Debug.Log(name + " Target not Assigned, can't Move ");
+            canMove = false;
+        }
     }
 
     public IEnumerator Move()
@@ -86,17 +86,20 @@ public class Unit : MonoBehaviour
             yield break;
         }
 
-        Debug.Log(name + " can Move, continue... ");
-
-        while (Vector3.Distance(gameObject.transform.position, target) > data.DistanceThreshold)
+        while (Vector3.Distance(gameObject.transform.position, target) > data.DistanceThreshold + data.MovementSpeed)
         {
+            Debug.Log(name + " moving... ");
+
             isMoving = true;
             gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.position, target, data.MovementSpeed);
 
-            Debug.Log(name + " distance: " + Vector3.Distance(gameObject.transform.position, target));
-
             yield return 0;
+
+            Debug.Log(name + " moved... ");
         }
+
+        Debug.Log(name + " not moving... ");
+
         isMoving = false;
     }
 
@@ -106,15 +109,7 @@ public class Unit : MonoBehaviour
         GameManager.instance.UnitManager.selectedUnits.Add(this);
     }
 
-    private void OnMouseDrag()
-    {
-        if (!GameManager.instance.UnitManager.selectedUnits.Contains(this))
-        {
-            GameManager.instance.UnitManager.selectedUnits.Add(this);
-        }
-    }
-
-    // Accessors
+    // Accessors 
 
     public UnitAlignment Alignment {
         get { return alignment; }
@@ -130,6 +125,18 @@ public class Unit : MonoBehaviour
     {
         get { return currentState; }
         set { currentState = value; }
+    }
+
+    public bool TargetAssigned
+    {
+        get { return targetAssigned; }
+        set { targetAssigned = value; }
+    }
+
+    public Vector3 Target
+    {
+        get { return target; }
+        set { target = value; }
     }
 
     public float Health {
@@ -186,4 +193,5 @@ public class Unit : MonoBehaviour
     {
         get { return data.DistanceThreshold; }
     }
+
 }

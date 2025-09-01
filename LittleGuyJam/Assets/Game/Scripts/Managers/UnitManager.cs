@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class UnitManager : MonoBehaviour
 {
-    public enum UnitStates { Hold, Move, Collect, Store, Attack, MoveAttack, Protect, Inactive };
+    public enum UnitStates { Hold, Move, Gather, Store, Attack, MoveAttack, Protect, Inactive };
 
     public List<GameObject> activeUnitPool;
     public List<GameObject> inActiveUnitPool;
@@ -16,18 +16,18 @@ public class UnitManager : MonoBehaviour
             if (unit.GetComponent<Unit>().Role == Unit.UnitRole.resource)
             {
                 // Run State Machine for changes in state
-                UnitStateMachine(unit.GetComponent<ResourceUnit>());
-
-                // Run new state behavior, basic
-                unit.GetComponent<ResourceUnit>().UpdateUnit();
+                ResourceStateMachine(unit.GetComponent<ResourceUnit>());
 
                 // Run new state behavior, role
                 unit.GetComponent<ResourceUnit>().UpdateResourcer();
+
+                // Run new state behavior, basic
+                unit.GetComponent<ResourceUnit>().UpdateUnit();
             }
             else
             {
                 // Run State Machine for changes in state
-                UnitStateMachine(unit.GetComponent<AttackUnit>());
+                AttackStateMachine(unit.GetComponent<AttackUnit>());
 
                 // Run new state behavior, basic
                 unit.GetComponent<AttackUnit>().UpdateUnit();
@@ -36,26 +36,121 @@ public class UnitManager : MonoBehaviour
                 unit.GetComponent<AttackUnit>().UpdateAttacker();
             }
         }
-
     }
 
-    public void UnitStateMachine(Unit u)
+    public void CheckHealth(Unit u)
     {
-        if(u.Health <= 0)
+        if (u.Health <= 0)
         {
             u.CurrentState = UnitStates.Inactive;
         }
+    }
 
-        switch(u.CurrentState)
+    public void ResourceStateMachine(ResourceUnit u)
+    {
+        CheckHealth(u);
+
+        switch (u.CurrentState) {
+            case UnitStates.Hold:
+                {
+                    Debug.Log(name + " in state 'Hold' ");
+
+                    if (u.CanMove)
+                    {
+                        Debug.Log(name + " changing state to 'Move' ");
+                        u.CurrentState = UnitStates.Move;
+                    }
+
+                    break;
+                }
+
+            case UnitStates.Move:
+                {
+                    Debug.Log(name + " in state 'Move' ");
+
+                    if (!u.CanMove)
+                    {
+                        Debug.Log(name + " changing state to 'Hold' ");
+                        u.CurrentState = UnitStates.Hold;
+                    }
+
+                    if (u.TargetAssigned && u.HasResources && !u.IsMoving)
+                    {
+                        Debug.Log(name + " changing state to 'Store' ");
+                        u.CurrentState = UnitStates.Store;
+                    }
+
+                    if (u.TargetAssigned && !u.HasResources && !u.IsMoving)
+                    {
+                        Debug.Log(name + " changing state to 'Gather' ");
+                        u.CurrentState = UnitStates.Gather;
+                    }
+
+                    break;
+                }
+
+            case UnitStates.Gather:
+                {
+                    Debug.Log(name + " in state 'Gather' ");
+
+                    if (u.HasResources)
+                    {
+                        Debug.Log(name + " changing state to 'Move' ");
+                        u.CurrentState = UnitStates.Move;
+                    }
+
+                    break;
+                }
+
+            case UnitStates.Store:
+                {
+                    Debug.Log(name + " in state 'Store' ");
+
+                    if (!u.HasResources)
+                    {
+                        Debug.Log(name + " changing state to 'Move' ");
+                        u.CurrentState = UnitStates.Move;
+                    }
+                    break;
+                }
+
+            case UnitStates.Inactive:
+                {
+                    Debug.Log(name + " in state 'Inactive' ");
+
+                    Debug.Log(name + " Stopping All Coroutines ");
+                    u.StopAllCoroutines();
+
+                    activeUnitPool.Remove(u.gameObject);
+                    inActiveUnitPool.Add(u.gameObject);
+
+                    u.gameObject.SetActive(false);
+
+                    break;
+                }
+
+            default:
+                {
+                    u.CurrentState = UnitStates.Hold;
+                    break;
+                }
+        }
+    }
+
+    public void AttackStateMachine(AttackUnit u)
+    {
+        CheckHealth(u);
+
+        switch (u.CurrentState)
         {
             case UnitStates.Hold:
                 {
-                    if(u.TargetAssigned)
+                    if (u.TargetAssigned)
                     {
                         u.CurrentState = UnitStates.Move;
                     }
 
-                    if(u.Health <= 0)
+                    if (u.Health <= 0)
                     {
                         u.CurrentState = UnitStates.Inactive;
                     }
@@ -64,11 +159,11 @@ public class UnitManager : MonoBehaviour
 
                     if (u.Role == Unit.UnitRole.resource)
                     {
-                        if(!!u.IsMoving && u.TargetAssigned)
+                        if (!!u.IsMoving && u.TargetAssigned)
                         {
                             ResourceUnit r = u.GetComponent<ResourceUnit>();
 
-                            if(r.HasResources)
+                            if (r.HasResources)
                             {
                                 //u.CurrentState == 
                             }
@@ -122,54 +217,6 @@ public class UnitManager : MonoBehaviour
                     break;
                 }
 
-            default:
-                {
-                    if(u.CurrentState == UnitStates.Collect || u.CurrentState == UnitStates.Store)
-                    {
-                        ResourceStateMachine((ResourceUnit)u);
-                    } 
-                    else if(u.CurrentState == UnitStates.Attack || u.CurrentState == UnitStates.MoveAttack || u.CurrentState == UnitStates.Protect)
-                    {
-                        AttackStateMachine((AttackUnit)u);
-                    }
-                        break;
-                }
-        }
-
-    }
-
-    public void ResourceStateMachine(ResourceUnit u)
-    {
-        switch (u.CurrentState) { 
-            case UnitStates.Collect:
-                {
-                    if(!u.IsGathering)
-                    {
-                        u.CurrentState = UnitStates.Store;
-                    }
-                    break;
-                }
-            case UnitStates.Store:
-                {
-                    if (!u.HasResources)
-                    {
-                        u.CurrentState = UnitStates.Collect;
-                    }
-                    break;
-                }
-
-            default:
-                {
-                    u.CurrentState = UnitStates.Hold;
-                    break;
-                }
-        }
-    }
-
-    public void AttackStateMachine(AttackUnit u)
-    {
-        switch (u.CurrentState)
-        {
             case UnitStates.Attack:
                 {
                     if(!u.IsAttacking)

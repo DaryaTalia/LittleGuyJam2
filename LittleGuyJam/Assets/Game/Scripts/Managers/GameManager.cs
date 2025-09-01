@@ -1,5 +1,8 @@
+using System.Resources;
 using UnityEngine;
 using UnityEngine.Events;
+[RequireComponent(typeof(UnitManager))]
+[RequireComponent(typeof(ResourceManager))]
 
 public class GameManager : MonoBehaviour
 {
@@ -7,6 +10,8 @@ public class GameManager : MonoBehaviour
 
     public GameData data;
     UnitManager unitManager;
+    ResourceManager resourceManager;
+    HUDManager hudManager;
 
     public enum GameStatus { inactive, playing, paused };
     public GameStatus status;
@@ -34,11 +39,29 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         unitManager = GetComponent<UnitManager>();  
+        resourceManager = GetComponent<ResourceManager>();
+
+        ResetGameData();
+    }
+
+    public void ResetGameData()
+    {
+        data.TotalCollectedResources = 0;
+        data.CurrentAvailableResources = 0;
+        data.TotalUnits = 0;
+        data.TotalBuildings = 0;
+        data.TotalGameTime = 0;
+        data.TotalEnemyUnitsKilled = 0;
+        data.WavesPassed = 0;
     }
 
     public UnitManager UnitManager
     {
         get { return unitManager; }
+    }
+    public ResourceManager ResourceManager
+    {
+        get { return resourceManager; }
     }
 
     public void Initialize()
