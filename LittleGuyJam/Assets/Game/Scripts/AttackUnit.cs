@@ -9,12 +9,42 @@ public class AttackUnit : Unit
     [SerializeField]
     bool isAttacking;
 
+    [SerializeField]
+    Unit attackTarget;
+    [SerializeField]
+    Unit protectTarget;
+
     public AttackUnit(UnitAlignment _a) : base(_a)
     {
-        //StartCoroutine(Move(Vector3.zero));
+        attackTarget = null;
+        protectTarget = null;
     }
 
-    public IEnumerator Attack(Unit attackTarget)
+    public void UpdateAttacker()
+    {
+        if (CurrentState == UnitManager.UnitStates.Attack)
+        {
+            StartCoroutine(Attack());
+        }
+        else if (CurrentState == UnitManager.UnitStates.MoveAttack)
+        {
+            StartCoroutine(MoveAttack());
+        }
+        else if (CurrentState == UnitManager.UnitStates.Protect)
+        {
+            StartCoroutine(Protect());
+        }
+        else if (attackTarget != null || protectTarget != null)
+        {
+            TargetAssigned = true;
+        }
+        else if (attackTarget == null && protectTarget == null)
+        {
+            TargetAssigned = false;
+        }
+    }
+
+    public IEnumerator Attack()
     {
         if(Alignment == attackTarget.Alignment)
         {
@@ -28,22 +58,76 @@ public class AttackUnit : Unit
 
         if (Vector3.Distance(attackTarget.transform.position, transform.position) > data.AttackRange)
         {
-            StartCoroutine(Move(attackTarget.gameObject.transform.position));
+            //StartCoroutine(Move(attackTarget.gameObject.transform.position));
+            Target = attackTarget.gameObject.transform.position;
+            TargetAssigned = true;
         }
         else
         {
             while (attackTarget.Health > 0)
             {
                 isAttacking = true;
+                CanMove = false;
+
                 yield return new WaitForSeconds(data.AttackSpeed);
-                attackTarget.TakeDamage(data.AttackDamage);
+                CanMove = true;
+
+                if (Health > 0)
+                {
+                    if (attackTarget.TakeDamage(data.AttackDamage) <= 0)
+                    {
+                        attackTarget = null;
+                        break;
+                    }
+                }
             }
 
             isAttacking = false;
         }          
     }
 
-    public IEnumerator Protect(Unit protectTarget)
+    public IEnumerator MoveAttack()
+    {
+        if(Alignment == attackTarget.Alignment)
+        {
+            yield break;
+        }
+
+        if(isAttacking)
+        {
+            yield break;
+        }
+
+        if (Vector3.Distance(attackTarget.transform.position, transform.position) > data.AttackRange)
+        {
+            //StartCoroutine(Move(attackTarget.gameObject.transform.position));
+            Target = attackTarget.gameObject.transform.position;
+            TargetAssigned = true;
+        }
+        else
+        {
+            while (attackTarget.Health > 0)
+            {
+                isAttacking = true;
+                CanMove = false;
+
+                yield return new WaitForSeconds(data.AttackSpeed);
+                CanMove = true;
+
+                if (Health > 0)
+                {
+                    if (attackTarget.TakeDamage(data.AttackDamage) <= 0) {
+                        attackTarget = null;
+                        break;
+                    }
+                }
+            }
+
+            isAttacking = false;
+        }          
+    }
+
+    public IEnumerator Protect()
     {
         if(Alignment != protectTarget.Alignment)
         {
@@ -57,7 +141,9 @@ public class AttackUnit : Unit
 
         if (Vector3.Distance(protectTarget.transform.position, transform.position) > data.AttackRange)
         {
-            StartCoroutine(Move(protectTarget.gameObject.transform.position));
+            //StartCoroutine(Move(protectTarget.gameObject.transform.position));
+            Target = protectTarget.gameObject.transform.position;
+            TargetAssigned = true;
         }
         else
         {
@@ -65,10 +151,14 @@ public class AttackUnit : Unit
 
             if(nearestEnemy == null)
             {
+                CanMove = false;
                 yield break;    
             }
 
-            StartCoroutine(Attack(nearestEnemy));
+            //StartCoroutine(Attack(nearestEnemy));
+            Target = nearestEnemy.gameObject.transform.position;
+            CanMove = true;
+            TargetAssigned = true;
 
             yield return 0;
         }          

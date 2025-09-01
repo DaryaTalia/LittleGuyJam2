@@ -8,6 +8,7 @@ public class UnitData : ScriptableObject
     public float DistanceThreshold = 1;
     public int MaxResources = 16;
     public float CollectionSpeed = 10;
+    public float StorageSpeed = 5;
     public float AttackRange = 5;
     public float AttackDamage = 10;
     public float AttackSpeed = 5;

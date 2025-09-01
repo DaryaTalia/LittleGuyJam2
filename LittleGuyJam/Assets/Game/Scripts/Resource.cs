@@ -17,4 +17,16 @@ public class Resource : MonoBehaviour
     {
         get { return data.Value; }
     }
+
+    private void OnMouseDown()
+    {
+        if (GameManager.instance.UnitManager.selectedUnits.Count > 0)
+        {
+            foreach(ResourceUnit r in GameManager.instance.UnitManager.selectedUnits)
+            {
+                r.ResourceTarget = this;
+                r.Target = transform.position;
+            }
+        }
+    }
 }

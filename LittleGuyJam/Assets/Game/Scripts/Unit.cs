@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static UnitManager;
 [RequireComponent(typeof(UnitData))]
 
 public class Unit : MonoBehaviour
@@ -8,6 +9,15 @@ public class Unit : MonoBehaviour
 
     [SerializeField]
     UnitAlignment alignment;
+
+    public enum UnitRole { resource, melee, ranged };
+
+    [SerializeField]
+    UnitRole role;
+
+    [SerializeField]
+    UnitStates currentState;
+
     [SerializeField]
     public UnitData data;
 
@@ -18,35 +28,110 @@ public class Unit : MonoBehaviour
     [SerializeField]
     bool isMoving;
 
+    bool targetAssigned;
+    Vector3 target;
+
+    public bool TargetAssigned
+    {
+        get { return targetAssigned; }
+        set { targetAssigned = value; }
+    }
+
+    public Vector3 Target
+    {
+        get { return target; }
+        set { target = value; }
+    }
+
     public Unit(UnitAlignment _a)
     {
         alignment = _a;
         health = data.MaxHealth;
-
+        CurrentState = UnitStates.Hold;
     }
 
-    public IEnumerator Move(Vector3 target)
+    private void Awake()
+    {
+        health = data.MaxHealth;
+        canMove = true;
+    }
+
+    public void UpdateUnit()
+    {
+        if (CurrentState == UnitManager.UnitStates.Hold)
+        {
+            StartCoroutine(Hold());
+        }
+        else if (CurrentState == UnitManager.UnitStates.Move)
+        {
+            Debug.Log(name + " StartCoroutine 'Move' ");
+
+            StartCoroutine(Move());
+        }
+        else if (CurrentState == UnitManager.UnitStates.Inactive)
+        {
+            StopAllCoroutines();
+        }
+    }
+
+    public IEnumerator Hold()
+    {
+        yield return 0;
+    }
+
+    public IEnumerator Move()
     {
         if (!canMove)
         {
+            Debug.Log(name + " can't Move, breaking ");
             yield break;
         }
 
-        while (Vector3.Distance(gameObject.transform.position, target) < data.DistanceThreshold)
+        Debug.Log(name + " can Move, continue... ");
+
+        while (Vector3.Distance(gameObject.transform.position, target) > data.DistanceThreshold)
         {
             isMoving = true;
             gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.position, target, data.MovementSpeed);
+
+            Debug.Log(name + " distance: " + Vector3.Distance(gameObject.transform.position, target));
 
             yield return 0;
         }
         isMoving = false;
     }
 
+    private void OnMouseDown()
+    {
+        GameManager.instance.UnitManager.selectedUnits.Clear();
+        GameManager.instance.UnitManager.selectedUnits.Add(this);
+    }
+
+    private void OnMouseDrag()
+    {
+        if (!GameManager.instance.UnitManager.selectedUnits.Contains(this))
+        {
+            GameManager.instance.UnitManager.selectedUnits.Add(this);
+        }
+    }
+
     // Accessors
 
     public UnitAlignment Alignment {
         get { return alignment; }
+        set { alignment = value; }
         }
+
+    public UnitRole Role {
+        get { return role; }
+        set { role = value; }
+        }
+
+    public UnitStates CurrentState
+    {
+        get { return currentState; }
+        set { currentState = value; }
+    }
 
     public float Health {
         get { return health; }
