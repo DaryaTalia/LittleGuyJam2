@@ -22,15 +22,15 @@ public class AttackUnit : Unit
 
     public void UpdateAttacker()
     {
-        if (CurrentState == UnitManager.UnitStates.Attack)
+        if (CurrentState == UnitManager.UnitStates.Attack && !coroutineRunning)
         {
             StartCoroutine(Attack());
         }
-        else if (CurrentState == UnitManager.UnitStates.MoveAttack)
+        else if (CurrentState == UnitManager.UnitStates.MoveAttack && !coroutineRunning)
         {
             StartCoroutine(MoveAttack());
         }
-        else if (CurrentState == UnitManager.UnitStates.Protect)
+        else if (CurrentState == UnitManager.UnitStates.Protect && !coroutineRunning)
         {
             StartCoroutine(Protect());
         }
@@ -46,6 +46,8 @@ public class AttackUnit : Unit
 
     public IEnumerator Attack()
     {
+        coroutineRunning = true;
+
         if(Alignment == attackTarget.Alignment)
         {
             yield break;
@@ -83,11 +85,15 @@ public class AttackUnit : Unit
             }
 
             isAttacking = false;
-        }          
+        }
+
+        coroutineRunning = false;
     }
 
     public IEnumerator MoveAttack()
     {
+        coroutineRunning = true;
+
         if(Alignment == attackTarget.Alignment)
         {
             yield break;
@@ -124,11 +130,15 @@ public class AttackUnit : Unit
             }
 
             isAttacking = false;
-        }          
+        }
+
+        coroutineRunning = false;
     }
 
     public IEnumerator Protect()
     {
+        coroutineRunning = true;
+
         if(Alignment != protectTarget.Alignment)
         {
             yield break;
@@ -161,7 +171,9 @@ public class AttackUnit : Unit
             TargetAssigned = true;
 
             yield return 0;
-        }          
+        }
+
+        coroutineRunning = false;
     }
 
     public bool IsAttacking

@@ -785,6 +785,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569463362}
   m_CullTransparentMesh: 1
+--- !u!1 &786281072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5529776207759161533, guid: 40870cd7eb804834b8972061573bfa7f, type: 3}
+  m_PrefabInstance: {fileID: 1518510472}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &793488938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2615,6 +2620,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2880290264472779758, guid: e2100b3e0a2480147a00a9bf709bd767, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2880290264472779758, guid: e2100b3e0a2480147a00a9bf709bd767, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 440197015297888021, guid: 30ecc8e14361ec544bb23a96428b8ec2, type: 2}
     - target: {fileID: 3572127452538153053, guid: e2100b3e0a2480147a00a9bf709bd767, type: 3}
       propertyPath: 'activeResourcePool.Array.data[0]'
       value: 
@@ -2623,6 +2636,22 @@ PrefabInstance:
       propertyPath: audioData
       value: 
       objectReference: {fileID: 11400000, guid: 968fd355b4ef43240af396955d95385d, type: 2}
+    - target: {fileID: 4427585077989259864, guid: e2100b3e0a2480147a00a9bf709bd767, type: 3}
+      propertyPath: audioMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 30ecc8e14361ec544bb23a96428b8ec2, type: 2}
+    - target: {fileID: 4427585077989259864, guid: e2100b3e0a2480147a00a9bf709bd767, type: 3}
+      propertyPath: _allVolumeSlider
+      value: 
+      objectReference: {fileID: 982098439}
+    - target: {fileID: 4427585077989259864, guid: e2100b3e0a2480147a00a9bf709bd767, type: 3}
+      propertyPath: _sfxVolumeSlider
+      value: 
+      objectReference: {fileID: 982098437}
+    - target: {fileID: 4427585077989259864, guid: e2100b3e0a2480147a00a9bf709bd767, type: 3}
+      propertyPath: _musicVolumeSlider
+      value: 
+      objectReference: {fileID: 982098438}
     - target: {fileID: 5382094965678013855, guid: e2100b3e0a2480147a00a9bf709bd767, type: 3}
       propertyPath: rndBuilding
       value: 
@@ -2639,6 +2668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5832904051571387134, guid: e2100b3e0a2480147a00a9bf709bd767, type: 3}
+      propertyPath: hudPanel
+      value: 
+      objectReference: {fileID: 786281072}
     - target: {fileID: 5832904051571387134, guid: e2100b3e0a2480147a00a9bf709bd767, type: 3}
       propertyPath: pauseGUI
       value: 
@@ -2736,6 +2769,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 982098447}
     - target: {fileID: 8940723428196723705, guid: e2100b3e0a2480147a00a9bf709bd767, type: 3}
+      propertyPath: _gameModePanel
+      value: 
+      objectReference: {fileID: 1287995873}
+    - target: {fileID: 8940723428196723705, guid: e2100b3e0a2480147a00a9bf709bd767, type: 3}
       propertyPath: _mainMenuPanel
       value: 
       objectReference: {fileID: 982098450}
@@ -2787,6 +2824,14 @@ PrefabInstance:
       propertyPath: _settingsButtonPause
       value: 
       objectReference: {fileID: 982098441}
+    - target: {fileID: 9175768231995238451, guid: e2100b3e0a2480147a00a9bf709bd767, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175768231995238451, guid: e2100b3e0a2480147a00a9bf709bd767, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -3723031264506842580, guid: 30ecc8e14361ec544bb23a96428b8ec2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

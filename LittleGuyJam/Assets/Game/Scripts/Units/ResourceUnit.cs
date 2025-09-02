@@ -43,14 +43,14 @@ public class ResourceUnit : Unit
             TargetAssigned = true;
         }
 
-        if (CurrentState == UnitManager.UnitStates.Gather && !isGathering)
+        if (CurrentState == UnitManager.UnitStates.Gather && !isGathering && !coroutineRunning)
         {
             Debug.Log(name + " StartCoroutine 'Gather' ");
 
             StartCoroutine(Gather());
         }
         
-        if (CurrentState == UnitManager.UnitStates.Store && !isStoring)
+        if (CurrentState == UnitManager.UnitStates.Store && !isStoring && !coroutineRunning)
         {
             Debug.Log(name + " StartCoroutine 'Store' ");
 
@@ -81,6 +81,8 @@ public class ResourceUnit : Unit
 
     public IEnumerator Gather()
     {
+        coroutineRunning = true;
+
         while (collectedResources < data.MaxResources)
         {
             CanMove = false;
@@ -102,11 +104,15 @@ public class ResourceUnit : Unit
         TargetAssigned = true;
         CanMove = true;
         isGathering = false;
-        hasResources = true;     
+        hasResources = true;
+
+        coroutineRunning = false;
     }
 
     public IEnumerator Store()
     {
+        coroutineRunning = true;
+
         CanMove = false;
         isStoring = true;
 
@@ -120,6 +126,8 @@ public class ResourceUnit : Unit
         CanMove = true;
         hasResources = false;
         TargetAssigned = false;
+
+        coroutineRunning = false;
     }
 
     // Accessors

@@ -22,11 +22,11 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void StartMenu()
     {
-        status = MenuStatus.MainMenu;        
+        status = MenuStatus.MainMenu;   
+        _mainMenuPanel.SetActive(true);
     }
-
 
     #region Main Menu
 
@@ -151,6 +151,7 @@ public class MenuManager : MonoBehaviour
     {
         if (status != MenuStatus.Pause || status != MenuStatus.MainMenu)
         {
+            GameManager.instance.status = GameManager.GameStatus.paused;
             status = MenuStatus.Pause;
             _pauseMenuPanel.SetActive(true);  
             
@@ -161,7 +162,8 @@ public class MenuManager : MonoBehaviour
     public void ResumeGame()
     {
         if (status != MenuStatus.MainMenu)
-        {            
+        {
+            GameManager.instance.status = GameManager.GameStatus.playing;
             status = MenuStatus.Game;
             _pauseMenuPanel.SetActive(false);
 

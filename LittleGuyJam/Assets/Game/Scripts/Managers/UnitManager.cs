@@ -12,6 +12,8 @@ public class UnitManager : MonoBehaviour
 
     public void UpdateUnits()
     {
+        GameManager.instance.data.TotalUnits = activeUnitPool.Count;
+
         foreach (GameObject unit in activeUnitPool) {
             if (unit.GetComponent<Unit>().Role == Unit.UnitRole.resource)
             {

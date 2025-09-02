@@ -31,6 +31,8 @@ public class Unit : MonoBehaviour
     bool targetAssigned;
     Vector3 target;
 
+    public bool coroutineRunning;
+
     public Unit(UnitAlignment _a)
     {
         alignment = _a;
@@ -46,14 +48,14 @@ public class Unit : MonoBehaviour
 
     public void UpdateUnit()
     {
-        if (CurrentState == UnitManager.UnitStates.Hold)
+        if (CurrentState == UnitManager.UnitStates.Hold && !coroutineRunning)
         {
             Debug.Log(name + " StartCoroutine 'Hold' ");
 
             StartCoroutine(Hold());
         }
         
-        if (CurrentState == UnitManager.UnitStates.Move && !isMoving)
+        if (CurrentState == UnitManager.UnitStates.Move && !isMoving && !coroutineRunning)
         {
             Debug.Log(name + " StartCoroutine 'Move' ");
 
@@ -63,6 +65,8 @@ public class Unit : MonoBehaviour
 
     public IEnumerator Hold()
     {
+        coroutineRunning = true;
+
         if (targetAssigned)
         {
             Debug.Log(name + " Target Assigned, can Move ");
@@ -76,10 +80,14 @@ public class Unit : MonoBehaviour
             Debug.Log(name + " Target not Assigned, can't Move ");
             canMove = false;
         }
+
+        coroutineRunning = false;
     }
 
     public IEnumerator Move()
     {
+        coroutineRunning = true;
+
         if (!canMove)
         {
             Debug.Log(name + " can't Move, breaking ");
@@ -101,6 +109,8 @@ public class Unit : MonoBehaviour
         Debug.Log(name + " not moving... ");
 
         isMoving = false;
+
+        coroutineRunning = false;
     }
 
     private void OnMouseDown()

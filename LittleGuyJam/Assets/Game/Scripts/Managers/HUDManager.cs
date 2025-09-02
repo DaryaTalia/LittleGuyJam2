@@ -194,7 +194,13 @@ public class HUDManager : MonoBehaviour
         if (timeGUIEnabled)
         {
             // Time counting up, not time counting down
-            timePassedText.text = GameManager.instance.data.TotalGameTime.ToString();
+            System.TimeSpan t = System.TimeSpan.FromSeconds(GameManager.instance.data.TotalGameTime);
+
+            string time = string.Format("{0:D2}m:{1:D2}s",
+                t.Minutes,
+                t.Seconds);
+
+            timePassedText.text = time;
         }
         
         if (enemiesGUIEnabled)

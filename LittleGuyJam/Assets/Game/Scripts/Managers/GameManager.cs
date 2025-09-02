@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Resources;
 using UnityEngine;
 using UnityEngine.Events;
@@ -52,6 +53,8 @@ public class GameManager : MonoBehaviour
         audioManager = GetComponent<AudioManager>();
 
         audioManager.StartAudio();
+        menuManager.StartMenu();
+        status = GameStatus.inactive;
     }
 
     public void Update()
@@ -69,11 +72,31 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public IEnumerator TimerAscending()
+    {
+        while (status == GameStatus.playing || status == GameStatus.paused)
+        {
+            if (status == GameStatus.playing)
+            {
+                yield return new WaitForSeconds(1);
+                data.TotalGameTime++;
+            }
+            else
+            {
+                yield return new WaitForSeconds(1);
+            }
+        }
+    }
+
     public void PlayGame()
     {
         ResetGameData();
         menuManager.CloseGameModePanel();
         hudManager.ResetHUD();
+        hudManager.StartHUD();
+        status = GameStatus.playing;
+
+        StartCoroutine(TimerAscending());
     }
 
     public void SelectGameMode(string game)
