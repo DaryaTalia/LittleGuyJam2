@@ -16,29 +16,41 @@ public class AttackUnit : Unit
 
     public AttackUnit(UnitAlignment _a) : base(_a)
     {
+        ResetAttacker();
+    }
+
+    public void ResetAttacker()
+    {
+        isAttacking = false;
         attackTarget = null;
         protectTarget = null;
+        Target = GameManager.instance.Barracks.transform.position;
+        TargetAssigned = true;
     }
 
     public void UpdateAttacker()
     {
-        if (CurrentState == UnitManager.UnitStates.Attack && !coroutineRunning)
+        if (CurrentState == UnitManager.UnitStates.Attack && !coroutineRunning && AutonomyBid())
         {
             StartCoroutine(Attack());
         }
-        else if (CurrentState == UnitManager.UnitStates.MoveAttack && !coroutineRunning)
+        
+        if (CurrentState == UnitManager.UnitStates.MoveAttack && !coroutineRunning && AutonomyBid())
         {
             StartCoroutine(MoveAttack());
         }
-        else if (CurrentState == UnitManager.UnitStates.Protect && !coroutineRunning)
+        
+        if (CurrentState == UnitManager.UnitStates.Protect && !coroutineRunning && AutonomyBid())
         {
             StartCoroutine(Protect());
         }
-        else if (attackTarget != null || protectTarget != null)
+        
+        if (attackTarget != null || protectTarget != null)
         {
             TargetAssigned = true;
         }
-        else if (attackTarget == null && protectTarget == null)
+        
+        if (attackTarget == null && protectTarget == null)
         {
             TargetAssigned = false;
         }
@@ -60,7 +72,6 @@ public class AttackUnit : Unit
 
         if (Vector3.Distance(attackTarget.transform.position, transform.position) > data.AttackRange)
         {
-            //StartCoroutine(Move(attackTarget.gameObject.transform.position));
             Target = attackTarget.gameObject.transform.position;
             TargetAssigned = true;
         }
@@ -106,7 +117,6 @@ public class AttackUnit : Unit
 
         if (Vector3.Distance(attackTarget.transform.position, transform.position) > data.AttackRange)
         {
-            //StartCoroutine(Move(attackTarget.gameObject.transform.position));
             Target = attackTarget.gameObject.transform.position;
             TargetAssigned = true;
         }
@@ -151,7 +161,6 @@ public class AttackUnit : Unit
 
         if (Vector3.Distance(protectTarget.transform.position, transform.position) > data.AttackRange)
         {
-            //StartCoroutine(Move(protectTarget.gameObject.transform.position));
             Target = protectTarget.gameObject.transform.position;
             TargetAssigned = true;
         }
@@ -165,7 +174,6 @@ public class AttackUnit : Unit
                 yield break;    
             }
 
-            //StartCoroutine(Attack(nearestEnemy));
             Target = nearestEnemy.gameObject.transform.position;
             CanMove = true;
             TargetAssigned = true;

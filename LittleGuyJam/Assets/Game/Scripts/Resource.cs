@@ -26,7 +26,14 @@ public class Resource : MonoBehaviour
             {
                 r.ResourceTarget = this;
                 r.Target = transform.position;
+                r.TargetAssigned = true;
+                r.PlayerDirected = true;    
             }
         }
+    }
+
+    private void OnMouseOver()
+    {
+        // Show Info Tooltip
     }
 }

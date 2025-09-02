@@ -32,18 +32,28 @@ public class Unit : MonoBehaviour
     Vector3 target;
 
     public bool coroutineRunning;
+    public bool canBid;
+    public bool playerDirected;
 
     public Unit(UnitAlignment _a)
     {
         alignment = _a;
-        health = data.MaxHealth;
-        CurrentState = UnitStates.Hold;
     }
 
     private void Awake()
     {
+        Reset();
+    }
+
+    public void Reset()
+    {
         health = data.MaxHealth;
+        CurrentState = UnitStates.Hold;
+        isMoving = false;
         canMove = true;
+        targetAssigned = false;
+        canBid = true;
+        playerDirected = false;
     }
 
     public void UpdateUnit()
@@ -55,12 +65,145 @@ public class Unit : MonoBehaviour
             StartCoroutine(Hold());
         }
         
-        if (CurrentState == UnitManager.UnitStates.Move && !isMoving && !coroutineRunning)
+        if (CurrentState == UnitManager.UnitStates.Move && targetAssigned && !isMoving && !coroutineRunning)
         {
             Debug.Log(name + " StartCoroutine 'Move' ");
 
-            StartCoroutine(Move());
+            if (playerDirected)
+            {
+                StartCoroutine(Move());
+            }
+            else if (canBid)
+            {
+                if (AutonomyBid())
+                {
+                    StartCoroutine(Move());
+
+                }
+                else
+                {
+                    StartCoroutine(AutonomyBidRefresh());
+                }
+            }
         }
+    }
+
+    public bool AutonomyBid()
+    {
+        int bid = Random.Range(0, data.RandomAutonomyMax);
+
+        switch (currentState)
+        {
+            case UnitStates.Move:
+                {
+                    if(bid > data.RandomMoveAutonomy)
+                    {
+                        // Lost Bid, go back to Hold state
+                        Debug.Log(name + " Lost Bid, go back to 'Hold' ");
+                        currentState = UnitStates.Hold;
+                        Target = GameManager.instance.Storage.transform.position;
+                        return false;
+                    }
+                    // Won Bid, continue in current state
+                    Debug.Log(name + " Won Bid, continue current state ");
+                    return true;
+                }
+
+            case UnitStates.Gather:
+                {
+                    if(bid > data.RandomGatherAutonomy)
+                    {
+                        // Lost Bid, go back to Hold state
+                        Debug.Log(name + " Lost Bid, go back to 'Hold' ");
+                        currentState = UnitStates.Hold;
+                        Target = GameManager.instance.Storage.transform.position;
+                        return false;
+                    }
+                    // Won Bid, continue in current state
+                    Debug.Log(name + " Won Bid, continue current state ");
+                    return true;
+                }
+
+            case UnitStates.Store:
+                {
+                    if(bid > data.RandomStoreAutonomy)
+                    {
+                        // Lost Bid, go back to Hold state
+                        Debug.Log(name + " Lost Bid, go back to 'Hold' ");
+                        currentState = UnitStates.Hold;
+                        Target = GameManager.instance.Storage.transform.position;
+                        return false;
+                    }
+                    // Won Bid, continue in current state
+                    Debug.Log(name + " Won Bid, continue current state ");
+                    return true;
+                }
+
+            case UnitStates.Attack:
+                {
+                    if(bid > data.RandomAttackAutonomy)
+                    {
+                        // Lost Bid, go back to Hold state
+                        Debug.Log(name + " Lost Bid, go back to 'Hold' ");
+                        currentState = UnitStates.Hold;
+                        Target = GameManager.instance.Barracks.transform.position;
+                        return false;
+                    }
+                    // Won Bid, continue in current state
+                    Debug.Log(name + " Won Bid, continue current state ");
+                    return true;
+                }
+
+            case UnitStates.MoveAttack:
+                {
+                    if(bid > data.RandomMoveAttackAutonomy)
+                    {
+                        // Lost Bid, go back to Hold state
+                        Debug.Log(name + " Lost Bid, go back to 'Hold' ");
+                        currentState = UnitStates.Hold;
+                        Target = GameManager.instance.Barracks.transform.position;
+                        return false;
+                    }
+                    // Won Bid, continue in current state
+                    Debug.Log(name + " Won Bid, continue current state ");
+                    return true;
+                }
+            
+            case UnitStates.Protect:
+                {
+                    if(bid > data.RandomProtectAutonomy)
+                    {
+                        // Lost Bid, go back to Hold state
+                        Debug.Log(name + " Lost Bid, go back to 'Hold' ");
+                        currentState = UnitStates.Hold;
+                        Target = GameManager.instance.Barracks.transform.position;
+                        return false;
+                    }
+                    // Won Bid, continue in current state
+                    Debug.Log(name + " Won Bid, continue current state ");
+                    return true;
+                }
+
+            default:
+                {
+                    Debug.Log(name + " Lost Bid, go back to 'Hold' ");
+                    currentState = UnitStates.Hold;
+                    return false;
+                }
+        }
+    }
+
+    public IEnumerator AutonomyBidRefresh()
+    {
+        coroutineRunning = true;
+        canBid = false;
+        Debug.Log(name + " can't bid... ");
+
+        yield return new WaitForSeconds(data.BidRefreshRate);
+
+        canBid = true;
+        coroutineRunning = false;
+        Debug.Log(name + " can bid... ");
     }
 
     public IEnumerator Hold()
@@ -69,7 +212,7 @@ public class Unit : MonoBehaviour
 
         if (targetAssigned)
         {
-            Debug.Log(name + " Target Assigned, can Move ");
+            //Debug.Log(name + " Target Assigned, can Move ");
             canMove = true;
         }
 
@@ -77,7 +220,7 @@ public class Unit : MonoBehaviour
 
         if (!targetAssigned)
         {
-            Debug.Log(name + " Target not Assigned, can't Move ");
+            //Debug.Log(name + " Target not Assigned, can't Move ");
             canMove = false;
         }
 
@@ -90,33 +233,39 @@ public class Unit : MonoBehaviour
 
         if (!canMove)
         {
-            Debug.Log(name + " can't Move, breaking ");
+            //Debug.Log(name + " can't Move, breaking ");
             yield break;
         }
 
         while (Vector3.Distance(gameObject.transform.position, target) > data.DistanceThreshold + data.MovementSpeed)
         {
-            Debug.Log(name + " moving... ");
+            //Debug.Log(name + " moving... ");
 
             isMoving = true;
-            gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.position, target, data.MovementSpeed);
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target, data.MovementSpeed);
 
             yield return 0;
 
-            Debug.Log(name + " moved... ");
+            //Debug.Log(name + " moved... ");
         }
 
-        Debug.Log(name + " not moving... ");
+        //Debug.Log(name + " not moving... ");
 
         isMoving = false;
 
         coroutineRunning = false;
+        playerDirected = false;
     }
 
     private void OnMouseDown()
     {
         GameManager.instance.UnitManager.selectedUnits.Clear();
         GameManager.instance.UnitManager.selectedUnits.Add(this);
+    }
+
+    private void OnMouseOver()
+    {
+        // Show Info Tooltip
     }
 
     // Accessors 
@@ -202,6 +351,12 @@ public class Unit : MonoBehaviour
     public float DistanceThreshold
     {
         get { return data.DistanceThreshold; }
+    }
+
+    public bool PlayerDirected
+    {
+        get { return playerDirected;  }
+        set {  playerDirected = value; }
     }
 
 }

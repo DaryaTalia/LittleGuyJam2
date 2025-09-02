@@ -17,10 +17,15 @@ public class UnitData : ScriptableObject
 
     [Header("AI Autonomy")]
     [Description("How likely will any individual AI unit spontaneously act in accordance to their role?")]
-    public float RandomAutonomyMax = 250;
-    public float RandomGatherAutonomy = 75; 
-    public float RandomStoreAutonomy = 90; 
-    public float RandomAttackAutonomy = 75; 
-    public float RandomMoveAttackAutonomy = 90; 
-    public float RandomProtectAutonomy = 50; 
+    public int RandomAutonomyMax = 250;
+    public int BidRefreshRate = 5;
+
+    [Space]
+
+    public int RandomMoveAutonomy = 75; 
+    public int RandomGatherAutonomy = 75; 
+    public int RandomStoreAutonomy = 90; 
+    public int RandomAttackAutonomy = 75; 
+    public int RandomMoveAttackAutonomy = 90; 
+    public int RandomProtectAutonomy = 50; 
 }

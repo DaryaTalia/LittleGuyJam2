@@ -6,7 +6,7 @@ public class UnitManager : MonoBehaviour
     public enum UnitStates { Hold, Move, Gather, Store, Attack, MoveAttack, Protect, Inactive };
 
     public List<GameObject> activeUnitPool;
-    public List<GameObject> inActiveUnitPool;
+    public List<GameObject> inactiveUnitPool;
 
     public List<Unit> selectedUnits;
 
@@ -55,11 +55,11 @@ public class UnitManager : MonoBehaviour
         switch (u.CurrentState) {
             case UnitStates.Hold:
                 {
-                    Debug.Log(name + " in state 'Hold' ");
+                    //Debug.Log(name + " in state 'Hold' ");
 
                     if (u.CanMove)
                     {
-                        Debug.Log(name + " changing state to 'Move' ");
+                        //Debug.Log(name + " changing state to 'Move' ");
                         u.CurrentState = UnitStates.Move;
                     }
 
@@ -68,23 +68,23 @@ public class UnitManager : MonoBehaviour
 
             case UnitStates.Move:
                 {
-                    Debug.Log(name + " in state 'Move' ");
+                    //Debug.Log(name + " in state 'Move' ");
 
                     if (!u.CanMove)
                     {
-                        Debug.Log(name + " changing state to 'Hold' ");
+                        //Debug.Log(name + " changing state to 'Hold' ");
                         u.CurrentState = UnitStates.Hold;
                     }
 
                     if (u.TargetAssigned && u.HasResources && !u.IsMoving)
                     {
-                        Debug.Log(name + " changing state to 'Store' ");
+                        //Debug.Log(name + " changing state to 'Store' ");
                         u.CurrentState = UnitStates.Store;
                     }
 
                     if (u.TargetAssigned && !u.HasResources && !u.IsMoving)
                     {
-                        Debug.Log(name + " changing state to 'Gather' ");
+                        //Debug.Log(name + " changing state to 'Gather' ");
                         u.CurrentState = UnitStates.Gather;
                     }
 
@@ -93,11 +93,11 @@ public class UnitManager : MonoBehaviour
 
             case UnitStates.Gather:
                 {
-                    Debug.Log(name + " in state 'Gather' ");
+                    //Debug.Log(name + " in state 'Gather' ");
 
-                    if (u.HasResources)
+                    if (u.HasResources || u.CanMove)
                     {
-                        Debug.Log(name + " changing state to 'Move' ");
+                        //Debug.Log(name + " changing state to 'Move' ");
                         u.CurrentState = UnitStates.Move;
                     }
 
@@ -106,11 +106,11 @@ public class UnitManager : MonoBehaviour
 
             case UnitStates.Store:
                 {
-                    Debug.Log(name + " in state 'Store' ");
+                    //Debug.Log(name + " in state 'Store' ");
 
-                    if (!u.HasResources)
+                    if (!u.HasResources || u.CanMove)
                     {
-                        Debug.Log(name + " changing state to 'Move' ");
+                        //Debug.Log(name + " changing state to 'Move' ");
                         u.CurrentState = UnitStates.Move;
                     }
                     break;
@@ -124,7 +124,7 @@ public class UnitManager : MonoBehaviour
                     u.StopAllCoroutines();
 
                     activeUnitPool.Remove(u.gameObject);
-                    inActiveUnitPool.Add(u.gameObject);
+                    inactiveUnitPool.Add(u.gameObject);
 
                     u.gameObject.SetActive(false);
 
@@ -212,7 +212,7 @@ public class UnitManager : MonoBehaviour
             case UnitStates.Inactive:
                 {
                     activeUnitPool.Remove(u.gameObject);
-                    inActiveUnitPool.Add(u.gameObject);
+                    inactiveUnitPool.Add(u.gameObject);
 
                     u.gameObject.SetActive(false);
 

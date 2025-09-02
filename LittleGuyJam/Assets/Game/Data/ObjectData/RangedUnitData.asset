@@ -17,6 +17,15 @@ MonoBehaviour:
   DistanceThreshold: 1
   MaxResources: 0
   CollectionSpeed: 0
+  StorageSpeed: 5
   AttackRange: 15
   AttackDamage: 5
   AttackSpeed: 7
+  RandomAutonomyMax: 250
+  BidRefreshRate: 5
+  RandomMoveAutonomy: 75
+  RandomGatherAutonomy: -1
+  RandomStoreAutonomy: -1
+  RandomAttackAutonomy: 75
+  RandomMoveAttackAutonomy: 90
+  RandomProtectAutonomy: 50

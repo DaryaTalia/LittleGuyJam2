@@ -18,15 +18,18 @@ public class ResourceUnit : Unit
     public ResourceUnit(UnitAlignment _a) : base(_a)
     {
         Role = UnitRole.resource;
-        Reset();
+        ResetResourcer();
     }
 
-    public void Reset()
+    public void ResetResourcer()
     {
         hasResources = false;
+        isStoring = false;
         isGathering = false;
         collectedResources = 0;
         resourceTarget = null;
+        Target = GameManager.instance.Storage.transform.position;
+        TargetAssigned = true;
     }
 
     public void UpdateResourcer()
@@ -43,24 +46,53 @@ public class ResourceUnit : Unit
             TargetAssigned = true;
         }
 
+
         if (CurrentState == UnitManager.UnitStates.Gather && !isGathering && !coroutineRunning)
         {
-            Debug.Log(name + " StartCoroutine 'Gather' ");
+            //Debug.Log(name + " StartCoroutine 'Gather' ");
+            if (playerDirected)
+            {
+                StartCoroutine(Gather());
+            }
+            else if (canBid)
+            {
+                if (AutonomyBid())
+                {
+                    StartCoroutine(Gather());
 
-            StartCoroutine(Gather());
+                }
+                else
+                {
+                    StartCoroutine(AutonomyBidRefresh());
+                }
+            }
         }
-        
+
         if (CurrentState == UnitManager.UnitStates.Store && !isStoring && !coroutineRunning)
         {
-            Debug.Log(name + " StartCoroutine 'Store' ");
+            //Debug.Log(name + " StartCoroutine 'Store' ");
+            if (playerDirected)
+            {
+                StartCoroutine(Store());
+            }
+            else if (canBid)
+            {
+                if (AutonomyBid())
+                {
+                    StartCoroutine(Store());
 
-            StartCoroutine(Store());
+                }
+                else
+                {
+                    StartCoroutine(AutonomyBidRefresh());
+                }
+            }
         }
     }
 
     public void FindResource()
     {
-        Debug.Log(name + " finding resource... ");
+        //Debug.Log(name + " finding resource... ");
 
         if (GameManager.instance.ResourceManager.activeResourcePool.Count > 0)
         {
@@ -72,11 +104,11 @@ public class ResourceUnit : Unit
 
             TargetAssigned = true;
 
-            Debug.Log(name + " resource found ");
+            //Debug.Log(name + " resource found ");
             return;
         }
 
-        Debug.Log(name + " resource not found ");
+        //Debug.Log(name + " resource not found ");
     }
 
     public IEnumerator Gather()
@@ -92,12 +124,12 @@ public class ResourceUnit : Unit
 
             collectedResources += resourceTarget.Value;
 
-            Debug.Log(name + " Collected Resources = " + collectedResources);
+            //Debug.Log(name + " Collected Resources = " + collectedResources);
         }
 
         collectedResources = data.MaxResources;
 
-        Debug.Log(name + " Max Resources Collected: " + collectedResources);
+        //Debug.Log(name + " Max Resources Collected: " + collectedResources);
 
         resourceTarget = null;
         Target = GameManager.instance.Storage.transform.position;
@@ -107,6 +139,7 @@ public class ResourceUnit : Unit
         hasResources = true;
 
         coroutineRunning = false;
+        playerDirected = false;
     }
 
     public IEnumerator Store()
@@ -128,6 +161,7 @@ public class ResourceUnit : Unit
         TargetAssigned = false;
 
         coroutineRunning = false;
+        playerDirected = false;
     }
 
     // Accessors
@@ -145,7 +179,7 @@ public class ResourceUnit : Unit
 
     public bool IsStoring
     {
-        get { return IsStoring; }
+        get { return isStoring; }
     }
 
     public bool HasResources

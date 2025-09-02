@@ -13,17 +13,19 @@ MonoBehaviour:
   m_Name: ResourceUnitData
   m_EditorClassIdentifier: 
   MaxHealth: 100
-  MovementSpeed: 0.5
+  MovementSpeed: 0.6
   DistanceThreshold: 20
   MaxResources: 16
-  CollectionSpeed: 5
+  CollectionSpeed: 2
   StorageSpeed: 5
   AttackRange: 0
   AttackDamage: 0
   AttackSpeed: 0
   RandomAutonomyMax: 250
-  RandomGatherAutonomy: 75
-  RandomStoreAutonomy: 90
-  RandomAttackAutonomy: 75
-  RandomMoveAttackAutonomy: 90
-  RandomProtectAutonomy: 50
+  BidRefreshRate: 5
+  RandomMoveAutonomy: 30
+  RandomGatherAutonomy: 30
+  RandomStoreAutonomy: 250
+  RandomAttackAutonomy: -1
+  RandomMoveAttackAutonomy: -1
+  RandomProtectAutonomy: -1
