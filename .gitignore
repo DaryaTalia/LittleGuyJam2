@@ -75,3 +75,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 /LittleGuyJam/Library
 /LittleGuyJam/UserSettings
+/LittleGuyJam/UserSettings
+LittleGuyJam/UserSettings/Layouts/default-6000.dwlt
+*.dwlt

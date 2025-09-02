@@ -3,18 +3,25 @@ using UnityEngine;
 using UnityEngine.Events;
 [RequireComponent(typeof(UnitManager))]
 [RequireComponent(typeof(ResourceManager))]
+[RequireComponent(typeof(HUDManager))]
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
     public GameData data;
+
     UnitManager unitManager;
     ResourceManager resourceManager;
     HUDManager hudManager;
+    MenuManager menuManager;
+    AudioManager audioManager;
 
     public enum GameStatus { inactive, playing, paused };
+    public enum GameMode { timed, elimination, survival };
+
     public GameStatus status;
+    public GameMode mode;
 
     [SerializeField]
     GameObject storageBuilding;
@@ -40,8 +47,89 @@ public class GameManager : MonoBehaviour
     {
         unitManager = GetComponent<UnitManager>();  
         resourceManager = GetComponent<ResourceManager>();
+        hudManager = GetComponent<HUDManager>();
+        menuManager = GetComponent<MenuManager>();
+        audioManager = GetComponent<AudioManager>();
 
+        audioManager.StartAudio();
+    }
+
+    public void Update()
+    {
+        if (status == GameStatus.inactive || status == GameStatus.paused)
+        {
+            hudManager.hudPanel.SetActive(false);
+        }
+
+        if (status == GameStatus.playing)
+        {
+            hudManager.hudPanel.SetActive(true);
+            unitManager.UpdateUnits();
+            hudManager.UpdateHUD();
+        }
+    }
+
+    public void PlayGame()
+    {
         ResetGameData();
+        menuManager.CloseGameModePanel();
+        hudManager.ResetHUD();
+    }
+
+    public void SelectGameMode(string game)
+    {
+        switch (game)
+        {
+            case "Timed":
+                {
+                    mode = GameMode.timed;
+                    hudManager.timeGUIEnabled = true;
+                    break;
+                }
+
+            case "Elimination":
+                {
+                    mode = GameMode.elimination;
+                    hudManager.enemiesGUIEnabled = true;
+                    break;
+                }
+
+            case "Survival":
+                {
+                    mode = GameMode.survival;
+                    hudManager.wavesGUIEnabled = true;
+                    break;
+                }
+
+            default:
+                {
+                    mode = GameMode.timed;
+                    hudManager.timeGUIEnabled = true;
+                    break;
+                }
+        }
+
+        hudManager.resourceGUIEnabled = true;
+        hudManager.unitsGUIEnabled = true;
+        hudManager.pauseGUIEnabled = true;
+
+        hudManager.hudPanel.SetActive(true);
+    }
+
+    public bool BuyUnit(Building b)
+    {
+        if (data.CurrentAvailableResources > b.data.ResourceCost)
+        {
+            data.CurrentAvailableResources -= b.data.ResourceCost;
+            SpawnUnit(b.data.UnitTypePrefab);
+            return true;
+        }
+        return false;
+    }
+
+    public void SpawnUnit(GameObject u)
+    {
+
     }
 
     public void ResetGameData()
@@ -55,46 +143,21 @@ public class GameManager : MonoBehaviour
         data.WavesPassed = 0;
     }
 
+    // Accessors
+
     public UnitManager UnitManager
     {
         get { return unitManager; }
     }
+
     public ResourceManager ResourceManager
     {
         get { return resourceManager; }
     }
 
-    public void Initialize()
+    public HUDManager HUDManager
     {
-        Initialize();
-    }
-
-    public void Update()
-    {
-        if (status == GameStatus.inactive)
-        {
-
-        }
-
-        if (status == GameStatus.playing) { 
-            unitManager.UpdateUnits();
-        }
-    }
-
-    public bool BuyUnit(Building b)
-    {
-        if(data.CurrentAvailableResources > b.data.ResourceCost)
-        {
-            data.CurrentAvailableResources -= b.data.ResourceCost;
-            SpawnUnit(b.data.UnitTypePrefab);
-            return true;
-        }
-        return false;
-    }
-
-    public void SpawnUnit(GameObject u)
-    {
-
+        get { return hudManager; }
     }
 
     public GameObject Storage

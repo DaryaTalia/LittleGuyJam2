@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 961d51490b0661e449da3747116fb110, type: 3}
-  m_Name: Background1
+  m_Name: AudioData1
   m_EditorClassIdentifier: 
-  clip: {fileID: 0}
-  volume: 0
+  mainVolume: 50
+  musicVolume: 100
+  sfxVolume: 100

@@ -5,7 +5,7 @@ using static UnityEditor.FilePathAttribute;
 
 public class MenuManager : MonoBehaviour
 {
-    public enum MenuStatus { Game, MainMenu, Pause, Settings, Credits };
+    public enum MenuStatus { Game, MainMenu, GameModeSelection, Pause, Settings, Credits };
     public MenuStatus status;
 
     public static MenuManager Instance;
@@ -47,6 +47,7 @@ public class MenuManager : MonoBehaviour
     {
         status = MenuStatus.Game;
         _mainMenuPanel.SetActive(false);
+        OpenGameModePanel();
 
         // Load data or start new data file
 
@@ -59,9 +60,22 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
-
-
     #endregion
+
+    [Header("Game Mode Selection")]
+    [SerializeField]
+    GameObject _gameModePanel;
+
+    public void OpenGameModePanel()
+    {
+        _gameModePanel.SetActive(true);
+    }
+
+    public void CloseGameModePanel()
+    {
+        _gameModePanel.SetActive(false);
+    }
+
 
     #region Settings
 
@@ -69,13 +83,6 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField]
     GameObject _settingsPanel;
-
-    [SerializeField]
-    Slider _allVolumeSlider;
-    [SerializeField]
-    Slider _musicVolumeSlider;
-    [SerializeField]
-    Slider _sfxVolumeSlider;
 
     public void OpenSettings()
     {
@@ -100,9 +107,6 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    public void UpdateAllVolume() { }
-    public void UpdateMusicVolume() { }
-    public void UpdateSFXVolume() { }
 
     #endregion
 
