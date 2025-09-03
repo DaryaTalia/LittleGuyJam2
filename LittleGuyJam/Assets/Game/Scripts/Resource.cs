@@ -24,10 +24,8 @@ public class Resource : MonoBehaviour
         {
             foreach(ResourceUnit r in GameManager.instance.UnitManager.selectedUnits)
             {
-                r.ResourceTarget = this;
-                r.Target = transform.position;
-                r.TargetAssigned = true;
-                r.PlayerDirected = true;    
+                r.NextTarget = transform.position;
+                r.NewMoveAction(true);
             }
         }
     }

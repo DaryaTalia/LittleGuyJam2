@@ -6,12 +6,10 @@ public class MapCollider : MonoBehaviour
     {
         if (GameManager.instance.UnitManager.selectedUnits.Count > 0)
         {
-            foreach (Unit r in GameManager.instance.UnitManager.selectedUnits)
+            foreach (Unit u in GameManager.instance.UnitManager.selectedUnits)
             {
-                r.Target = transform.position;
-                r.TargetAssigned = true;
-                r.PlayerDirected = true;
-                r.CanMove = true;
+                u.NextTarget = transform.position;
+                u.NewMoveAction(true);
             }
         }
     }

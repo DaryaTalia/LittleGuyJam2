@@ -66,7 +66,6 @@ public class GameManager : MonoBehaviour
 
         if (status == GameStatus.playing)
         {
-            hudManager.hudPanel.SetActive(true);
             unitManager.UpdateUnits();
             hudManager.UpdateHUD();
         }
@@ -94,6 +93,7 @@ public class GameManager : MonoBehaviour
         menuManager.CloseGameModePanel();
         hudManager.ResetHUD();
         hudManager.StartHUD();
+        hudManager.hudPanel.SetActive(true);
         status = GameStatus.playing;
 
         StartCoroutine(TimerAscending());

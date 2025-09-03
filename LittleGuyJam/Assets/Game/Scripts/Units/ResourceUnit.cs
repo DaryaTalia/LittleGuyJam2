@@ -1,96 +1,45 @@
 using System.Collections;
 using UnityEngine;
+using static UnitManager;
 
 public class ResourceUnit : Unit
 {
     [SerializeField]
-    bool hasResources;
-    [SerializeField]
-    bool isGathering;
-    [SerializeField]
-    bool isStoring;
-    [SerializeField]
     int collectedResources;
-
-    [SerializeField]
-    Resource resourceTarget;
 
     public ResourceUnit(UnitAlignment _a) : base(_a)
     {
         Role = UnitRole.resource;
-        ResetResourcer();
     }
 
-    public void ResetResourcer()
+    public override bool AutonomyBid(string action)
     {
-        hasResources = false;
-        isStoring = false;
-        isGathering = false;
-        collectedResources = 0;
-        resourceTarget = null;
-        Target = GameManager.instance.Storage.transform.position;
-        TargetAssigned = true;
+        int bid = Random.Range(0, data.RandomAutonomyMax);
+
+        switch (action)
+        {
+            case "Gather":
+                {
+                    if(bid < data.RandomGatherAutonomy)
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+
+            case "Store":
+                {
+                    if(bid < data.RandomStoreAutonomy)
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+        }
+        return false;
     }
 
-    public void UpdateResourcer()
-    {
-        if (resourceTarget == null && !HasResources)
-        {
-            // Automated Find Resource, TODO: Add random chance for player interaction
-            FindResource();
-        }
-
-        if (HasResources && !isStoring)
-        {
-            Target = GameManager.instance.Storage.transform.position;
-            TargetAssigned = true;
-        }
-
-
-        if (CurrentState == UnitManager.UnitStates.Gather && !isGathering && !coroutineRunning)
-        {
-            //Debug.Log(name + " StartCoroutine 'Gather' ");
-            if (playerDirected)
-            {
-                StartCoroutine(Gather());
-            }
-            else if (canBid)
-            {
-                if (AutonomyBid())
-                {
-                    StartCoroutine(Gather());
-
-                }
-                else
-                {
-                    StartCoroutine(AutonomyBidRefresh());
-                }
-            }
-        }
-
-        if (CurrentState == UnitManager.UnitStates.Store && !isStoring && !coroutineRunning)
-        {
-            //Debug.Log(name + " StartCoroutine 'Store' ");
-            if (playerDirected)
-            {
-                StartCoroutine(Store());
-            }
-            else if (canBid)
-            {
-                if (AutonomyBid())
-                {
-                    StartCoroutine(Store());
-
-                }
-                else
-                {
-                    StartCoroutine(AutonomyBidRefresh());
-                }
-            }
-        }
-    }
-
-    public void FindResource()
+    public Resource FindResource()
     {
         //Debug.Log(name + " finding resource... ");
 
@@ -99,91 +48,41 @@ public class ResourceUnit : Unit
 
             int r = Random.Range(0, GameManager.instance.ResourceManager.activeResourcePool.Count);
 
-            resourceTarget = GameManager.instance.ResourceManager.activeResourcePool[r].GetComponent<Resource>();
-            Target = resourceTarget.transform.position;
-
-            TargetAssigned = true;
-
             //Debug.Log(name + " resource found ");
-            return;
+            return GameManager.instance.ResourceManager.activeResourcePool[r].GetComponent<Resource>();
         }
 
-        //Debug.Log(name + " resource not found ");
+        //Debug.Log(name + " resource not found ")
+        return null;
     }
 
-    public IEnumerator Gather()
+    public GatherAction NewGatherAction(bool fromPlayer)
     {
-        coroutineRunning = true;
+        GatherAction action = new GatherAction();
 
-        while (collectedResources < data.MaxResources)
-        {
-            CanMove = false;
-            isGathering = true;
+        action.AssignUnit(this, fromPlayer);
+        action.ResourceTarget = FindResource();
+        nextTarget = action.ResourceTarget.transform.position;
 
-            yield return new WaitForSeconds(data.CollectionSpeed);
-
-            collectedResources += resourceTarget.Value;
-
-            //Debug.Log(name + " Collected Resources = " + collectedResources);
-        }
-
-        collectedResources = data.MaxResources;
-
-        //Debug.Log(name + " Max Resources Collected: " + collectedResources);
-
-        resourceTarget = null;
-        Target = GameManager.instance.Storage.transform.position;
-        TargetAssigned = true;
-        CanMove = true;
-        isGathering = false;
-        hasResources = true;
-
-        coroutineRunning = false;
-        playerDirected = false;
+        return action;
     }
 
-    public IEnumerator Store()
+    public StoreAction NewStoreAction(bool fromPlayer)
     {
-        coroutineRunning = true;
+        StoreAction action = new StoreAction();
 
-        CanMove = false;
-        isStoring = true;
+        action.AssignUnit(this, fromPlayer);
+        nextTarget = GameManager.instance.Storage.transform.position;
 
-        yield return new WaitForSeconds(data.StorageSpeed);
-
-        GameManager.instance.data.TotalCollectedResources += collectedResources;
-        GameManager.instance.data.CurrentAvailableResources += collectedResources;
-
-        collectedResources = 0;
-        isStoring = false;
-        CanMove = true;
-        hasResources = false;
-        TargetAssigned = false;
-
-        coroutineRunning = false;
-        playerDirected = false;
+        return action;
     }
+
 
     // Accessors
 
-    public Resource ResourceTarget
+    public int CollectedResources
     {
-        get { return resourceTarget; }
-        set { resourceTarget = value; }
-    }
-
-    public bool IsGathering
-    {
-        get { return isGathering; }
-    }
-
-    public bool IsStoring
-    {
-        get { return isStoring; }
-    }
-
-    public bool HasResources
-    {
-        get { return hasResources; }
+        get { return collectedResources; }
+        set { collectedResources = value; }
     }
 }

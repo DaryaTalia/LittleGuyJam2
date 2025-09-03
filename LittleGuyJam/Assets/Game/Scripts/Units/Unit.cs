@@ -1,13 +1,10 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using static UnitManager;
 
 public class Unit : MonoBehaviour
 {
-    public enum UnitAlignment { player, enemy };
-
-    public enum UnitRole { resource, melee, ranged };
-
     [SerializeField]
     UnitAlignment alignment;
 
@@ -22,18 +19,15 @@ public class Unit : MonoBehaviour
     [SerializeField]
     float health;
 
-    [SerializeField]
-    bool canMove;
+    public List<IAction> actionQueue;
 
-    [SerializeField]
-    bool isMoving;
-
-    bool targetAssigned;
-    Vector3 target;
+    public bool near;
+    public float distanceCap;
 
     public bool coroutineRunning;
     public bool canBid;
-    public bool playerDirected;
+
+    protected Vector3 nextTarget;
 
     public Unit(UnitAlignment _a)
     {
@@ -49,149 +43,10 @@ public class Unit : MonoBehaviour
     {
         health = data.MaxHealth;
         CurrentState = UnitStates.Hold;
-        isMoving = false;
-        canMove = true;
-        targetAssigned = false;
         canBid = true;
-        playerDirected = false;
     }
 
-    public void UpdateUnit()
-    {
-        if (CurrentState == UnitManager.UnitStates.Hold && !coroutineRunning)
-        {
-            Debug.Log(name + " StartCoroutine 'Hold' ");
-
-            StartCoroutine(Hold());
-        }
-        
-        if (CurrentState == UnitManager.UnitStates.Move && targetAssigned && !isMoving && !coroutineRunning)
-        {
-            Debug.Log(name + " StartCoroutine 'Move' ");
-
-            if (playerDirected)
-            {
-                StartCoroutine(Move());
-            }
-            else if (canBid)
-            {
-                if (AutonomyBid())
-                {
-                    StartCoroutine(Move());
-
-                }
-                else
-                {
-                    StartCoroutine(AutonomyBidRefresh());
-                }
-            }
-        }
-    }
-
-    public bool AutonomyBid()
-    {
-        int bid = Random.Range(0, data.RandomAutonomyMax);
-
-        switch (currentState)
-        {
-            case UnitStates.Move:
-                {
-                    if(bid > data.RandomMoveAutonomy)
-                    {
-                        // Lost Bid, go back to Hold state
-                        Debug.Log(name + " Lost Bid, go back to 'Hold' ");
-                        currentState = UnitStates.Hold;
-                        Target = GameManager.instance.Storage.transform.position;
-                        return false;
-                    }
-                    // Won Bid, continue in current state
-                    Debug.Log(name + " Won Bid, continue current state ");
-                    return true;
-                }
-
-            case UnitStates.Gather:
-                {
-                    if(bid > data.RandomGatherAutonomy)
-                    {
-                        // Lost Bid, go back to Hold state
-                        Debug.Log(name + " Lost Bid, go back to 'Hold' ");
-                        currentState = UnitStates.Hold;
-                        Target = GameManager.instance.Storage.transform.position;
-                        return false;
-                    }
-                    // Won Bid, continue in current state
-                    Debug.Log(name + " Won Bid, continue current state ");
-                    return true;
-                }
-
-            case UnitStates.Store:
-                {
-                    if(bid > data.RandomStoreAutonomy)
-                    {
-                        // Lost Bid, go back to Hold state
-                        Debug.Log(name + " Lost Bid, go back to 'Hold' ");
-                        currentState = UnitStates.Hold;
-                        Target = GameManager.instance.Storage.transform.position;
-                        return false;
-                    }
-                    // Won Bid, continue in current state
-                    Debug.Log(name + " Won Bid, continue current state ");
-                    return true;
-                }
-
-            case UnitStates.Attack:
-                {
-                    if(bid > data.RandomAttackAutonomy)
-                    {
-                        // Lost Bid, go back to Hold state
-                        Debug.Log(name + " Lost Bid, go back to 'Hold' ");
-                        currentState = UnitStates.Hold;
-                        Target = GameManager.instance.Barracks.transform.position;
-                        return false;
-                    }
-                    // Won Bid, continue in current state
-                    Debug.Log(name + " Won Bid, continue current state ");
-                    return true;
-                }
-
-            case UnitStates.MoveAttack:
-                {
-                    if(bid > data.RandomMoveAttackAutonomy)
-                    {
-                        // Lost Bid, go back to Hold state
-                        Debug.Log(name + " Lost Bid, go back to 'Hold' ");
-                        currentState = UnitStates.Hold;
-                        Target = GameManager.instance.Barracks.transform.position;
-                        return false;
-                    }
-                    // Won Bid, continue in current state
-                    Debug.Log(name + " Won Bid, continue current state ");
-                    return true;
-                }
-            
-            case UnitStates.Protect:
-                {
-                    if(bid > data.RandomProtectAutonomy)
-                    {
-                        // Lost Bid, go back to Hold state
-                        Debug.Log(name + " Lost Bid, go back to 'Hold' ");
-                        currentState = UnitStates.Hold;
-                        Target = GameManager.instance.Barracks.transform.position;
-                        return false;
-                    }
-                    // Won Bid, continue in current state
-                    Debug.Log(name + " Won Bid, continue current state ");
-                    return true;
-                }
-
-            default:
-                {
-                    Debug.Log(name + " Lost Bid, go back to 'Hold' ");
-                    currentState = UnitStates.Hold;
-                    return false;
-                }
-        }
-    }
+    public virtual bool AutonomyBid(string action) { return false; }
 
     public IEnumerator AutonomyBidRefresh()
     {
@@ -206,61 +61,41 @@ public class Unit : MonoBehaviour
         Debug.Log(name + " can bid... ");
     }
 
-    public IEnumerator Hold()
+    public HoldAction NewHoldAction(bool fromPlayer)
     {
-        coroutineRunning = true;
-
-        if (targetAssigned)
-        {
-            //Debug.Log(name + " Target Assigned, can Move ");
-            canMove = true;
-        }
-
-        yield return 0;
-
-        if (!targetAssigned)
-        {
-            //Debug.Log(name + " Target not Assigned, can't Move ");
-            canMove = false;
-        }
-
-        coroutineRunning = false;
+        return new HoldAction();
     }
 
-    public IEnumerator Move()
+    public MoveAction NewMoveAction(bool fromPlayer)
     {
-        coroutineRunning = true;
+        MoveAction action = new MoveAction();
 
-        if (!canMove)
-        {
-            //Debug.Log(name + " can't Move, breaking ");
-            yield break;
-        }
+        action.AssignUnit(this, fromPlayer);
+        action.Target = nextTarget;
 
-        while (Vector3.Distance(gameObject.transform.position, target) > data.DistanceThreshold + data.MovementSpeed)
-        {
-            //Debug.Log(name + " moving... ");
-
-            isMoving = true;
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target, data.MovementSpeed);
-
-            yield return 0;
-
-            //Debug.Log(name + " moved... ");
-        }
-
-        //Debug.Log(name + " not moving... ");
-
-        isMoving = false;
-
-        coroutineRunning = false;
-        playerDirected = false;
+        return action;
     }
+
 
     private void OnMouseDown()
     {
-        GameManager.instance.UnitManager.selectedUnits.Clear();
-        GameManager.instance.UnitManager.selectedUnits.Add(this);
+        if(alignment == UnitAlignment.ally)
+        {
+            GameManager.instance.UnitManager.selectedUnits.Clear();
+            GameManager.instance.UnitManager.selectedUnits.Add(this);
+
+        } 
+        else
+        {
+            if (GameManager.instance.UnitManager.selectedUnits.Count > 0)
+            {
+                foreach (AttackUnit a in GameManager.instance.UnitManager.selectedUnits)
+                {
+                    a.NextTarget = transform.position;
+                    a.NewAttackAction(true);
+                }
+            }
+        }
     }
 
     private void OnMouseOver()
@@ -284,18 +119,6 @@ public class Unit : MonoBehaviour
     {
         get { return currentState; }
         set { currentState = value; }
-    }
-
-    public bool TargetAssigned
-    {
-        get { return targetAssigned; }
-        set { targetAssigned = value; }
-    }
-
-    public Vector3 Target
-    {
-        get { return target; }
-        set { target = value; }
     }
 
     public float Health {
@@ -335,28 +158,10 @@ public class Unit : MonoBehaviour
         }
     }
 
-    public float MovementSpeed {
-        get { return data.MovementSpeed; }
-        }
-
-    public bool CanMove {
-        get { return canMove; }
-        set { canMove = value; }
-        }
-
-    public bool IsMoving {
-        get { return isMoving; }
-        }
-
-    public float DistanceThreshold
+    public Vector3 NextTarget
     {
-        get { return data.DistanceThreshold; }
-    }
-
-    public bool PlayerDirected
-    {
-        get { return playerDirected;  }
-        set {  playerDirected = value; }
+        get { return nextTarget; }
+        set { nextTarget = value; }
     }
 
 }
