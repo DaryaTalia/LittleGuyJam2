@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
+[System.Serializable]
 public class GatherAction : IAction
 {
     ResourceUnit unit;
@@ -22,12 +23,6 @@ public class GatherAction : IAction
 
     public void Execute()
     {
-        if (!CheckCanExecute())
-        {
-            return;
-        }
-
-        // Maintain Position
         Gather();
     }
 
@@ -36,7 +31,7 @@ public class GatherAction : IAction
         // Timer
         if (timer < unit.data.CollectionSpeed)
         {
-            timer++;
+            timer += Time.deltaTime;
             return;
         }
         else
@@ -47,25 +42,52 @@ public class GatherAction : IAction
         // Gather
         if (unit.CollectedResources < unit.data.MaxResources)
         {
+            Debug.Log(unit.name + " Gather +" + target.Value);
             unit.CollectedResources += target.Value;
         }
         else
         {
             unit.CollectedResources = unit.data.MaxResources;
+            Debug.Log(unit.name + " Gathered " + unit.CollectedResources);
             isGathering = false;
+            unit.nearTarget = false;
+            target = null;
+            unit.actionQueue.Remove(this);
         }
     }
 
     public bool CheckCanExecute()
     {
-        if (!isGathering)
+        if (target == null && unit.CollectedResources < unit.data.MaxResources)
         {
+            target = unit.FindResource();
             return false;
         }
 
-        if (target == null)
+        if (!unit.nearTarget 
+            && unit.CollectedResources < unit.data.MaxResources 
+            && unit.actionQueue.Count < 3 
+            && unit.actionQueue[unit.actionQueue.Count - 1].GetType() != typeof(MoveAction))
         {
-            target = unit.FindResource();
+            isGathering = false;
+
+            MoveAction newMA = unit.NewMoveAction(false);
+            newMA.Target = target.transform.position;
+            unit.NextTarget = newMA.Target;
+            newMA.DistanceCap = unit.data.DistanceThreshold;
+
+            unit.actionQueue.Add(this);
+            unit.actionQueue.Add(newMA);
+            return false;
+        }
+
+        if (unit.nearTarget && unit.CollectedResources < unit.data.MaxResources)
+        {
+            isGathering = true;
+        }
+
+        if (!isGathering)
+        {
             return false;
         }
 

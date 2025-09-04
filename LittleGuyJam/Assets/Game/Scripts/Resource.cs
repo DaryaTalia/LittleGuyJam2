@@ -25,7 +25,7 @@ public class Resource : MonoBehaviour
             foreach(ResourceUnit r in GameManager.instance.UnitManager.selectedUnits)
             {
                 r.NextTarget = transform.position;
-                r.NewMoveAction(true);
+                r.actionQueue.Insert(0,r.NewMoveAction(true));
             }
         }
     }

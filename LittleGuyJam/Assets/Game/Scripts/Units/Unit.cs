@@ -19,10 +19,10 @@ public class Unit : MonoBehaviour
     [SerializeField]
     float health;
 
+    [SerializeField]
     public List<IAction> actionQueue;
 
-    public bool near;
-    public float distanceCap;
+    public bool nearTarget;
 
     public bool coroutineRunning;
     public bool canBid;
@@ -34,7 +34,7 @@ public class Unit : MonoBehaviour
         alignment = _a;
     }
 
-    private void Awake()
+    public void StartUnit()
     {
         Reset();
     }
@@ -44,6 +44,10 @@ public class Unit : MonoBehaviour
         health = data.MaxHealth;
         CurrentState = UnitStates.Hold;
         canBid = true;
+
+        actionQueue = new List<IAction>();
+        actionQueue.Clear();
+        actionQueue.Add(NewHoldAction(true));
     }
 
     public virtual bool AutonomyBid(string action) { return false; }
@@ -63,7 +67,12 @@ public class Unit : MonoBehaviour
 
     public HoldAction NewHoldAction(bool fromPlayer)
     {
-        return new HoldAction();
+        HoldAction action = new HoldAction();
+
+        action.AssignUnit(this, fromPlayer);
+        action.CanMove = true;
+
+        return action;
     }
 
     public MoveAction NewMoveAction(bool fromPlayer)
@@ -92,7 +101,7 @@ public class Unit : MonoBehaviour
                 foreach (AttackUnit a in GameManager.instance.UnitManager.selectedUnits)
                 {
                     a.NextTarget = transform.position;
-                    a.NewAttackAction(true);
+                    a.actionQueue.Insert(0, a.NewAttackAction(true));
                 }
             }
         }

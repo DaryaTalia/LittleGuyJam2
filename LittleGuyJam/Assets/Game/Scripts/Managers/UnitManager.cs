@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class UnitManager : MonoBehaviour
@@ -7,25 +8,84 @@ public class UnitManager : MonoBehaviour
     public enum UnitAlignment { ally, enemy };
     public enum UnitRole { resource, melee, ranged };
 
-    public List<GameObject> activeUnitPool;
-    public List<GameObject> inactiveUnitPool;
+    public GameObject activeUnitPool;
+    public GameObject inactiveUnitPool;
 
     public List<Unit> selectedUnits;
 
+    public void StartUnits()
+    {
+        CheckActiveUnitPool();
+
+        foreach (Unit unit in activeUnitPool.GetComponentsInChildren<Unit>())
+        {
+            unit.StartUnit();
+        }
+    }
+
     public void UpdateUnits()
     {
-        GameManager.instance.data.TotalUnits = activeUnitPool.Count;
+        GameManager.instance.data.TotalUnits = activeUnitPool.GetComponentsInChildren<Unit>().Count();
 
-        // Check each Unit
-        foreach (GameObject unit in activeUnitPool)
+        CheckActiveUnitPool();
+        CheckInactiveUnitPool();
+        RunUnitQueue();
+    }
+
+    void RunUnitQueue() {
+        foreach (Unit unit in activeUnitPool.GetComponentsInChildren<Unit>())
         {
-            IAction lastAction = unit.GetComponent<Unit>().actionQueue
-                [unit.GetComponent<Unit>().actionQueue.Count - 1];
-
-            // Check each Unit's ActionQueue
-            if (lastAction.CheckCanExecute())
+            if (unit.actionQueue.Count > 0)
             {
-                lastAction.Execute();
+                IAction lastAction = unit.actionQueue
+                                [unit.actionQueue.Count - 1];
+
+                // Check each Unit's ActionQueue
+                if (lastAction.CheckCanExecute())
+                {
+                    lastAction.Execute();
+                }
+                else
+                {
+                    unit.actionQueue.Remove(lastAction);
+                }
+            }
+            else
+            {
+                unit.actionQueue.Add(unit.NewHoldAction(true));
+            }
+        }
+    }
+
+    void CheckActiveUnitPool()
+    {
+        if(activeUnitPool.GetComponentsInChildren<Unit>().Count() < 1)
+        {
+            return;
+        }
+
+        foreach (Unit unit in activeUnitPool.GetComponentsInChildren<Unit>())
+        {
+            if (!unit.gameObject.activeInHierarchy)
+            {
+                unit.gameObject.transform.SetParent(inactiveUnitPool.transform);              
+            }
+        }
+
+    }
+
+    void CheckInactiveUnitPool()
+    {
+        if (inactiveUnitPool.GetComponentsInChildren<Unit>().Count() < 1)
+        {
+            return;
+        }
+
+        foreach (Unit unit in activeUnitPool.GetComponentsInChildren<Unit>())
+        {
+            if (unit.gameObject.activeInHierarchy)
+            {
+                unit.gameObject.transform.SetParent(activeUnitPool.transform);
             }
         }
     }

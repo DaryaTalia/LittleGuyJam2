@@ -2,6 +2,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[System.Serializable]
 public class MoveAction : IAction
 {
     Unit unit;
@@ -10,6 +11,7 @@ public class MoveAction : IAction
 
     bool isMoving;
     Vector3 target;
+    float distanceCap;
 
     public void AssignUnit(Unit unit, bool player)
     {
@@ -20,32 +22,25 @@ public class MoveAction : IAction
 
     public void Execute()
     {
-        if (!CheckCanExecute())
-        {
-            return;
-        }
-
         Move();
     }
 
     void Move()
     {
         // Translate Position
-        if (Vector3.Distance(unit.gameObject.transform.position, target) > unit.distanceCap + unit.data.MovementSpeed)
+        if (Vector3.Distance(unit.gameObject.transform.position, target) > distanceCap + unit.data.MovementSpeed)
         {
-            //Debug.Log(name + " moving... ");
+            Debug.Log(unit.name + " Moving");
 
             isMoving = true;
-            unit.gameObject.transform.position = Vector3.MoveTowards(unit.gameObject.transform.position, target, unit.data.MovementSpeed);
-
-            //Debug.Log(name + " moved... ");
+            unit.gameObject.transform.position = Vector3.MoveTowards(unit.gameObject.transform.position, target, unit.data.MovementSpeed * Time.deltaTime);
         } 
         else
         {
-            //Debug.Log(name + " not moving... ");
-
             isMoving = false;
-            unit.near = true;
+            unit.nearTarget = true;
+            Debug.Log(unit.name + " Near Target");
+            unit.actionQueue.Remove(this);
         }
     }
 
@@ -61,7 +56,7 @@ public class MoveAction : IAction
             return false;
         }
 
-        if (unit.near)
+        if (unit.nearTarget)
         {
             return false;
         }
@@ -84,6 +79,12 @@ public class MoveAction : IAction
     {
         get { return target; }
         set { target = value; }
+    }
+
+    public float DistanceCap
+    {
+        get { return distanceCap; }
+        set { distanceCap = value; }
     }
 
 }

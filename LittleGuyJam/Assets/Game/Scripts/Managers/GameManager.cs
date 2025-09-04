@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
         audioManager.StartAudio();
         menuManager.StartMenu();
         status = GameStatus.inactive;
+        UnitManager.StartUnits();
     }
 
     public void Update()

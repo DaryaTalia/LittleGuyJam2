@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ResourceUnitData
   m_EditorClassIdentifier: 
   MaxHealth: 100
-  MovementSpeed: 0.6
+  MovementSpeed: 50
   DistanceThreshold: 20
   MaxResources: 16
   CollectionSpeed: 2

@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
+[System.Serializable]
 public class AttackAction : IAction
 {
     AttackUnit unit;
@@ -20,11 +21,6 @@ public class AttackAction : IAction
 
     public void Execute()
     {
-        if (!CheckCanExecute())
-        {
-            return;
-        }
-
         Attack();
     }
 
@@ -33,7 +29,7 @@ public class AttackAction : IAction
         // Timer
         if (timer < unit.data.AttackSpeed)
         {
-            timer++;
+            timer += Time.deltaTime;
             return;
         }
         else
@@ -48,19 +44,17 @@ public class AttackAction : IAction
             {
                 unit.AttackTarget = null;
                 isAttacking = false;
+                unit.nearTarget = false;
+                unit.actionQueue.Remove(this);
             }
         }
     }
 
     public bool CheckCanExecute()
     {
-        if (!isAttacking)
-        {
-            return false;
-        }
-
         if(unit.AttackTarget == null)
         {
+            unit.FindEnemy();
             return false;
         }
 
@@ -69,7 +63,25 @@ public class AttackAction : IAction
             return false;
         }
 
-        if (!unit.near)
+        if (!unit.nearTarget 
+            && unit.actionQueue.Count < 3 
+            && unit.actionQueue[unit.actionQueue.Count - 1].GetType() != typeof(MoveAction))
+        {
+            MoveAction newMA = unit.NewMoveAction(false);
+            newMA.Target = GameManager.instance.Storage.transform.position;
+            newMA.DistanceCap = unit.data.AttackRange;
+
+            unit.actionQueue.Add(this);
+            unit.actionQueue.Add(newMA);
+            return false;
+        }
+
+        if (unit.nearTarget && unit.AttackTarget != null)
+        {
+            isAttacking = true;
+        }
+
+        if(!isAttacking)
         {
             return false;
         }

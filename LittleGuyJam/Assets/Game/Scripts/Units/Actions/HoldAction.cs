@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[System.Serializable]
 public class HoldAction : IAction
 {
     Unit unit;
@@ -16,16 +17,13 @@ public class HoldAction : IAction
 
     public void Execute()
     {
-        if (!CheckCanExecute())
-        {
-            return;
-        }
         Hold();
     }
 
     void Hold()
     {
         // Maintain Position
+        Debug.Log(unit.name + " Holding");
         unit.gameObject.transform.position = unit.gameObject.transform.position;
     }
 
@@ -34,14 +32,17 @@ public class HoldAction : IAction
         if (unit.GetType() == typeof(ResourceUnit))
         {
             ResourceUnit r = (ResourceUnit)unit;
+
             if (r.CollectedResources == r.data.MaxResources && r.AutonomyBid("Store"))
             {
+                r.actionQueue.Add(this);
                 r.actionQueue.Add(r.NewStoreAction(false));
                 return false;
             }
             else
             if (r.CollectedResources < r.data.MaxResources && r.AutonomyBid("Gather"))
             {
+                r.actionQueue.Add(this);
                 r.actionQueue.Add(r.NewGatherAction(false));
                 return false;
             }
@@ -52,13 +53,14 @@ public class HoldAction : IAction
             AttackUnit a = (AttackUnit)unit;
             if (a.AttackTarget != null && a.AutonomyBid("Attack"))
             {
+                a.actionQueue.Add(this);
                 a.actionQueue.Add(a.NewAttackAction(false));
                 return false;
             } 
             else 
             if(a.AttackTarget == null)
             {
-                a.FindTarget();
+                a.FindEnemy();
             }
         }
 
