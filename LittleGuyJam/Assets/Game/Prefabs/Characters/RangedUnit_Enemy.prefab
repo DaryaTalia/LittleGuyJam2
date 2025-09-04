@@ -15,7 +15,7 @@ GameObject:
   m_Layer: 0
   m_Name: RangedUnit_Enemy
   m_TagString: Unit
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -139,12 +139,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignment: 1
+  role: 0
+  currentState: 0
   data: {fileID: 11400000, guid: ceba0520318ad7f4787f85d98c7715cd, type: 2}
   health: 0
-  canMove: 0
-  isMoving: 0
+  nearTarget: 0
+  coroutineRunning: 0
+  canBid: 0
   protectionRange: {fileID: 5022679078550729646}
-  isAttacking: 0
 --- !u!1 &7899848911183399504
 GameObject:
   m_ObjectHideFlags: 0

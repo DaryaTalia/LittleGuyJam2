@@ -19,16 +19,25 @@ public class AttackUnit : Unit
 
     public override bool AutonomyBid(string action)
     {
-        int bid = Random.Range(0, data.RandomAutonomyMax);
-
-        switch (action)
+        if (canBid)
         {
-            case "Action":
-                {
+            int bid = Random.Range(0, data.RandomAutonomyMax);
 
-                    return true;
-                }
+            switch (action)
+            {
+                case "Action":
+                    {
+                        if (bid < data.RandomAttackAutonomy)
+                        {
+                            return true;
+                        }
+                        StartCoroutine(AutonomyBidRefresh());
+                        return false;
+                    }
+            }
+
         }
+
         return false;
     }
 
@@ -37,7 +46,9 @@ public class AttackUnit : Unit
         AttackAction action = new AttackAction();
 
         action.AssignUnit(this, fromPlayer);
-        nextTarget = AttackTarget.transform.position;
+        FindEnemy();
+        nextTarget = attackTarget.transform.position;
+        nearTarget = false;
 
         return action;
     }
@@ -64,6 +75,7 @@ public class AttackUnit : Unit
         if (enemies.Count > 0)
         {
             attackTarget = enemies[randomTarget].GetComponent<Unit>();
+            nextTarget = attackTarget.transform.position;
         }
     }
 
@@ -87,8 +99,9 @@ public class AttackUnit : Unit
         int randomTarget = Random.Range(0, allies.Count);
 
         if (allies.Count > 0)
-        {
-            attackTarget = allies[randomTarget].GetComponent<Unit>();
+        {            
+            nextTarget = allies[randomTarget].
+                GetComponent<Unit>().transform.position;
         }
     }
 

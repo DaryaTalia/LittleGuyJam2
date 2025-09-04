@@ -1,3 +1,4 @@
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
@@ -42,10 +43,15 @@ public class AttackAction : IAction
         {
             if (unit.AttackTarget.TakeDamage(unit.data.AttackDamage) <= 0)
             {
+                Debug.Log(unit.name + " Killed " + unit.AttackTarget.name);
                 unit.AttackTarget = null;
                 isAttacking = false;
                 unit.nearTarget = false;
                 unit.actionQueue.Remove(this);
+            } 
+            else
+            {
+                Debug.Log(unit.name + " Attacked " + unit.AttackTarget.name);
             }
         }
     }
@@ -65,10 +71,10 @@ public class AttackAction : IAction
 
         if (!unit.nearTarget 
             && unit.actionQueue.Count < 3 
-            && unit.actionQueue[unit.actionQueue.Count - 1].GetType() != typeof(MoveAction))
+            && unit.actionQueue.Last().GetType() != typeof(MoveAction))
         {
             MoveAction newMA = unit.NewMoveAction(false);
-            newMA.Target = GameManager.instance.Storage.transform.position;
+            newMA.Target = unit.NextTarget;
             newMA.DistanceCap = unit.data.AttackRange;
 
             unit.actionQueue.Add(this);

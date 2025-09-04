@@ -14,45 +14,46 @@ public class ResourceUnit : Unit
 
     public override bool AutonomyBid(string action)
     {
-        int bid = Random.Range(0, data.RandomAutonomyMax);
-
-        switch (action)
+        if (canBid)
         {
-            case "Gather":
-                {
-                    if(bid < data.RandomGatherAutonomy)
-                    {
-                        return true;
-                    }
-                    return false;
-                }
+            int bid = Random.Range(0, data.RandomAutonomyMax);
 
-            case "Store":
-                {
-                    if(bid < data.RandomStoreAutonomy)
+            switch (action)
+            {
+                case "Gather":
                     {
-                        return true;
+                        if (bid < data.RandomGatherAutonomy)
+                        {
+                            return true;
+                        }
+                        StartCoroutine(AutonomyBidRefresh());
+                        return false;
                     }
-                    return false;
-                }
+
+                case "Store":
+                    {
+                        if (bid < data.RandomStoreAutonomy)
+                        {
+                            return true;
+                        }
+                        StartCoroutine(AutonomyBidRefresh());
+                        return false;
+                    }
+            }
         }
+        
         return false;
     }
 
     public Resource FindResource()
     {
-        //Debug.Log(name + " finding resource... ");
-
         if (GameManager.instance.ResourceManager.activeResourcePool.Count > 0)
         {
-
             int r = Random.Range(0, GameManager.instance.ResourceManager.activeResourcePool.Count);
 
-            //Debug.Log(name + " resource found ");
             return GameManager.instance.ResourceManager.activeResourcePool[r].GetComponent<Resource>();
         }
 
-        //Debug.Log(name + " resource not found ")
         return null;
     }
 

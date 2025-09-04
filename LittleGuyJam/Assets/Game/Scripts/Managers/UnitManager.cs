@@ -25,7 +25,11 @@ public class UnitManager : MonoBehaviour
 
     public void UpdateUnits()
     {
-        GameManager.instance.data.TotalUnits = activeUnitPool.GetComponentsInChildren<Unit>().Count();
+        GameManager.instance.data.TotalUnits = activeUnitPool.
+            GetComponentsInChildren<Unit>().
+            Where(u => u.Alignment == UnitAlignment.ally).
+            ToList().
+            Count();
 
         CheckActiveUnitPool();
         CheckInactiveUnitPool();
@@ -37,8 +41,7 @@ public class UnitManager : MonoBehaviour
         {
             if (unit.actionQueue.Count > 0)
             {
-                IAction lastAction = unit.actionQueue
-                                [unit.actionQueue.Count - 1];
+                IAction lastAction = unit.actionQueue.Last();
 
                 // Check each Unit's ActionQueue
                 if (lastAction.CheckCanExecute())
@@ -59,16 +62,18 @@ public class UnitManager : MonoBehaviour
 
     void CheckActiveUnitPool()
     {
-        if(activeUnitPool.GetComponentsInChildren<Unit>().Count() < 1)
+        if(activeUnitPool.transform.childCount < 1)
         {
             return;
         }
 
-        foreach (Unit unit in activeUnitPool.GetComponentsInChildren<Unit>())
+        for (int i = 0; i < activeUnitPool.transform.childCount; i++)
         {
-            if (!unit.gameObject.activeInHierarchy)
+            if (!activeUnitPool.transform.GetChild(i).gameObject.activeInHierarchy)
             {
-                unit.gameObject.transform.SetParent(inactiveUnitPool.transform);              
+                activeUnitPool.transform.
+                    GetChild(i).gameObject.transform.
+                    SetParent(inactiveUnitPool.transform);
             }
         }
 
@@ -76,16 +81,18 @@ public class UnitManager : MonoBehaviour
 
     void CheckInactiveUnitPool()
     {
-        if (inactiveUnitPool.GetComponentsInChildren<Unit>().Count() < 1)
+        if (inactiveUnitPool.transform.childCount < 1)
         {
             return;
         }
 
-        foreach (Unit unit in activeUnitPool.GetComponentsInChildren<Unit>())
+        for (int i = 0; i < inactiveUnitPool.transform.childCount; i++)
         {
-            if (unit.gameObject.activeInHierarchy)
+            if (inactiveUnitPool.transform.GetChild(i).gameObject.activeInHierarchy)
             {
-                unit.gameObject.transform.SetParent(activeUnitPool.transform);
+                inactiveUnitPool.transform.
+                    GetChild(i).gameObject.transform.
+                    SetParent(activeUnitPool.transform);
             }
         }
     }

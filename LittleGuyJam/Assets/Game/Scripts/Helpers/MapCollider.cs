@@ -12,7 +12,7 @@ public class MapCollider : MonoBehaviour
             foreach (Unit u in GameManager.instance.UnitManager.selectedUnits)
             {
                 u.NextTarget = worldPosition;
-                u.actionQueue.Insert(0, u.NewMoveAction(true));
+                u.actionQueue.Add(u.NewMoveAction(true));
             }
         }
     }

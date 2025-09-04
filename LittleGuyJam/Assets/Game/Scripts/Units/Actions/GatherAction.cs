@@ -42,13 +42,13 @@ public class GatherAction : IAction
         // Gather
         if (unit.CollectedResources < unit.data.MaxResources)
         {
-            Debug.Log(unit.name + " Gather +" + target.Value);
+            //Debug.Log(unit.name + " Gather +" + target.Value);
             unit.CollectedResources += target.Value;
         }
         else
         {
             unit.CollectedResources = unit.data.MaxResources;
-            Debug.Log(unit.name + " Gathered " + unit.CollectedResources);
+            //Debug.Log(unit.name + " Gathered " + unit.CollectedResources);
             isGathering = false;
             unit.nearTarget = false;
             target = null;

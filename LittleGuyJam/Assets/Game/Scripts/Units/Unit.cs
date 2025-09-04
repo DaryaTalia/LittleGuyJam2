@@ -101,7 +101,7 @@ public class Unit : MonoBehaviour
                 foreach (AttackUnit a in GameManager.instance.UnitManager.selectedUnits)
                 {
                     a.NextTarget = transform.position;
-                    a.actionQueue.Insert(0, a.NewAttackAction(true));
+                    a.actionQueue.Add(a.NewMoveAction(true));
                 }
             }
         }
@@ -143,9 +143,12 @@ public class Unit : MonoBehaviour
     {
         health -= Mathf.Abs(value);
 
-        if(health <= 0)
+        Debug.Log(name + " Attacked ");
+
+        if (health <= 0)
         {
             health = 0;
+            Debug.Log(name + " Killed ");
         }
 
         // Evaluate in manager for death condition
@@ -160,6 +163,8 @@ public class Unit : MonoBehaviour
     public void RestoreHealth(float value)
     {
         health += Mathf.Abs(value);
+
+        Debug.Log(name + " Healed ");
 
         if (health >= data.MaxHealth)
         {

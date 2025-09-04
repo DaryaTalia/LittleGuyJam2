@@ -83,7 +83,7 @@ GameObject:
   m_Layer: 0
   m_Name: MeleeUnit_Player
   m_TagString: Unit
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -207,9 +207,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignment: 0
+  role: 0
+  currentState: 0
   data: {fileID: 11400000, guid: 3b23714cbe15a4041868bb5637836fb1, type: 2}
   health: 0
-  canMove: 0
-  isMoving: 0
+  nearTarget: 0
+  coroutineRunning: 0
+  canBid: 0
   protectionRange: {fileID: 7999163056097626917}
-  isAttacking: 0
