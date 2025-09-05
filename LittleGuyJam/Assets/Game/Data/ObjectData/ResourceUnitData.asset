@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95925a9dfd40cd948b878d800b0504c8, type: 3}
+  m_Name: ResourceUnitData
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  MovementSpeed: 1.5
+  DistanceThreshold: 0.5
+  MaxResources: 16
+  CollectionSpeed: 2
+  StorageSpeed: 5
+  AttackRange: 0
+  AttackDamage: 0
+  AttackSpeed: 0
+  RandomAutonomyMax: 250
+  BidRefreshRate: 5
+  RandomMoveAutonomy: 30
+  RandomGatherAutonomy: 30
+  RandomStoreAutonomy: 250
+  RandomAttackAutonomy: 0
+  RandomMoveAttackAutonomy: 0
+  RandomProtectAutonomy: 0
