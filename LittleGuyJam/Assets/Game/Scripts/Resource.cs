@@ -1,3 +1,5 @@
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -25,8 +27,14 @@ public class Resource : MonoBehaviour
             foreach(ResourceUnit r in GameManager.instance.UnitManager.selectedUnits)
             {
                 r.NextTarget = transform.position;
+                r.actionQueue.Add(r.NewGatherAction(true));
+                r.actionQueue.Last<IAction>().ConvertTo<GatherAction>().ResourceTarget = this;
                 r.actionQueue.Add(r.NewMoveAction(true));
+                r.actionQueue.Last<IAction>().ConvertTo<MoveAction>().Target = r.NextTarget;
+                r.actionQueue.Last<IAction>().ConvertTo<MoveAction>().DistanceCap = r.data.DistanceThreshold;
             }
+
+            GameManager.instance.UnitManager.selectedUnits.Clear();
         }
     }
 

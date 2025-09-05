@@ -77,7 +77,6 @@ public class AttackAction : IAction
             newMA.Target = unit.NextTarget;
             newMA.DistanceCap = unit.data.AttackRange;
 
-            unit.actionQueue.Add(this);
             unit.actionQueue.Add(newMA);
             return false;
         }

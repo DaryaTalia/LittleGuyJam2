@@ -6,8 +6,10 @@ using UnityEngine.Rendering;
 public class UnitData : ScriptableObject
 {
     public float MaxHealth = 100;
-    public float MovementSpeed = 10;
-    public float DistanceThreshold = 1;
+    [Range(0, 5)]
+    public float MovementSpeed = 1.5f;
+    [Range(0,1)]
+    public float DistanceThreshold =.5f;
     public int MaxResources = 16;
     public float CollectionSpeed = 10;
     public float StorageSpeed = 5;
@@ -22,10 +24,16 @@ public class UnitData : ScriptableObject
 
     [Space]
 
-    public int RandomMoveAutonomy = 75; 
-    public int RandomGatherAutonomy = 75; 
-    public int RandomStoreAutonomy = 90; 
-    public int RandomAttackAutonomy = 75; 
-    public int RandomMoveAttackAutonomy = 90; 
-    public int RandomProtectAutonomy = 50; 
+    [Range(0, 250)]
+    public int RandomMoveAutonomy = 50;
+    [Range(0, 250)]
+    public int RandomGatherAutonomy = 25;
+    [Range(0, 250)]
+    public int RandomStoreAutonomy = 250;
+    [Range(0, 250)]
+    public int RandomAttackAutonomy = 75;
+    [Range(0, 250)]
+    public int RandomMoveAttackAutonomy = 90;
+    [Range(0, 250)]
+    public int RandomProtectAutonomy = 50;
 }

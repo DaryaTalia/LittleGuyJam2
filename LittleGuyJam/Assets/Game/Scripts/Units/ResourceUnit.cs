@@ -62,8 +62,12 @@ public class ResourceUnit : Unit
         GatherAction action = new GatherAction();
 
         action.AssignUnit(this, fromPlayer);
-        action.ResourceTarget = FindResource();
-        nextTarget = action.ResourceTarget.transform.position;
+
+        if (!fromPlayer)
+        {
+            action.ResourceTarget = FindResource();
+            nextTarget = action.ResourceTarget.transform.position;
+        }
 
         return action;
     }

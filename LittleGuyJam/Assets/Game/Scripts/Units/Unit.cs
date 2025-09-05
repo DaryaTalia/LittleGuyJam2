@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnitManager;
 
@@ -32,6 +34,7 @@ public class Unit : MonoBehaviour
     public Unit(UnitAlignment _a)
     {
         alignment = _a;
+        Reset();
     }
 
     public void StartUnit()
@@ -101,8 +104,12 @@ public class Unit : MonoBehaviour
                 foreach (AttackUnit a in GameManager.instance.UnitManager.selectedUnits)
                 {
                     a.NextTarget = transform.position;
+                    a.actionQueue.Add(a.NewAttackAction(true));
+                    a.AttackTarget = this;
                     a.actionQueue.Add(a.NewMoveAction(true));
+                    a.actionQueue.Last<IAction>().ConvertTo<MoveAction>().DistanceCap = a.data.AttackRange;
                 }
+                GameManager.instance.UnitManager.selectedUnits.Clear();
             }
         }
     }

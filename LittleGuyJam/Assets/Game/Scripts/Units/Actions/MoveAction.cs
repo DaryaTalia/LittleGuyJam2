@@ -18,6 +18,7 @@ public class MoveAction : IAction
         this.unit = unit;
         fromPlayer = player;
         isMoving = true;
+        unit.nearTarget = false;
     }
 
     public void Execute()
@@ -28,7 +29,7 @@ public class MoveAction : IAction
     void Move()
     {
         // Translate Position
-        if (Vector3.Distance(unit.gameObject.transform.position, target) > distanceCap + unit.data.MovementSpeed)
+        if (Vector3.Distance(unit.gameObject.transform.position, target) > distanceCap)
         {
             Debug.Log(unit.name + " Moving");
 
@@ -51,7 +52,7 @@ public class MoveAction : IAction
             return false;
         }
 
-        if (target == null)
+        if (target != unit.NextTarget)
         {
             return false;
         }

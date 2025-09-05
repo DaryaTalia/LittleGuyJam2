@@ -62,7 +62,6 @@ public class StoreAction : IAction
             unit.NextTarget = newMA.Target;
             newMA.DistanceCap = unit.data.DistanceThreshold;
 
-            unit.actionQueue.Add(this);
             unit.actionQueue.Add(newMA);
             return false;
         }

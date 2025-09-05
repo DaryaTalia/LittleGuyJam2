@@ -13,8 +13,14 @@ public class UnitManager : MonoBehaviour
 
     public List<Unit> selectedUnits;
 
+    public GameObject enemyMeleePrefab;
+    public GameObject enemyRangedPrefab;
+    public Transform enemySpawn;
+
     public void StartUnits()
     {
+        selectedUnits = new List<Unit>();
+
         CheckActiveUnitPool();
 
         foreach (Unit unit in activeUnitPool.GetComponentsInChildren<Unit>())
@@ -39,7 +45,7 @@ public class UnitManager : MonoBehaviour
     void RunUnitQueue() {
         foreach (Unit unit in activeUnitPool.GetComponentsInChildren<Unit>())
         {
-            if (unit.actionQueue.Count > 0)
+            if (unit.actionQueue?.Count > 0)
             {
                 IAction lastAction = unit.actionQueue.Last();
 
@@ -48,15 +54,48 @@ public class UnitManager : MonoBehaviour
                 {
                     lastAction.Execute();
                 }
-                else
-                {
-                    unit.actionQueue.Remove(lastAction);
-                }
             }
             else
             {
-                unit.actionQueue.Add(unit.NewHoldAction(true));
+                unit.actionQueue = new List<IAction>
+                {
+                    unit.NewHoldAction(true)
+                };
             }
+        }
+    }
+
+    public void DeactivatePool()
+    {
+        if (activeUnitPool.transform.childCount < 1)
+        {
+            return;
+        }
+
+        for (int i = 0; i < activeUnitPool.transform.childCount; i++)
+        {
+            activeUnitPool.transform.
+                    GetChild(0).gameObject.SetActive(false);
+            activeUnitPool.transform.
+                    GetChild(0).gameObject.transform.
+                    SetParent(inactiveUnitPool.transform);
+        }
+    }
+
+    public void ActivatePool()
+    {
+        if (inactiveUnitPool.transform.childCount < 1)
+        {
+            return;
+        }
+
+        for (int i = 0; i < inactiveUnitPool.transform.childCount; i++)
+        {
+            inactiveUnitPool.transform.
+                    GetChild(0).gameObject.SetActive(true);
+            inactiveUnitPool.transform.
+                    GetChild(0).gameObject.transform.
+                    SetParent(activeUnitPool.transform);
         }
     }
 

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MeleeUnitData
   m_EditorClassIdentifier: 
   MaxHealth: 100
-  MovementSpeed: 10
-  DistanceThreshold: 2
+  MovementSpeed: 2
+  DistanceThreshold: 1
   MaxResources: 0
   CollectionSpeed: 0
   StorageSpeed: 5
@@ -24,8 +24,8 @@ MonoBehaviour:
   RandomAutonomyMax: 250
   BidRefreshRate: 5
   RandomMoveAutonomy: 75
-  RandomGatherAutonomy: -1
-  RandomStoreAutonomy: -1
+  RandomGatherAutonomy: 0
+  RandomStoreAutonomy: 0
   RandomAttackAutonomy: 75
   RandomMoveAttackAutonomy: 90
   RandomProtectAutonomy: 50

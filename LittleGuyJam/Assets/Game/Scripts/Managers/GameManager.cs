@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using System.Resources;
 using UnityEngine;
 using UnityEngine.Events;
@@ -18,10 +19,8 @@ public class GameManager : MonoBehaviour
     MenuManager menuManager;
     AudioManager audioManager;
 
-    public enum GameStatus { inactive, playing, paused };
     public enum GameMode { timed, elimination, survival };
 
-    public GameStatus status;
     public GameMode mode;
 
     [SerializeField]
@@ -32,6 +31,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     GameObject rndBuilding;
+
+    [SerializeField]
+    GameObject map;
 
     private void Awake()
     {
@@ -54,37 +56,50 @@ public class GameManager : MonoBehaviour
 
         audioManager.StartAudio();
         menuManager.StartMenu();
-        status = GameStatus.inactive;
+        menuManager.status = MenuManager.MenuStatus.MainMenu;
         UnitManager.StartUnits();
+        unitManager.DeactivatePool();
+        map.SetActive(false);
     }
 
     public void Update()
     {
-        if (status == GameStatus.inactive || status == GameStatus.paused)
+        if (menuManager.status != MenuManager.MenuStatus.Game)
         {
             hudManager.hudPanel.SetActive(false);
-        }
-
-        if (status == GameStatus.playing)
+            Map.SetActive(false);
+        } 
+        else
         {
             unitManager.UpdateUnits();
             hudManager.UpdateHUD();
+            menuManager.UpdateMenu();
+
+            if (mode == GameMode.timed)
+            {
+                CheckTimedProgression();
+            } 
+            else if (mode == GameMode.elimination)
+            {
+                CheckEliminationProgression();
+            }
+            else if (mode == GameMode.survival)
+            {
+                CheckSurvivalProgression();
+            }
         }
     }
 
     public IEnumerator TimerAscending()
     {
-        while (status == GameStatus.playing || status == GameStatus.paused)
+        if (menuManager.status == MenuManager.MenuStatus.Game)
         {
-            if (status == GameStatus.playing)
-            {
-                yield return new WaitForSeconds(1);
-                data.TotalGameTime++;
-            }
-            else
-            {
-                yield return new WaitForSeconds(1);
-            }
+            yield return new WaitForSeconds(1);
+            data.TotalGameTime++;
+        }
+        else
+        {
+            yield return new WaitForSeconds(1);
         }
     }
 
@@ -95,7 +110,10 @@ public class GameManager : MonoBehaviour
         hudManager.ResetHUD();
         hudManager.StartHUD();
         hudManager.hudPanel.SetActive(true);
-        status = GameStatus.playing;
+        map.SetActive(true);
+        menuManager.status = MenuManager.MenuStatus.Game;
+        SpawnUnit(Storage.GetComponent<Building>().data.UnitTypePrefab, Storage.transform.position);
+        unitManager.ActivatePool();
 
         StartCoroutine(TimerAscending());
     }
@@ -145,15 +163,24 @@ public class GameManager : MonoBehaviour
         if (data.CurrentAvailableResources > b.data.ResourceCost)
         {
             data.CurrentAvailableResources -= b.data.ResourceCost;
-            SpawnUnit(b.data.UnitTypePrefab);
+            SpawnUnit(b.data.UnitTypePrefab, b.transform.position);
             return true;
         }
         return false;
     }
 
-    public void SpawnUnit(GameObject u)
+    public void SpawnUnit(GameObject u, Vector3 position)
     {
+        GameObject newUnit = Instantiate(u, unitManager.activeUnitPool.transform);
 
+        int yOffset, xOffset;
+
+        yOffset = Random.Range(-2,2);
+        xOffset = Random.Range(-2,2);
+
+        newUnit.transform.position = new Vector3(
+            position.x + xOffset,
+            position.y + yOffset, -11);
     }
 
     public void ResetGameData()
@@ -165,6 +192,54 @@ public class GameManager : MonoBehaviour
         data.TotalGameTime = 0;
         data.TotalEnemyUnitsKilled = 0;
         data.WavesPassed = 0;
+    }
+
+    public void CheckTimedProgression()
+    {
+        // Activate Buildings
+        if(data.TotalCollectedResources >= 64
+            && !barracksBuilding.activeInHierarchy)
+        {
+            barracksBuilding.SetActive(true);
+        }
+        else if (data.TotalCollectedResources >= 250
+            && !rndBuilding.activeInHierarchy)
+        {
+            rndBuilding.SetActive(true);
+        }
+
+        // Spawn Enemies
+        if (unitManager.activeUnitPool.
+            GetComponentsInChildren<AttackUnit>().
+            Where(u => u.Alignment == UnitManager.UnitAlignment.ally).
+            Count() > 1)
+        {
+            int chance = Random.Range(0, 200);
+
+            if (chance < 20)
+            {
+                if (chance % 2 == 0)
+                {
+                    SpawnUnit(unitManager.enemyMeleePrefab, unitManager.enemySpawn.position);
+                } 
+                else
+                {
+                    SpawnUnit(unitManager.enemyRangedPrefab, unitManager.enemySpawn.position);
+                }
+
+            }
+        }
+
+    }
+
+    public void CheckEliminationProgression()
+    {
+
+    }
+
+    public void CheckSurvivalProgression()
+    {
+
     }
 
     // Accessors
@@ -197,5 +272,10 @@ public class GameManager : MonoBehaviour
     public GameObject RnD
     {
         get { return rndBuilding; }
+    }
+
+    public GameObject Map
+    {
+        get { return map; }
     }
 }

@@ -35,14 +35,12 @@ public class HoldAction : IAction
 
             if (r.CollectedResources == r.data.MaxResources && r.AutonomyBid("Store"))
             {
-                r.actionQueue.Add(this);
                 r.actionQueue.Add(r.NewStoreAction(false));
                 return false;
             }
             else
             if (r.CollectedResources < r.data.MaxResources && r.AutonomyBid("Gather"))
             {
-                r.actionQueue.Add(this);
                 r.actionQueue.Add(r.NewGatherAction(false));
                 return false;
             }
@@ -53,7 +51,6 @@ public class HoldAction : IAction
             AttackUnit a = (AttackUnit)unit;
             if (a.AttackTarget != null && a.AutonomyBid("Attack"))
             {
-                a.actionQueue.Add(this);
                 a.actionQueue.Add(a.NewAttackAction(false));
                 return false;
             } 
