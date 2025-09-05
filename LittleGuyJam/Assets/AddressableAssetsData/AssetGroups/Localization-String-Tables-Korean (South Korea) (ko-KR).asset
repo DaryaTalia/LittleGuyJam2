@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Korean (South Korea) (ko-KR)
   m_GUID: 3fa54878c32f48f4e8dfc6ed01d11138
-  m_SerializeEntries:
-  - m_GUID: 420f04f8ede344a428f657d603f6428f
-    m_Address: GameTable_ko-KR
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ko-KR
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 8bb43cc9aeef2fa40a6aca4fa2fa78c6, type: 2}
     - {fileID: 11400000, guid: 7b3c387497b5c77458f627043e7ccc9c, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 224
+    'bytes[1]': 224
+    'bytes[2]': 155
+    'bytes[3]': 41
+    'bytes[4]': 123
+    'bytes[5]': 76
+    'bytes[6]': 200
+    'bytes[7]': 240
+    'bytes[8]': 128
+    'bytes[9]': 146
+    'bytes[10]': 146
+    'bytes[11]': 10
+    'bytes[12]': 16
+    'bytes[13]': 233
+    'bytes[14]': 1
+    'bytes[15]': 108

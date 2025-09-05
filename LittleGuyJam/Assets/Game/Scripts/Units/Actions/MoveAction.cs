@@ -28,8 +28,8 @@ public class MoveAction : IAction
 
     void Move()
     {
-        // Translate Position
-        if (Vector3.Distance(unit.gameObject.transform.position, target) > distanceCap)
+            // Translate Position
+            if (Vector3.Distance(unit.gameObject.transform.position, target) > distanceCap)
         {
             Debug.Log(unit.name + " Moving");
 

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Afrikaans (South Africa) (af-ZA)
   m_GUID: 1115adb795fbc1a46b026a2ad0761876
-  m_SerializeEntries:
-  - m_GUID: 849c835806e9a334482656b99bd8ab5c
-    m_Address: GameTable_af-ZA
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-af-ZA
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: e723bc622b229644699653bb8ce2327a, type: 2}
     - {fileID: 11400000, guid: 64f241bdc2c787c41aeddf8e890a8a17, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 213
+    'bytes[1]': 247
+    'bytes[2]': 40
+    'bytes[3]': 79
+    'bytes[4]': 210
+    'bytes[5]': 127
+    'bytes[6]': 24
+    'bytes[7]': 148
+    'bytes[8]': 113
+    'bytes[9]': 98
+    'bytes[10]': 96
+    'bytes[11]': 202
+    'bytes[12]': 208
+    'bytes[13]': 213
+    'bytes[14]': 186
+    'bytes[15]': 250

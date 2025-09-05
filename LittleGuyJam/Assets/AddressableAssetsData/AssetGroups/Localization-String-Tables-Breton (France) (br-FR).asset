@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Breton (France) (br-FR)
   m_GUID: ed3819f834d232b409444f46cf975019
-  m_SerializeEntries:
-  - m_GUID: b14d2c63c14e32245ada90b39bff9e85
-    m_Address: GameTable_br-FR
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-br-FR
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 1511d89e6c30b0641ad4ae2c4ef0aede, type: 2}
     - {fileID: 11400000, guid: da85e4c513eab0641af5c6bd0fb97261, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 65
+    'bytes[1]': 146
+    'bytes[2]': 58
+    'bytes[3]': 255
+    'bytes[4]': 52
+    'bytes[5]': 133
+    'bytes[6]': 208
+    'bytes[7]': 135
+    'bytes[8]': 41
+    'bytes[9]': 140
+    'bytes[10]': 191
+    'bytes[11]': 219
+    'bytes[12]': 14
+    'bytes[13]': 165
+    'bytes[14]': 236
+    'bytes[15]': 24

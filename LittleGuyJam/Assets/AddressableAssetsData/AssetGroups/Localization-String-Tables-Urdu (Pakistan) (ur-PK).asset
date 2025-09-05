@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Urdu (Pakistan) (ur-PK)
   m_GUID: 9484dca3830f45c48a7138bd23996d3d
-  m_SerializeEntries:
-  - m_GUID: fd0c3c6d181369c4ea2738918250ce6a
-    m_Address: GameTable_ur-PK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ur-PK
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 80a17e091a2af4c4088b6a621c4bf2cb, type: 2}
     - {fileID: 11400000, guid: c4f91eba74bb5984895c3b6a48bfa8b7, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 37
+    'bytes[1]': 208
+    'bytes[2]': 132
+    'bytes[3]': 15
+    'bytes[4]': 137
+    'bytes[5]': 246
+    'bytes[6]': 77
+    'bytes[7]': 188
+    'bytes[8]': 125
+    'bytes[9]': 83
+    'bytes[10]': 5
+    'bytes[11]': 70
+    'bytes[12]': 101
+    'bytes[13]': 171
+    'bytes[14]': 120
+    'bytes[15]': 17

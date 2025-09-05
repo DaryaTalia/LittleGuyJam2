@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Faroese (Faroe Islands) (fo-FO)
   m_GUID: c9f86aa08723ed748be45ea794635b7a
-  m_SerializeEntries:
-  - m_GUID: 4cb73f8bca5a30845a35802b30868bd9
-    m_Address: GameTable_fo-FO
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-fo-FO
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 4675fdb4d321695409f0907fa4d458b9, type: 2}
     - {fileID: 11400000, guid: ee66b25a7e11a1a4e80bc57e9269812e, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 69
+    'bytes[1]': 225
+    'bytes[2]': 224
+    'bytes[3]': 215
+    'bytes[4]': 20
+    'bytes[5]': 218
+    'bytes[6]': 212
+    'bytes[7]': 82
+    'bytes[8]': 128
+    'bytes[9]': 78
+    'bytes[10]': 93
+    'bytes[11]': 162
+    'bytes[12]': 25
+    'bytes[13]': 64
+    'bytes[14]': 22
+    'bytes[15]': 91

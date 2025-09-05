@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Hausa (Latin, Nigeria) (ha-Latn-NG)
   m_GUID: 9b044cc9b49d45c4c95722595968dc74
-  m_SerializeEntries:
-  - m_GUID: 146cbc1fa0e26fe498899cfdca75e18f
-    m_Address: GameTable_ha-Latn-NG
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ha-Latn-NG
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: ba8ef2105b86fad4d87823d7a27f417e, type: 2}
     - {fileID: 11400000, guid: fc52347230b409e4fbd9f0a67e2224d0, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 157
+    'bytes[1]': 113
+    'bytes[2]': 100
+    'bytes[3]': 78
+    'bytes[4]': 235
+    'bytes[5]': 201
+    'bytes[6]': 251
+    'bytes[7]': 13
+    'bytes[8]': 36
+    'bytes[9]': 229
+    'bytes[10]': 88
+    'bytes[11]': 234
+    'bytes[12]': 151
+    'bytes[13]': 103
+    'bytes[14]': 168
+    'bytes[15]': 77

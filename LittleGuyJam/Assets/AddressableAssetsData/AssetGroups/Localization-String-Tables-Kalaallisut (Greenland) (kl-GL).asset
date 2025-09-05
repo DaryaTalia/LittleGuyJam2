@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Kalaallisut (Greenland) (kl-GL)
   m_GUID: f5d95f7c2f618aa45b770cf3215cdc67
-  m_SerializeEntries:
-  - m_GUID: dc427707f3c14db43aaea4126af7f75f
-    m_Address: GameTable_kl-GL
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kl-GL
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 77d9e2de7cd00ae438e294850ed5acb5, type: 2}
     - {fileID: 11400000, guid: ed94271b86690834194905e18a6f2028, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 157
+    'bytes[1]': 98
+    'bytes[2]': 60
+    'bytes[3]': 178
+    'bytes[4]': 82
+    'bytes[5]': 43
+    'bytes[6]': 236
+    'bytes[7]': 125
+    'bytes[8]': 120
+    'bytes[9]': 82
+    'bytes[10]': 9
+    'bytes[11]': 120
+    'bytes[12]': 107
+    'bytes[13]': 90
+    'bytes[14]': 150
+    'bytes[15]': 194

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Gujarati (India) (gu-IN)
   m_GUID: 22fc606166bd5b946b59562c6759259d
-  m_SerializeEntries:
-  - m_GUID: 0899a9b42b2100142938efaae9c91dae
-    m_Address: GameTable_gu-IN
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-gu-IN
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: ba8dfa4ec6daebd4fbe142cee60505bb, type: 2}
     - {fileID: 11400000, guid: 6685cdbf9a611cc4d98d0633c2ad639c, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 48
+    'bytes[1]': 226
+    'bytes[2]': 219
+    'bytes[3]': 175
+    'bytes[4]': 36
+    'bytes[5]': 234
+    'bytes[6]': 84
+    'bytes[7]': 116
+    'bytes[8]': 166
+    'bytes[9]': 178
+    'bytes[10]': 219
+    'bytes[11]': 242
+    'bytes[12]': 56
+    'bytes[13]': 121
+    'bytes[14]': 155
+    'bytes[15]': 245

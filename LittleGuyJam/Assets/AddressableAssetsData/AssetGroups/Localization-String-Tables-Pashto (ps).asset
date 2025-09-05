@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Pashto (ps)
   m_GUID: 43f83c93b7510dd429c8811a850fa931
-  m_SerializeEntries:
-  - m_GUID: 6dba25cb361a90a4b880a52d04c3560c
-    m_Address: GameTable_ps
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ps
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: bca6f05da2996b4409ee3ab44bfdad59, type: 2}
     - {fileID: 11400000, guid: 8c7de41738f0e0448bb09a063d2b1155, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 181
+    'bytes[1]': 231
+    'bytes[2]': 36
+    'bytes[3]': 2
+    'bytes[4]': 95
+    'bytes[5]': 126
+    'bytes[6]': 82
+    'bytes[7]': 218
+    'bytes[8]': 49
+    'bytes[9]': 116
+    'bytes[10]': 35
+    'bytes[11]': 158
+    'bytes[12]': 210
+    'bytes[13]': 10
+    'bytes[14]': 160
+    'bytes[15]': 231

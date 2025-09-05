@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Belarusian (Belarus) (be-BY)
   m_GUID: ff050d98305201344924b2a73550b2eb
-  m_SerializeEntries:
-  - m_GUID: 151813a7c4274ec46ba48cf430c580e9
-    m_Address: GameTable_be-BY
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-be-BY
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: d54a4139646a47c42a1b4ab3ad91f822, type: 2}
     - {fileID: 11400000, guid: 9fee36ce951b6044085d2a12f32032ed, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 191
+    'bytes[1]': 58
+    'bytes[2]': 121
+    'bytes[3]': 54
+    'bytes[4]': 136
+    'bytes[5]': 17
+    'bytes[6]': 11
+    'bytes[7]': 245
+    'bytes[8]': 108
+    'bytes[9]': 67
+    'bytes[10]': 96
+    'bytes[11]': 18
+    'bytes[12]': 241
+    'bytes[13]': 88
+    'bytes[14]': 173
+    'bytes[15]': 101

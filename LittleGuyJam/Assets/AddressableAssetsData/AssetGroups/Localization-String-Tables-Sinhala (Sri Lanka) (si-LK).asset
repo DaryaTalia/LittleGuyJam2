@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Sinhala (Sri Lanka) (si-LK)
   m_GUID: 271d68012ffd174478825676bb28b51a
-  m_SerializeEntries:
-  - m_GUID: ee79f91aea5205046a1cb0598e84c71f
-    m_Address: GameTable_si-LK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-si-LK
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 8dbace73d46f9394ab24e9e1362956bc, type: 2}
     - {fileID: 11400000, guid: ec16e9e5073edf2498eff9b78cd23152, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 114
+    'bytes[1]': 214
+    'bytes[2]': 133
+    'bytes[3]': 245
+    'bytes[4]': 221
+    'bytes[5]': 111
+    'bytes[6]': 4
+    'bytes[7]': 125
+    'bytes[8]': 6
+    'bytes[9]': 71
+    'bytes[10]': 248
+    'bytes[11]': 141
+    'bytes[12]': 163
+    'bytes[13]': 114
+    'bytes[14]': 8
+    'bytes[15]': 239

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Arabic (Morocco) (ar-MA)
   m_GUID: 234fc797910ed4e46be2591e4096ce55
-  m_SerializeEntries:
-  - m_GUID: 14a6691c3d40e884f81387f212f33037
-    m_Address: GameTable_ar-MA
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ar-MA
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 15e1876998627454886e4115fe62f690, type: 2}
     - {fileID: 11400000, guid: 7744d5347e34e2146a6cf561474057ed, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 188
+    'bytes[1]': 6
+    'bytes[2]': 138
+    'bytes[3]': 27
+    'bytes[4]': 129
+    'bytes[5]': 70
+    'bytes[6]': 245
+    'bytes[7]': 66
+    'bytes[8]': 254
+    'bytes[9]': 238
+    'bytes[10]': 53
+    'bytes[11]': 171
+    'bytes[12]': 138
+    'bytes[13]': 4
+    'bytes[14]': 188
+    'bytes[15]': 234

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Konkani (kok)
   m_GUID: b52599be34ba4134c9a76b2818561ac0
-  m_SerializeEntries:
-  - m_GUID: 509344a3accb866479e55403a87650af
-    m_Address: GameTable_kok
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kok
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 73b91c552c5740e47820d9fbc995665d, type: 2}
     - {fileID: 11400000, guid: 98723934ff198a44e8e49e487017a377, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 63
+    'bytes[1]': 148
+    'bytes[2]': 18
+    'bytes[3]': 101
+    'bytes[4]': 135
+    'bytes[5]': 68
+    'bytes[6]': 70
+    'bytes[7]': 163
+    'bytes[8]': 242
+    'bytes[9]': 217
+    'bytes[10]': 215
+    'bytes[11]': 83
+    'bytes[12]': 27
+    'bytes[13]': 118
+    'bytes[14]': 199
+    'bytes[15]': 4

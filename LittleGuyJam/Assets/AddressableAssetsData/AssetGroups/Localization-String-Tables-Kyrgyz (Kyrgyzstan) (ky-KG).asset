@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Kyrgyz (Kyrgyzstan) (ky-KG)
   m_GUID: b1d279ff9f468844096ced0cc71cc1e9
-  m_SerializeEntries:
-  - m_GUID: ad477d57f42e8964dba2d08180f7f50f
-    m_Address: GameTable_ky-KG
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ky-KG
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 491abb9e58509a54b9bb971fcea4edd4, type: 2}
     - {fileID: 11400000, guid: e2f648878354f134a885b826aa053a2f, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 254
+    'bytes[1]': 144
+    'bytes[2]': 184
+    'bytes[3]': 239
+    'bytes[4]': 209
+    'bytes[5]': 151
+    'bytes[6]': 75
+    'bytes[7]': 149
+    'bytes[8]': 4
+    'bytes[9]': 11
+    'bytes[10]': 60
+    'bytes[11]': 125
+    'bytes[12]': 135
+    'bytes[13]': 70
+    'bytes[14]': 175
+    'bytes[15]': 108

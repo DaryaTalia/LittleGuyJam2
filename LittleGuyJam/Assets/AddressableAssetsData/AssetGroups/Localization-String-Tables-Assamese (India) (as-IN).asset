@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Assamese (India) (as-IN)
   m_GUID: b749cedde09555e4795d64375837803e
-  m_SerializeEntries:
-  - m_GUID: 97069990eb1b1cd43affcdf0667e4dbb
-    m_Address: GameTable_as-IN
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-as-IN
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 1eab937b9ed5c6a4eb660704687dc33c, type: 2}
     - {fileID: 11400000, guid: c0bafee3eb0209b4fa45b115d16ab96b, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 198
+    'bytes[1]': 113
+    'bytes[2]': 89
+    'bytes[3]': 16
+    'bytes[4]': 178
+    'bytes[5]': 140
+    'bytes[6]': 78
+    'bytes[7]': 135
+    'bytes[8]': 44
+    'bytes[9]': 110
+    'bytes[10]': 195
+    'bytes[11]': 87
+    'bytes[12]': 52
+    'bytes[13]': 83
+    'bytes[14]': 116
+    'bytes[15]': 138

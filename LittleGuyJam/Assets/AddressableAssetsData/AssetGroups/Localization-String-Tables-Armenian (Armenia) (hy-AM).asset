@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Armenian (Armenia) (hy-AM)
   m_GUID: 96fc6792a42ec5441a9d0dbd95c2f4ef
-  m_SerializeEntries:
-  - m_GUID: b6c731d9c3409d34c843c55e35fc2770
-    m_Address: GameTable_hy-AM
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-hy-AM
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 7c2027d9c36663d45b5dbca012aa9675, type: 2}
     - {fileID: 11400000, guid: d0896e5131132184a8b1b27b9b18bcc9, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 111
+    'bytes[1]': 31
+    'bytes[2]': 35
+    'bytes[3]': 250
+    'bytes[4]': 155
+    'bytes[5]': 8
+    'bytes[6]': 90
+    'bytes[7]': 160
+    'bytes[8]': 47
+    'bytes[9]': 24
+    'bytes[10]': 75
+    'bytes[11]': 144
+    'bytes[12]': 74
+    'bytes[13]': 74
+    'bytes[14]': 152
+    'bytes[15]': 81

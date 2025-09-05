@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Zulu (South Africa) (zu-ZA)
   m_GUID: b2efdbb0784a507479be1c75082e4a28
-  m_SerializeEntries:
-  - m_GUID: 3a0b0651c0ee29f4197567a9ce40faa2
-    m_Address: GameTable_zu-ZA
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-zu-ZA
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 3bee5c5d57fd67743973288845e6d181, type: 2}
     - {fileID: 11400000, guid: 6612b277e585003479657a01050861f5, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 164
+    'bytes[1]': 204
+    'bytes[2]': 100
+    'bytes[3]': 68
+    'bytes[4]': 23
+    'bytes[5]': 124
+    'bytes[6]': 137
+    'bytes[7]': 72
+    'bytes[8]': 168
+    'bytes[9]': 197
+    'bytes[10]': 131
+    'bytes[11]': 24
+    'bytes[12]': 56
+    'bytes[13]': 62
+    'bytes[14]': 218
+    'bytes[15]': 2

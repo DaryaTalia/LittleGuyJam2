@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Filipino (Philippines) (fil-PH)
   m_GUID: 695273528330c3f468fa1e2e9ce63174
-  m_SerializeEntries:
-  - m_GUID: 93bb6d0ca1736164690cbd4bb27fe0fd
-    m_Address: GameTable_fil-PH
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-fil-PH
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 6498828aa675b544a8dcc5b1eed7e929, type: 2}
     - {fileID: 11400000, guid: 36b0551ac89b8504cb7b40727bbe940d, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 121
+    'bytes[1]': 68
+    'bytes[2]': 48
+    'bytes[3]': 228
+    'bytes[4]': 176
+    'bytes[5]': 27
+    'bytes[6]': 229
+    'bytes[7]': 82
+    'bytes[8]': 226
+    'bytes[9]': 228
+    'bytes[10]': 0
+    'bytes[11]': 129
+    'bytes[12]': 116
+    'bytes[13]': 153
+    'bytes[14]': 240
+    'bytes[15]': 76

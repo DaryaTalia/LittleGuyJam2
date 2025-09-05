@@ -5,12 +5,15 @@ using static UnitManager;
 
 public class ResourceUnit : Unit
 {
+    public Animator resourceAnim;
+
     [SerializeField]
     int collectedResources;
 
     public ResourceUnit(UnitAlignment _a) : base(_a)
     {
         Role = UnitRole.resource;
+        resourceAnim = GetComponentInChildren<Animator>();
     }
 
     public override bool AutonomyBid(string action)

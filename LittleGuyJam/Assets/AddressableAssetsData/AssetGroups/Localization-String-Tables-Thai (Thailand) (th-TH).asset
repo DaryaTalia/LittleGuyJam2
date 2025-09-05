@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Thai (Thailand) (th-TH)
   m_GUID: 656ca24ad3cb5e44ba7a0f0a5e60a05b
-  m_SerializeEntries:
-  - m_GUID: c3adfe566ae1eb64686cba798e031704
-    m_Address: GameTable_th-TH
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-th-TH
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: dae226fda457f2042a3a4df1c88d3900, type: 2}
     - {fileID: 11400000, guid: 68d82d3ad3ad6d843a4f6cc8a12f5d49, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 190
+    'bytes[1]': 43
+    'bytes[2]': 10
+    'bytes[3]': 16
+    'bytes[4]': 207
+    'bytes[5]': 248
+    'bytes[6]': 184
+    'bytes[7]': 124
+    'bytes[8]': 189
+    'bytes[9]': 246
+    'bytes[10]': 89
+    'bytes[11]': 107
+    'bytes[12]': 76
+    'bytes[13]': 247
+    'bytes[14]': 5
+    'bytes[15]': 169

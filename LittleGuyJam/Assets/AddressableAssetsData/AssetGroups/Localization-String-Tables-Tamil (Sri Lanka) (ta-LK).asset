@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Tamil (Sri Lanka) (ta-LK)
   m_GUID: 4503b6d1a0546704daaa41d344e42db5
-  m_SerializeEntries:
-  - m_GUID: 8ab87d2357aec894f9362bc9b6d236d7
-    m_Address: GameTable_ta-LK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ta-LK
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 05095edd4f7298c4d93b7d47649eb532, type: 2}
     - {fileID: 11400000, guid: 60b4209e3d4ca2647963681c745d8d72, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 7
+    'bytes[1]': 47
+    'bytes[2]': 21
+    'bytes[3]': 60
+    'bytes[4]': 96
+    'bytes[5]': 177
+    'bytes[6]': 7
+    'bytes[7]': 10
+    'bytes[8]': 174
+    'bytes[9]': 73
+    'bytes[10]': 180
+    'bytes[11]': 130
+    'bytes[12]': 30
+    'bytes[13]': 213
+    'bytes[14]': 2
+    'bytes[15]': 179

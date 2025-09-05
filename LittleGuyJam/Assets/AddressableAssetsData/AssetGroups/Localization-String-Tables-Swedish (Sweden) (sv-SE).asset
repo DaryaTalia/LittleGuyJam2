@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Swedish (Sweden) (sv-SE)
   m_GUID: 55adc472baaa7ad43bad99fb37dbdf20
-  m_SerializeEntries:
-  - m_GUID: f69a06c8dda7e734bae08878d9cd4d58
-    m_Address: GameTable_sv-SE
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-sv-SE
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: d329dd99a077a7d4bb048fb32c42effb, type: 2}
     - {fileID: 11400000, guid: 6baa53dd81beb1f40afa8107150acbb6, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 209
+    'bytes[1]': 178
+    'bytes[2]': 10
+    'bytes[3]': 96
+    'bytes[4]': 2
+    'bytes[5]': 150
+    'bytes[6]': 181
+    'bytes[7]': 237
+    'bytes[8]': 115
+    'bytes[9]': 66
+    'bytes[10]': 215
+    'bytes[11]': 138
+    'bytes[12]': 136
+    'bytes[13]': 49
+    'bytes[14]': 69
+    'bytes[15]': 43

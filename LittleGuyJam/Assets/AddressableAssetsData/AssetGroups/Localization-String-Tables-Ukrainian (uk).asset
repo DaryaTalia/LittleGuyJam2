@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Ukrainian (uk)
   m_GUID: 9c5d708b455e828428c3127b5fe7b6e1
-  m_SerializeEntries:
-  - m_GUID: 48e2a4464d49b734694451b16abff174
-    m_Address: GameTable_uk
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-uk
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 51c5697b37cb0044f87133f60ba3df20, type: 2}
     - {fileID: 11400000, guid: 1e0b8399d1e83f340aeec7a97f2ca1bc, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 137
+    'bytes[1]': 27
+    'bytes[2]': 206
+    'bytes[3]': 83
+    'bytes[4]': 220
+    'bytes[5]': 210
+    'bytes[6]': 36
+    'bytes[7]': 88
+    'bytes[8]': 49
+    'bytes[9]': 203
+    'bytes[10]': 103
+    'bytes[11]': 180
+    'bytes[12]': 221
+    'bytes[13]': 120
+    'bytes[14]': 59
+    'bytes[15]': 40

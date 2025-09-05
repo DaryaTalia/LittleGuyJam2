@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Romanian (Romania) (ro-RO)
   m_GUID: ec6608e2792993a4d8f9c10ddf86c2fa
-  m_SerializeEntries:
-  - m_GUID: 2271d5891b99e5544bc61c9d0a99d6df
-    m_Address: GameTable_ro-RO
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ro-RO
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: f10f570b967ee8245830a722027d6769, type: 2}
     - {fileID: 11400000, guid: b39f6b7549f7028458533a315a8bd24f, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 99
+    'bytes[1]': 175
+    'bytes[2]': 108
+    'bytes[3]': 3
+    'bytes[4]': 180
+    'bytes[5]': 229
+    'bytes[6]': 130
+    'bytes[7]': 196
+    'bytes[8]': 45
+    'bytes[9]': 214
+    'bytes[10]': 228
+    'bytes[11]': 58
+    'bytes[12]': 243
+    'bytes[13]': 153
+    'bytes[14]': 245
+    'bytes[15]': 220

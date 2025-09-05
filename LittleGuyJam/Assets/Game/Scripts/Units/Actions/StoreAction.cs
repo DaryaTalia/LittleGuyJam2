@@ -41,6 +41,7 @@ public class StoreAction : IAction
         // Store
         GameManager.instance.data.TotalCollectedResources += unit.CollectedResources;
         GameManager.instance.data.CurrentAvailableResources += unit.CollectedResources;
+        unit.resourceAnim.SetTrigger("collect");
         //Debug.Log(unit.name + " Stored " + unit.CollectedResources);
         unit.CollectedResources = 0;
         isStoring = false;

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Azerbaijani (az)
   m_GUID: 3c78569d4390638478efa9740a9de756
-  m_SerializeEntries:
-  - m_GUID: fe1b7708ce5dce74c8b7028438ec7b2d
-    m_Address: GameTable_az
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-az
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 536b7148d7768894dbf7f3621d0e7ea0, type: 2}
     - {fileID: 11400000, guid: f290f9467b75198488578a14c305850c, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 116
+    'bytes[1]': 85
+    'bytes[2]': 243
+    'bytes[3]': 96
+    'bytes[4]': 121
+    'bytes[5]': 90
+    'bytes[6]': 29
+    'bytes[7]': 133
+    'bytes[8]': 195
+    'bytes[9]': 185
+    'bytes[10]': 37
+    'bytes[11]': 85
+    'bytes[12]': 176
+    'bytes[13]': 139
+    'bytes[14]': 65
+    'bytes[15]': 107

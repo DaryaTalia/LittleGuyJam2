@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Vietnamese (vi)
   m_GUID: 76a273c93a5899348ac696e48d6fa282
-  m_SerializeEntries:
-  - m_GUID: feba8f04cf909fd4c938eccaebb2745e
-    m_Address: GameTable_vi
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-vi
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: f85a5789e87dff448ac3e0b669b6fe7c, type: 2}
     - {fileID: 11400000, guid: 35b889f106f84004e8a49e49c62dadc6, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 106
+    'bytes[1]': 158
+    'bytes[2]': 86
+    'bytes[3]': 75
+    'bytes[4]': 53
+    'bytes[5]': 10
+    'bytes[6]': 82
+    'bytes[7]': 244
+    'bytes[8]': 66
+    'bytes[9]': 87
+    'bytes[10]': 184
+    'bytes[11]': 8
+    'bytes[12]': 56
+    'bytes[13]': 70
+    'bytes[14]': 164
+    'bytes[15]': 244

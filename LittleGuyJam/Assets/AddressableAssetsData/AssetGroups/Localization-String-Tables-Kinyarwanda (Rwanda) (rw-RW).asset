@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Kinyarwanda (Rwanda) (rw-RW)
   m_GUID: ef8bfaba21587514e88460ba408d411a
-  m_SerializeEntries:
-  - m_GUID: 6550a6a45d2c4384cb35b04f0e4bc8cd
-    m_Address: GameTable_rw-RW
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-rw-RW
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 9ab4f2086adebb646a228dea2e4e66e1, type: 2}
     - {fileID: 11400000, guid: a8943026fb96905409172d0c1c1bd588, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 241
+    'bytes[1]': 170
+    'bytes[2]': 67
+    'bytes[3]': 20
+    'bytes[4]': 9
+    'bytes[5]': 240
+    'bytes[6]': 197
+    'bytes[7]': 89
+    'bytes[8]': 37
+    'bytes[9]': 145
+    'bytes[10]': 82
+    'bytes[11]': 38
+    'bytes[12]': 199
+    'bytes[13]': 126
+    'bytes[14]': 43
+    'bytes[15]': 159

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Polish (Poland) (pl-PL)
   m_GUID: fda76e4a9ff5dab4294c2ff5ede899a2
-  m_SerializeEntries:
-  - m_GUID: e3ed10fe92a19174a8e59dc7c692889a
-    m_Address: GameTable_pl-PL
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-pl-PL
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 2d352afcc7d2ad84f9e31b97a24895e5, type: 2}
     - {fileID: 11400000, guid: 3eecada65dcf5024ba10e8628123523e, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 160
+    'bytes[1]': 68
+    'bytes[2]': 189
+    'bytes[3]': 10
+    'bytes[4]': 30
+    'bytes[5]': 225
+    'bytes[6]': 178
+    'bytes[7]': 170
+    'bytes[8]': 184
+    'bytes[9]': 102
+    'bytes[10]': 4
+    'bytes[11]': 33
+    'bytes[12]': 49
+    'bytes[13]': 57
+    'bytes[14]': 98
+    'bytes[15]': 64

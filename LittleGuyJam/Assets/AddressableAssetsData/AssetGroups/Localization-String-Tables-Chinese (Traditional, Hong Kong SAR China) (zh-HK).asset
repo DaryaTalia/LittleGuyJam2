@@ -15,16 +15,29 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Chinese (Traditional, Hong Kong SAR China)
     (zh-HK)
   m_GUID: 954c84feb7462b0498b2447962d99b3d
-  m_SerializeEntries:
-  - m_GUID: 4292db0ade7aa9b439b8b3cb543b0a31
-    m_Address: GameTable_zh-HK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-zh-HK
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 0cc1207e3901c9240897fe0a5d9df941, type: 2}
     - {fileID: 11400000, guid: c78bc826493ff854e98e2b0546ba4446, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 63
+    'bytes[1]': 135
+    'bytes[2]': 221
+    'bytes[3]': 121
+    'bytes[4]': 84
+    'bytes[5]': 118
+    'bytes[6]': 225
+    'bytes[7]': 51
+    'bytes[8]': 212
+    'bytes[9]': 75
+    'bytes[10]': 180
+    'bytes[11]': 190
+    'bytes[12]': 76
+    'bytes[13]': 246
+    'bytes[14]': 119
+    'bytes[15]': 236

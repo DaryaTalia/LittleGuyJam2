@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Czech (Czech Republic) (cs-CZ)
   m_GUID: fadf046664583c642b5ac9b1cbf76bbe
-  m_SerializeEntries:
-  - m_GUID: 93529624beae1c84cb9a462b2597150c
-    m_Address: GameTable_cs-CZ
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-cs-CZ
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 45c560ee509199447aea1b469cc942df, type: 2}
     - {fileID: 11400000, guid: ce6406cf3c7cd514f9f93e84b0c6e55b, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 225
+    'bytes[1]': 75
+    'bytes[2]': 146
+    'bytes[3]': 130
+    'bytes[4]': 237
+    'bytes[5]': 235
+    'bytes[6]': 31
+    'bytes[7]': 93
+    'bytes[8]': 248
+    'bytes[9]': 155
+    'bytes[10]': 62
+    'bytes[11]': 116
+    'bytes[12]': 215
+    'bytes[13]': 248
+    'bytes[14]': 102
+    'bytes[15]': 52

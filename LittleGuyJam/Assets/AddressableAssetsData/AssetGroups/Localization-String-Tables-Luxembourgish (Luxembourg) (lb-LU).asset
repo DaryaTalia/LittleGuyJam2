@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Luxembourgish (Luxembourg) (lb-LU)
   m_GUID: ed15cae2018d61e4a988460383173557
-  m_SerializeEntries:
-  - m_GUID: 1e94f99b15073a54490b769666470fc5
-    m_Address: GameTable_lb-LU
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-lb-LU
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: fea777b0517f63c47af4b56afbf1c3e2, type: 2}
     - {fileID: 11400000, guid: e234ac4c86685e043a78925f227a784a, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 198
+    'bytes[1]': 92
+    'bytes[2]': 93
+    'bytes[3]': 87
+    'bytes[4]': 138
+    'bytes[5]': 99
+    'bytes[6]': 67
+    'bytes[7]': 106
+    'bytes[8]': 165
+    'bytes[9]': 18
+    'bytes[10]': 168
+    'bytes[11]': 58
+    'bytes[12]': 240
+    'bytes[13]': 214
+    'bytes[14]': 177
+    'bytes[15]': 183

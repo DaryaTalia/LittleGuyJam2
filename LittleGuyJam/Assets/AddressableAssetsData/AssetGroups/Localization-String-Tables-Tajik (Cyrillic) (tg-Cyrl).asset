@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Tajik (Cyrillic) (tg-Cyrl)
   m_GUID: 861b1fd6cee61244181a87d744eb1163
-  m_SerializeEntries:
-  - m_GUID: e3653a53869a1d447af0990ad27c4a6c
-    m_Address: GameTable_tg-Cyrl
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-tg-Cyrl
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: e77330b002d7e8549a2596bccc9eb7a7, type: 2}
     - {fileID: 11400000, guid: 3eb280d986ed31345be3b94f01851a36, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 55
+    'bytes[1]': 19
+    'bytes[2]': 125
+    'bytes[3]': 215
+    'bytes[4]': 230
+    'bytes[5]': 43
+    'bytes[6]': 132
+    'bytes[7]': 245
+    'bytes[8]': 93
+    'bytes[9]': 58
+    'bytes[10]': 150
+    'bytes[11]': 222
+    'bytes[12]': 168
+    'bytes[13]': 134
+    'bytes[14]': 194
+    'bytes[15]': 107

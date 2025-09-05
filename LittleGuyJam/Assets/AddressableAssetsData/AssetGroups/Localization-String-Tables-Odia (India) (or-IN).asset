@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Odia (India) (or-IN)
   m_GUID: d8bb0b33896ee384aabbf07af9a1d7f5
-  m_SerializeEntries:
-  - m_GUID: 01c22dcc2167e724c90d0fa98439578f
-    m_Address: GameTable_or-IN
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-or-IN
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: ecb14277090c84641b981855e34028e7, type: 2}
     - {fileID: 11400000, guid: a2bcf44510006df42b2a7af22c81fc2d, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 9
+    'bytes[1]': 185
+    'bytes[2]': 90
+    'bytes[3]': 205
+    'bytes[4]': 101
+    'bytes[5]': 111
+    'bytes[6]': 115
+    'bytes[7]': 13
+    'bytes[8]': 50
+    'bytes[9]': 215
+    'bytes[10]': 221
+    'bytes[11]': 51
+    'bytes[12]': 191
+    'bytes[13]': 116
+    'bytes[14]': 203
+    'bytes[15]': 66

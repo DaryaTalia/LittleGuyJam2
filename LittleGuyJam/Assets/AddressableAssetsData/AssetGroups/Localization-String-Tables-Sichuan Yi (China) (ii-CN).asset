@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Sichuan Yi (China) (ii-CN)
   m_GUID: 04d2863484f97cb40b2070cd3b2cc00f
-  m_SerializeEntries:
-  - m_GUID: fbb2974a7b5b0bf4e99ef780c435c2f3
-    m_Address: GameTable_ii-CN
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ii-CN
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 525238ac9f56e4945a44a45a68ef107f, type: 2}
     - {fileID: 11400000, guid: 4440eeab703ed3848af67a60b30b741c, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 65
+    'bytes[1]': 221
+    'bytes[2]': 147
+    'bytes[3]': 209
+    'bytes[4]': 140
+    'bytes[5]': 25
+    'bytes[6]': 146
+    'bytes[7]': 123
+    'bytes[8]': 151
+    'bytes[9]': 15
+    'bytes[10]': 148
+    'bytes[11]': 172
+    'bytes[12]': 164
+    'bytes[13]': 49
+    'bytes[14]': 222
+    'bytes[15]': 241

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Inari Sami (smn)
   m_GUID: baf25c2363b39ef4eb755f4455c15012
-  m_SerializeEntries:
-  - m_GUID: bbba6cc7d1c7bb24b91192e4ef02db82
-    m_Address: GameTable_smn
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-smn
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: ffac1697561586f40b93e3f0db72c787, type: 2}
     - {fileID: 11400000, guid: 2ba178be2d78feb4386daa8fae3afdf9, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 211
+    'bytes[1]': 100
+    'bytes[2]': 53
+    'bytes[3]': 33
+    'bytes[4]': 14
+    'bytes[5]': 172
+    'bytes[6]': 163
+    'bytes[7]': 207
+    'bytes[8]': 148
+    'bytes[9]': 75
+    'bytes[10]': 244
+    'bytes[11]': 16
+    'bytes[12]': 37
+    'bytes[13]': 94
+    'bytes[14]': 191
+    'bytes[15]': 71

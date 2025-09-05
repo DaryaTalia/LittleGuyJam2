@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Slovak (Slovakia) (sk-SK)
   m_GUID: 6dcd42481f50abb42becc0ecbe7f86a7
-  m_SerializeEntries:
-  - m_GUID: 50d2f142b07b48a4f8fe898991544542
-    m_Address: GameTable_sk-SK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-sk-SK
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 717ee2144be984d4698262d6c3672e6d, type: 2}
     - {fileID: 11400000, guid: 351a7e3897e4c63429dda5d26adfa7a9, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 110
+    'bytes[1]': 229
+    'bytes[2]': 28
+    'bytes[3]': 227
+    'bytes[4]': 211
+    'bytes[5]': 181
+    'bytes[6]': 64
+    'bytes[7]': 68
+    'bytes[8]': 116
+    'bytes[9]': 203
+    'bytes[10]': 252
+    'bytes[11]': 171
+    'bytes[12]': 52
+    'bytes[13]': 112
+    'bytes[14]': 164
+    'bytes[15]': 32

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Malay (Malaysia) (ms-MY)
   m_GUID: e0e27afb1c017ac498962ae07ff12aae
-  m_SerializeEntries:
-  - m_GUID: 47a94c06ec19b3c4c959484ba686fd20
-    m_Address: GameTable_ms-MY
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ms-MY
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: b3d43f9651306f740b7ec74968b2cc79, type: 2}
     - {fileID: 11400000, guid: 25278b2e24abad04db11d9b3c561108f, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 68
+    'bytes[1]': 154
+    'bytes[2]': 56
+    'bytes[3]': 10
+    'bytes[4]': 143
+    'bytes[5]': 36
+    'bytes[6]': 49
+    'bytes[7]': 74
+    'bytes[8]': 3
+    'bytes[9]': 143
+    'bytes[10]': 15
+    'bytes[11]': 89
+    'bytes[12]': 187
+    'bytes[13]': 154
+    'bytes[14]': 6
+    'bytes[15]': 186

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Sakha (Russia) (sah-RU)
   m_GUID: 99086d1a4fca1684abb22ff8f32ca497
-  m_SerializeEntries:
-  - m_GUID: e678457559c20144ead87e8ad3e93492
-    m_Address: GameTable_sah-RU
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-sah-RU
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 9bf05aa754788bb479aab3ce3429e87d, type: 2}
     - {fileID: 11400000, guid: fb3e2abaa0dd6e745a236ee1398db108, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 47
+    'bytes[1]': 159
+    'bytes[2]': 246
+    'bytes[3]': 217
+    'bytes[4]': 225
+    'bytes[5]': 156
+    'bytes[6]': 36
+    'bytes[7]': 61
+    'bytes[8]': 187
+    'bytes[9]': 56
+    'bytes[10]': 137
+    'bytes[11]': 23
+    'bytes[12]': 240
+    'bytes[13]': 224
+    'bytes[14]': 76
+    'bytes[15]': 70

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Turkish (Turkey) (tr-TR)
   m_GUID: 3e01259f80c37a94384af496dfd3ecf2
-  m_SerializeEntries:
-  - m_GUID: f6ce80cf1e4e8474291dca28c7e0bd8d
-    m_Address: GameTable_tr-TR
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-tr-TR
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: b4798981cf135e742a9b63d518ab5c8f, type: 2}
     - {fileID: 11400000, guid: f25e8e4f9296a9e4584703e971fd877b, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 133
+    'bytes[1]': 79
+    'bytes[2]': 220
+    'bytes[3]': 214
+    'bytes[4]': 123
+    'bytes[5]': 34
+    'bytes[6]': 234
+    'bytes[7]': 237
+    'bytes[8]': 255
+    'bytes[9]': 115
+    'bytes[10]': 2
+    'bytes[11]': 217
+    'bytes[12]': 31
+    'bytes[13]': 229
+    'bytes[14]': 190
+    'bytes[15]': 119

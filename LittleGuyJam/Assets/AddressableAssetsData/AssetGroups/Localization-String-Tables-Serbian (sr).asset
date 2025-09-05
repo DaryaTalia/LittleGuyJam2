@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Serbian (sr)
   m_GUID: 4bba4d8b52f64ed47997c822d45b198d
-  m_SerializeEntries:
-  - m_GUID: 2871e2f956993a241b971dbb2e074acb
-    m_Address: GameTable_sr
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-sr
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 5727aa481e0fd0040b59aa9067b78d88, type: 2}
     - {fileID: 11400000, guid: 9b2332ac226f9e448bbedb8fc2360dfe, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 149
+    'bytes[1]': 205
+    'bytes[2]': 40
+    'bytes[3]': 211
+    'bytes[4]': 206
+    'bytes[5]': 247
+    'bytes[6]': 214
+    'bytes[7]': 52
+    'bytes[8]': 218
+    'bytes[9]': 85
+    'bytes[10]': 66
+    'bytes[11]': 123
+    'bytes[12]': 236
+    'bytes[13]': 57
+    'bytes[14]': 89
+    'bytes[15]': 18

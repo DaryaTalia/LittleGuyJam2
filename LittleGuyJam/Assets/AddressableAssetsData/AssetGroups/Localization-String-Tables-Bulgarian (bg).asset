@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Bulgarian (bg)
   m_GUID: 472c334ed24bf19428a2714db43fbef5
-  m_SerializeEntries:
-  - m_GUID: aa6cac404a6bac14daf0fb861d478e56
-    m_Address: GameTable_bg
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-bg
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: e14e4cd7ce9e31f43a90cb32e64633d2, type: 2}
     - {fileID: 11400000, guid: 645a7f3e75c24944cbbe86d5a84f366c, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 205
+    'bytes[1]': 107
+    'bytes[2]': 249
+    'bytes[3]': 24
+    'bytes[4]': 203
+    'bytes[5]': 236
+    'bytes[6]': 69
+    'bytes[7]': 200
+    'bytes[8]': 26
+    'bytes[9]': 118
+    'bytes[10]': 93
+    'bytes[11]': 234
+    'bytes[12]': 2
+    'bytes[13]': 209
+    'bytes[14]': 165
+    'bytes[15]': 39

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Hawaiian (haw)
   m_GUID: 9a8b28fd53770fc4d9a2a00750e95aa3
-  m_SerializeEntries:
-  - m_GUID: 097a820d2b61d624a8ddfd27061eeec3
-    m_Address: GameTable_haw
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-haw
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 978649831287a584f815e8c827473931, type: 2}
     - {fileID: 11400000, guid: cba0aac114f3172478aad46db0ff8ec5, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 207
+    'bytes[1]': 189
+    'bytes[2]': 71
+    'bytes[3]': 234
+    'bytes[4]': 181
+    'bytes[5]': 19
+    'bytes[6]': 37
+    'bytes[7]': 165
+    'bytes[8]': 154
+    'bytes[9]': 122
+    'bytes[10]': 107
+    'bytes[11]': 175
+    'bytes[12]': 217
+    'bytes[13]': 150
+    'bytes[14]': 99
+    'bytes[15]': 6

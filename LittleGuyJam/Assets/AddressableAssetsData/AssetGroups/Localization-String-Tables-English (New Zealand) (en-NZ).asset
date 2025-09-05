@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-English (New Zealand) (en-NZ)
   m_GUID: 5ef0e8547459e894b89d79e5132e821c
-  m_SerializeEntries:
-  - m_GUID: 38ae2876fef4e624d898a9daea90cffa
-    m_Address: GameTable_en-NZ
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en-NZ
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 8fd105e2492cbb9408858cdeaa08b338, type: 2}
     - {fileID: 11400000, guid: 26266acb73d739747938feec9a345c70, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 129
+    'bytes[1]': 90
+    'bytes[2]': 6
+    'bytes[3]': 84
+    'bytes[4]': 20
+    'bytes[5]': 90
+    'bytes[6]': 47
+    'bytes[7]': 119
+    'bytes[8]': 175
+    'bytes[9]': 194
+    'bytes[10]': 25
+    'bytes[11]': 142
+    'bytes[12]': 189
+    'bytes[13]': 95
+    'bytes[14]': 151
+    'bytes[15]': 219

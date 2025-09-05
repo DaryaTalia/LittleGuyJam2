@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Cherokee (chr)
   m_GUID: 8b6ac6d77141a1b4ca6fda0f410a7769
-  m_SerializeEntries:
-  - m_GUID: a2a9175bf285d46448f7dc50ba0db300
-    m_Address: GameTable_chr
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-chr
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 69ac8e4fad6317446898bf5b00b940b7, type: 2}
     - {fileID: 11400000, guid: dea7e585375c5f34180f77fdb3125239, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 46
+    'bytes[1]': 80
+    'bytes[2]': 1
+    'bytes[3]': 248
+    'bytes[4]': 203
+    'bytes[5]': 193
+    'bytes[6]': 42
+    'bytes[7]': 92
+    'bytes[8]': 116
+    'bytes[9]': 78
+    'bytes[10]': 178
+    'bytes[11]': 250
+    'bytes[12]': 48
+    'bytes[13]': 7
+    'bytes[14]': 30
+    'bytes[15]': 226

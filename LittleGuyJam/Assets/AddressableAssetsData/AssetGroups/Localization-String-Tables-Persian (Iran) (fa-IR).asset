@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Persian (Iran) (fa-IR)
   m_GUID: 9b5c0c062c275654c8ae1b8bb11f524e
-  m_SerializeEntries:
-  - m_GUID: 3ae10ef95b00d1a418163af557fd7ea5
-    m_Address: GameTable_fa-IR
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-fa-IR
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: bbfb3bf93393142488ab6ab446fa8b73, type: 2}
     - {fileID: 11400000, guid: 253df48073dbc404cb6337304cb4ea04, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 100
+    'bytes[1]': 153
+    'bytes[2]': 20
+    'bytes[3]': 223
+    'bytes[4]': 101
+    'bytes[5]': 84
+    'bytes[6]': 206
+    'bytes[7]': 56
+    'bytes[8]': 192
+    'bytes[9]': 192
+    'bytes[10]': 21
+    'bytes[11]': 13
+    'bytes[12]': 123
+    'bytes[13]': 18
+    'bytes[14]': 93
+    'bytes[15]': 197

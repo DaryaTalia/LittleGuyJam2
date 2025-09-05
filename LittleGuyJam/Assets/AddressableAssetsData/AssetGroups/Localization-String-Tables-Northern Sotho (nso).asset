@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Northern Sotho (nso)
   m_GUID: 5f27b33060d799a4caae4f0338bb6f8d
-  m_SerializeEntries:
-  - m_GUID: 22d6dc47e4eaf6646b5eba1ccba2697e
-    m_Address: GameTable_nso
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-nso
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: f96744e089c35d249a9f8fcdd4099079, type: 2}
     - {fileID: 11400000, guid: c7a1b4d860dbf7c4a9020b3a6bb45992, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 10
+    'bytes[1]': 27
+    'bytes[2]': 121
+    'bytes[3]': 10
+    'bytes[4]': 126
+    'bytes[5]': 144
+    'bytes[6]': 163
+    'bytes[7]': 21
+    'bytes[8]': 134
+    'bytes[9]': 236
+    'bytes[10]': 124
+    'bytes[11]': 56
+    'bytes[12]': 108
+    'bytes[13]': 226
+    'bytes[14]': 219
+    'bytes[15]': 22

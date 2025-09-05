@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Uyghur (China) (ug-CN)
   m_GUID: ef4fdad639b30a348af825dc4375507c
-  m_SerializeEntries:
-  - m_GUID: 807a600a0776bba40b0825937dcb2b02
-    m_Address: GameTable_ug-CN
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ug-CN
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 617d86b113e971e4c9ab2cb9206e07f3, type: 2}
     - {fileID: 11400000, guid: be20f4a9859d7464e8ced9fdcf76aa10, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 220
+    'bytes[1]': 92
+    'bytes[2]': 186
+    'bytes[3]': 207
+    'bytes[4]': 25
+    'bytes[5]': 162
+    'bytes[6]': 177
+    'bytes[7]': 145
+    'bytes[8]': 146
+    'bytes[9]': 27
+    'bytes[10]': 234
+    'bytes[11]': 230
+    'bytes[12]': 136
+    'bytes[13]': 137
+    'bytes[14]': 163
+    'bytes[15]': 91

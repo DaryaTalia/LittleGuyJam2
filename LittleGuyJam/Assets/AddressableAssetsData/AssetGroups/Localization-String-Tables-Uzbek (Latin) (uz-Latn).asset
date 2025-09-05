@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Uzbek (Latin) (uz-Latn)
   m_GUID: 83b43efeca21af9429a808a8a7de7c83
-  m_SerializeEntries:
-  - m_GUID: 0cf1885efbf80654db6a3e060c34a736
-    m_Address: GameTable_uz-Latn
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-uz-Latn
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 9b7120e3f2a5f4f4ebb322a1b5f823c4, type: 2}
     - {fileID: 11400000, guid: cf7932cca710d9646b0fc13e3be0abf3, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 170
+    'bytes[1]': 103
+    'bytes[2]': 122
+    'bytes[3]': 192
+    'bytes[4]': 168
+    'bytes[5]': 120
+    'bytes[6]': 76
+    'bytes[7]': 82
+    'bytes[8]': 252
+    'bytes[9]': 228
+    'bytes[10]': 134
+    'bytes[11]': 134
+    'bytes[12]': 154
+    'bytes[13]': 20
+    'bytes[14]': 105
+    'bytes[15]': 50

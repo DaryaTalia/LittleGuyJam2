@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Sinhala (si)
   m_GUID: f346889c5414adf498cdab2231a0fb5c
-  m_SerializeEntries:
-  - m_GUID: ceeafdd45229ba9488dcd09e7b3271b9
-    m_Address: GameTable_si
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-si
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 1c4b23a1b4704ed43a46fb869b96f399, type: 2}
     - {fileID: 11400000, guid: 9d9cc027e5ba3784eabcdd63f658c92e, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 107
+    'bytes[1]': 177
+    'bytes[2]': 188
+    'bytes[3]': 172
+    'bytes[4]': 93
+    'bytes[5]': 5
+    'bytes[6]': 7
+    'bytes[7]': 69
+    'bytes[8]': 106
+    'bytes[9]': 46
+    'bytes[10]': 124
+    'bytes[11]': 202
+    'bytes[12]': 101
+    'bytes[13]': 249
+    'bytes[14]': 45
+    'bytes[15]': 91

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Tibetan (China) (bo-CN)
   m_GUID: d8964e7508c91e246a592391c40726cb
-  m_SerializeEntries:
-  - m_GUID: 78551765e9f5b3a4e87d7dfb5919525e
-    m_Address: GameTable_bo-CN
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-bo-CN
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 7095974bdbd660546b88d8a0522cf379, type: 2}
     - {fileID: 11400000, guid: e4a42c5c8cb2fdd4f981427eade1b42e, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 101
+    'bytes[1]': 65
+    'bytes[2]': 144
+    'bytes[3]': 33
+    'bytes[4]': 108
+    'bytes[5]': 167
+    'bytes[6]': 144
+    'bytes[7]': 175
+    'bytes[8]': 141
+    'bytes[9]': 224
+    'bytes[10]': 54
+    'bytes[11]': 97
+    'bytes[12]': 168
+    'bytes[13]': 170
+    'bytes[14]': 51
+    'bytes[15]': 19

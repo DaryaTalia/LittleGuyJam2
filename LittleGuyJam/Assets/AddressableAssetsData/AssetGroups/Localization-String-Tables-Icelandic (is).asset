@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Icelandic (is)
   m_GUID: 4ec10c4f168b9f84c971f4a450686a7d
-  m_SerializeEntries:
-  - m_GUID: 8bda9dfdfaa134a478526051bb449b9d
-    m_Address: GameTable_is
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-is
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 5ad71928a4ad3d94fa98f3cb84158971, type: 2}
     - {fileID: 11400000, guid: 18f003b52f4fdbc4e9c8b64e7ed7150f, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 53
+    'bytes[1]': 153
+    'bytes[2]': 229
+    'bytes[3]': 46
+    'bytes[4]': 136
+    'bytes[5]': 68
+    'bytes[6]': 38
+    'bytes[7]': 7
+    'bytes[8]': 74
+    'bytes[9]': 22
+    'bytes[10]': 38
+    'bytes[11]': 152
+    'bytes[12]': 73
+    'bytes[13]': 3
+    'bytes[14]': 21
+    'bytes[15]': 211

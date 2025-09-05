@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Kazakh (kk)
   m_GUID: 8c7ff62146919434298b25ede007c87d
-  m_SerializeEntries:
-  - m_GUID: 5a7ef6ef8a03efc41af20cca6414b6e8
-    m_Address: GameTable_kk
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 4f928048adf413a44ad731c9920f7272, type: 2}
     - {fileID: 11400000, guid: ba246c0732985824782f00cac1b6f914, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 160
+    'bytes[1]': 15
+    'bytes[2]': 18
+    'bytes[3]': 59
+    'bytes[4]': 70
+    'bytes[5]': 133
+    'bytes[6]': 124
+    'bytes[7]': 25
+    'bytes[8]': 89
+    'bytes[9]': 3
+    'bytes[10]': 134
+    'bytes[11]': 241
+    'bytes[12]': 138
+    'bytes[13]': 65
+    'bytes[14]': 19
+    'bytes[15]': 152

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Nepali (Nepal) (ne-NP)
   m_GUID: c6c3362051bfaa0458fc2cdf07115209
-  m_SerializeEntries:
-  - m_GUID: e3892feaa0aaa6945bb6f6938d741022
-    m_Address: GameTable_ne-NP
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ne-NP
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: f0ade0e2d6cb9b648afcb8b2ed14b101, type: 2}
     - {fileID: 11400000, guid: 8a4caf0a9cfa26441bdb275b93e412bb, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 246
+    'bytes[1]': 170
+    'bytes[2]': 205
+    'bytes[3]': 183
+    'bytes[4]': 49
+    'bytes[5]': 87
+    'bytes[6]': 207
+    'bytes[7]': 50
+    'bytes[8]': 142
+    'bytes[9]': 71
+    'bytes[10]': 109
+    'bytes[11]': 129
+    'bytes[12]': 235
+    'bytes[13]': 193
+    'bytes[14]': 219
+    'bytes[15]': 2

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Igbo (Nigeria) (ig-NG)
   m_GUID: aa6bc1d0e8ca6e1469cacfc2963bde9c
-  m_SerializeEntries:
-  - m_GUID: 6a9fe56956d935b4897ae1d8ef3ae9e8
-    m_Address: GameTable_ig-NG
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ig-NG
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 3cec7aeb3f7a4484487080829cfc0e6f, type: 2}
     - {fileID: 11400000, guid: 6dbd6b133ffc79c4595969fb5bb20b31, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 120
+    'bytes[1]': 175
+    'bytes[2]': 168
+    'bytes[3]': 18
+    'bytes[4]': 8
+    'bytes[5]': 79
+    'bytes[6]': 144
+    'bytes[7]': 247
+    'bytes[8]': 161
+    'bytes[9]': 167
+    'bytes[10]': 14
+    'bytes[11]': 59
+    'bytes[12]': 17
+    'bytes[13]': 196
+    'bytes[14]': 96
+    'bytes[15]': 131

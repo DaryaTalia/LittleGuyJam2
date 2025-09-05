@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Spanish (Colombia) (es-CO)
   m_GUID: 9ea2ee47ef5aafd4e9c7998b427234bf
-  m_SerializeEntries:
-  - m_GUID: 08f64e6b75f3e2449a2eeee3403b6056
-    m_Address: GameTable_es-CO
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-es-CO
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 0b0a429d996072245a1d015a511524d9, type: 2}
     - {fileID: 11400000, guid: 9db6c6bb81850e14790127d59aaef12e, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 25
+    'bytes[1]': 22
+    'bytes[2]': 205
+    'bytes[3]': 86
+    'bytes[4]': 72
+    'bytes[5]': 140
+    'bytes[6]': 53
+    'bytes[7]': 37
+    'bytes[8]': 47
+    'bytes[9]': 167
+    'bytes[10]': 163
+    'bytes[11]': 12
+    'bytes[12]': 207
+    'bytes[13]': 137
+    'bytes[14]': 193
+    'bytes[15]': 249

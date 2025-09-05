@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Estonian (Estonia) (et-EE)
   m_GUID: b678bce0a48b77b46997f6697e29df66
-  m_SerializeEntries:
-  - m_GUID: e50b9dd3ecdb15746b7c4dfbb274d3e4
-    m_Address: GameTable_et-EE
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-et-EE
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: d9bf23dd4361a3443a07df9ed5009842, type: 2}
     - {fileID: 11400000, guid: 80de631575509cb4ea9139b1c9534450, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 101
+    'bytes[1]': 164
+    'bytes[2]': 253
+    'bytes[3]': 248
+    'bytes[4]': 211
+    'bytes[5]': 175
+    'bytes[6]': 54
+    'bytes[7]': 235
+    'bytes[8]': 134
+    'bytes[9]': 51
+    'bytes[10]': 201
+    'bytes[11]': 114
+    'bytes[12]': 191
+    'bytes[13]': 131
+    'bytes[14]': 58
+    'bytes[15]': 142

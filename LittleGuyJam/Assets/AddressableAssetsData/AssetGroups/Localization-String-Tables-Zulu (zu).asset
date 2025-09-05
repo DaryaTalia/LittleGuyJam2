@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Zulu (zu)
   m_GUID: a32643162e58a2d4698356cbda67e34a
-  m_SerializeEntries:
-  - m_GUID: a7806bc0f35d2084385a33bd75b5102a
-    m_Address: GameTable_zu
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-zu
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: b62d8a6f697435c4ebd98adf0cb4ce1d, type: 2}
     - {fileID: 11400000, guid: 61dc47aaeda1c3e49aca19dc70c5aab4, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 146
+    'bytes[1]': 89
+    'bytes[2]': 78
+    'bytes[3]': 97
+    'bytes[4]': 167
+    'bytes[5]': 40
+    'bytes[6]': 156
+    'bytes[7]': 21
+    'bytes[8]': 25
+    'bytes[9]': 142
+    'bytes[10]': 144
+    'bytes[11]': 39
+    'bytes[12]': 180
+    'bytes[13]': 181
+    'bytes[14]': 168
+    'bytes[15]': 26

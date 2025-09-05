@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Oromo (om)
   m_GUID: 8644ddb867c7e4e42ab1db6cd3d7be6f
-  m_SerializeEntries:
-  - m_GUID: 8aa57803bb713c84689f3f177fa2868a
-    m_Address: GameTable_om
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-om
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 4250aec58f798d0409e89eed22f3a4a7, type: 2}
     - {fileID: 11400000, guid: 5e02ab2b9c69699469700277e6ceea80, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 117
+    'bytes[1]': 183
+    'bytes[2]': 169
+    'bytes[3]': 217
+    'bytes[4]': 62
+    'bytes[5]': 67
+    'bytes[6]': 95
+    'bytes[7]': 205
+    'bytes[8]': 14
+    'bytes[9]': 115
+    'bytes[10]': 64
+    'bytes[11]': 134
+    'bytes[12]': 6
+    'bytes[13]': 5
+    'bytes[14]': 138
+    'bytes[15]': 112

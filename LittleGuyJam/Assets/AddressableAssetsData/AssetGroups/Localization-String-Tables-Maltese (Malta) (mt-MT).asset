@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Maltese (Malta) (mt-MT)
   m_GUID: 6315f2471795870458c69e2e8d1cbf79
-  m_SerializeEntries:
-  - m_GUID: 2f4adf98a780c8b45b7324383eb143bf
-    m_Address: GameTable_mt-MT
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-mt-MT
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 618da932916d55f43b8e28b7fa7fb283, type: 2}
     - {fileID: 11400000, guid: d1a5bdb76da293348b3e5b080c1bfe52, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 37
+    'bytes[1]': 165
+    'bytes[2]': 201
+    'bytes[3]': 91
+    'bytes[4]': 13
+    'bytes[5]': 58
+    'bytes[6]': 165
+    'bytes[7]': 44
+    'bytes[8]': 129
+    'bytes[9]': 227
+    'bytes[10]': 35
+    'bytes[11]': 192
+    'bytes[12]': 131
+    'bytes[13]': 5
+    'bytes[14]': 177
+    'bytes[15]': 27

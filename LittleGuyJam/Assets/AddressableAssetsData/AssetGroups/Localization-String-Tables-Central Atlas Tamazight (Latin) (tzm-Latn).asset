@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Central Atlas Tamazight (Latin) (tzm-Latn)
   m_GUID: 51b0c546eceef2d408a306df0e5424ea
-  m_SerializeEntries:
-  - m_GUID: dbb87822d3d1d7941adbe714e83f9924
-    m_Address: GameTable_tzm-Latn
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-tzm-Latn
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: bb28b1e82d6633149acf8d877cf6866c, type: 2}
     - {fileID: 11400000, guid: 1ae614dfec0296b46b9ac18940e73ee6, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 225
+    'bytes[1]': 88
+    'bytes[2]': 122
+    'bytes[3]': 30
+    'bytes[4]': 54
+    'bytes[5]': 237
+    'bytes[6]': 148
+    'bytes[7]': 115
+    'bytes[8]': 24
+    'bytes[9]': 85
+    'bytes[10]': 235
+    'bytes[11]': 159
+    'bytes[12]': 230
+    'bytes[13]': 147
+    'bytes[14]': 67
+    'bytes[15]': 101

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Tajik (Cyrillic, Tajikistan) (tg-Cyrl-TJ)
   m_GUID: 1449f41a8f9c03249af6ed73922765ba
-  m_SerializeEntries:
-  - m_GUID: 9f7430d8b7b6a5147bef7f201e2a068a
-    m_Address: GameTable_tg-Cyrl-TJ
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-tg-Cyrl-TJ
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: c0a3715d9fe84f747a60edfa446bac76, type: 2}
     - {fileID: 11400000, guid: f1fdcc37e78e716449e869c71e7c318b, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 201
+    'bytes[1]': 16
+    'bytes[2]': 96
+    'bytes[3]': 187
+    'bytes[4]': 52
+    'bytes[5]': 113
+    'bytes[6]': 81
+    'bytes[7]': 121
+    'bytes[8]': 37
+    'bytes[9]': 54
+    'bytes[10]': 219
+    'bytes[11]': 157
+    'bytes[12]': 153
+    'bytes[13]': 67
+    'bytes[14]': 230
+    'bytes[15]': 210

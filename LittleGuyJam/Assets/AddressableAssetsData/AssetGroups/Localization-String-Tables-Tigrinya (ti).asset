@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Tigrinya (ti)
   m_GUID: b556a0aa506a9de4689102b2bea75200
-  m_SerializeEntries:
-  - m_GUID: 45316f6a201f4d54cacf24ef411b95c9
-    m_Address: GameTable_ti
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ti
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 55649742d4f06664bb4defb3589bb7d5, type: 2}
     - {fileID: 11400000, guid: 3761fa5f924dca245bcd6be9a1cbc126, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 150
+    'bytes[1]': 150
+    'bytes[2]': 197
+    'bytes[3]': 40
+    'bytes[4]': 187
+    'bytes[5]': 157
+    'bytes[6]': 252
+    'bytes[7]': 215
+    'bytes[8]': 108
+    'bytes[9]': 6
+    'bytes[10]': 209
+    'bytes[11]': 72
+    'bytes[12]': 48
+    'bytes[13]': 146
+    'bytes[14]': 109
+    'bytes[15]': 69

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-English (Zimbabwe) (en-ZW)
   m_GUID: b8ebf8f83abe4ee4384d109efd2006da
-  m_SerializeEntries:
-  - m_GUID: 57076fc21256a2c488bcd4d821226b43
-    m_Address: GameTable_en-ZW
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en-ZW
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: b19b445caef632a47b66e880ca54a3b5, type: 2}
     - {fileID: 11400000, guid: d34648912d52f1d49a68c04c32c673d3, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 31
+    'bytes[1]': 156
+    'bytes[2]': 120
+    'bytes[3]': 237
+    'bytes[4]': 163
+    'bytes[5]': 108
+    'bytes[6]': 57
+    'bytes[7]': 11
+    'bytes[8]': 131
+    'bytes[9]': 26
+    'bytes[10]': 230
+    'bytes[11]': 1
+    'bytes[12]': 101
+    'bytes[13]': 136
+    'bytes[14]': 166
+    'bytes[15]': 194

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Tatar (tt)
   m_GUID: 60b8bb2727b6e924b8a60ee0f7f6825b
-  m_SerializeEntries:
-  - m_GUID: 1af7097d042ed51408d0e06d346b4caf
-    m_Address: GameTable_tt
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-tt
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 8b06860d754348a46a58ba95b2f63167, type: 2}
     - {fileID: 11400000, guid: a0705192fa2fb4c439b696b596104320, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 162
+    'bytes[1]': 52
+    'bytes[2]': 30
+    'bytes[3]': 153
+    'bytes[4]': 6
+    'bytes[5]': 22
+    'bytes[6]': 4
+    'bytes[7]': 111
+    'bytes[8]': 69
+    'bytes[9]': 136
+    'bytes[10]': 57
+    'bytes[11]': 56
+    'bytes[12]': 127
+    'bytes[13]': 7
+    'bytes[14]': 111
+    'bytes[15]': 222

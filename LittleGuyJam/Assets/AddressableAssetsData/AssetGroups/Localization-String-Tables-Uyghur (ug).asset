@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Uyghur (ug)
   m_GUID: dfdd0f1eb1d362243a229839712f6dff
-  m_SerializeEntries:
-  - m_GUID: 8d9b4ca5968d963468722c163c76160a
-    m_Address: GameTable_ug
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ug
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: c5fa895e67951964ca72dbd19ada632c, type: 2}
     - {fileID: 11400000, guid: a6faf37bb78f6f4439eb27ff62e5b235, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 209
+    'bytes[1]': 178
+    'bytes[2]': 250
+    'bytes[3]': 0
+    'bytes[4]': 80
+    'bytes[5]': 115
+    'bytes[6]': 150
+    'bytes[7]': 24
+    'bytes[8]': 229
+    'bytes[9]': 132
+    'bytes[10]': 22
+    'bytes[11]': 36
+    'bytes[12]': 78
+    'bytes[13]': 233
+    'bytes[14]': 36
+    'bytes[15]': 113

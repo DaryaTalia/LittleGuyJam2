@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Kannada (India) (kn-IN)
   m_GUID: a1d0ffe720b6ed449bef5880c8df9c05
-  m_SerializeEntries:
-  - m_GUID: dd3ff754c36e6df4691da79d2acfc0a8
-    m_Address: GameTable_kn-IN
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kn-IN
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: d3d314d08cef8284d8ab91d88a590c5a, type: 2}
     - {fileID: 11400000, guid: 8d04df2ecac6fe34eb2e946c69ff5138, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 254
+    'bytes[1]': 124
+    'bytes[2]': 91
+    'bytes[3]': 203
+    'bytes[4]': 59
+    'bytes[5]': 24
+    'bytes[6]': 93
+    'bytes[7]': 246
+    'bytes[8]': 253
+    'bytes[9]': 181
+    'bytes[10]': 120
+    'bytes[11]': 183
+    'bytes[12]': 108
+    'bytes[13]': 29
+    'bytes[14]': 1
+    'bytes[15]': 53

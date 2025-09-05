@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Western Frisian (Netherlands) (fy-NL)
   m_GUID: c5d270eb9e480614d82433b708d35b74
-  m_SerializeEntries:
-  - m_GUID: 6a898bbfb43b8f94a893c80c593d35e7
-    m_Address: GameTable_fy-NL
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-fy-NL
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 88a3fa15bc373b34a90017877e351457, type: 2}
     - {fileID: 11400000, guid: 24082834a3a696b4ab42a2f492bc64ce, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 202
+    'bytes[1]': 20
+    'bytes[2]': 238
+    'bytes[3]': 248
+    'bytes[4]': 100
+    'bytes[5]': 204
+    'bytes[6]': 21
+    'bytes[7]': 214
+    'bytes[8]': 118
+    'bytes[9]': 245
+    'bytes[10]': 219
+    'bytes[11]': 134
+    'bytes[12]': 254
+    'bytes[13]': 85
+    'bytes[14]': 147
+    'bytes[15]': 250

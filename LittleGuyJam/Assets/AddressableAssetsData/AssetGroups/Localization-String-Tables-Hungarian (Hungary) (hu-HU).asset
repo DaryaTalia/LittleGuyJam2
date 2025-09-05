@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Hungarian (Hungary) (hu-HU)
   m_GUID: e4a52671a21e5574a833af9586fd89d3
-  m_SerializeEntries:
-  - m_GUID: 0ff1ae422f172374982d794c6434a505
-    m_Address: GameTable_hu-HU
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-hu-HU
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: b9346a6540f2b5042aec5b1734fd7223, type: 2}
     - {fileID: 11400000, guid: 391deb52d194e0d4aae9c640f03518b9, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 126
+    'bytes[1]': 211
+    'bytes[2]': 53
+    'bytes[3]': 71
+    'bytes[4]': 166
+    'bytes[5]': 58
+    'bytes[6]': 125
+    'bytes[7]': 47
+    'bytes[8]': 192
+    'bytes[9]': 127
+    'bytes[10]': 160
+    'bytes[11]': 217
+    'bytes[12]': 75
+    'bytes[13]': 61
+    'bytes[14]': 23
+    'bytes[15]': 250

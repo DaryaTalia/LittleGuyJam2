@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Yoruba (Nigeria) (yo-NG)
   m_GUID: b17ca806fdb8d7a4a81f0fb5e7e95d4a
-  m_SerializeEntries:
-  - m_GUID: c01d6272ef6bac8428498b9f4efe3680
-    m_Address: GameTable_yo-NG
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-yo-NG
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: e23bda8642bcb244d82399c7b4b37976, type: 2}
     - {fileID: 11400000, guid: ef4ba5eb8229c3945a71f76791155380, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 221
+    'bytes[1]': 112
+    'bytes[2]': 81
+    'bytes[3]': 41
+    'bytes[4]': 211
+    'bytes[5]': 61
+    'bytes[6]': 210
+    'bytes[7]': 171
+    'bytes[8]': 196
+    'bytes[9]': 40
+    'bytes[10]': 230
+    'bytes[11]': 40
+    'bytes[12]': 206
+    'bytes[13]': 8
+    'bytes[14]': 67
+    'bytes[15]': 208

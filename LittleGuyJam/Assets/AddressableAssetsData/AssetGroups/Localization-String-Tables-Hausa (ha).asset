@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Hausa (ha)
   m_GUID: 6736a46c02319054f958c91b98f2820d
-  m_SerializeEntries:
-  - m_GUID: 946796c1cc854854da69328ec5fbaf99
-    m_Address: GameTable_ha
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ha
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: ce19161456d65354ba130499130b5e79, type: 2}
     - {fileID: 11400000, guid: 4a160b52a216e174f97bbfc4ef00dd2e, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 9
+    'bytes[1]': 13
+    'bytes[2]': 68
+    'bytes[3]': 1
+    'bytes[4]': 87
+    'bytes[5]': 115
+    'bytes[6]': 41
+    'bytes[7]': 226
+    'bytes[8]': 189
+    'bytes[9]': 14
+    'bytes[10]': 159
+    'bytes[11]': 62
+    'bytes[12]': 250
+    'bytes[13]': 242
+    'bytes[14]': 57
+    'bytes[15]': 1

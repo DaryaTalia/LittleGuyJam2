@@ -14,15 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-Assets-Shared
   m_GUID: 7da8d64030e9666449cea235a0197385
-  m_SerializeEntries:
-  - m_GUID: 19260bc1287ebbc4780bd2fc7087bb42
-    m_Address: Assets/Settings/Localization/GameTable Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 46fc414e5afe89642ad39998b812d1b8, type: 2}
     - {fileID: 11400000, guid: 0dc76ebf8c1030e4299cfc072d1ac66a, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 195
+    'bytes[1]': 219
+    'bytes[2]': 15
+    'bytes[3]': 220
+    'bytes[4]': 175
+    'bytes[5]': 131
+    'bytes[6]': 137
+    'bytes[7]': 156
+    'bytes[8]': 48
+    'bytes[9]': 5
+    'bytes[10]': 137
+    'bytes[11]': 200
+    'bytes[12]': 172
+    'bytes[13]': 195
+    'bytes[14]': 209
+    'bytes[15]': 10

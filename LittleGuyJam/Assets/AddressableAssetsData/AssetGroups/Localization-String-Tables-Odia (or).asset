@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Odia (or)
   m_GUID: 6c2a280546477fa4fa96c858c6c3aae3
-  m_SerializeEntries:
-  - m_GUID: 8d91c598e88da5046bc480ab84205cba
-    m_Address: GameTable_or
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-or
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 4be1a1fa29ec9d74c9dbf193fc8735ad, type: 2}
     - {fileID: 11400000, guid: af7e22b2a2025f14082dcb6b2c76aed4, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 235
+    'bytes[1]': 43
+    'bytes[2]': 174
+    'bytes[3]': 172
+    'bytes[4]': 205
+    'bytes[5]': 32
+    'bytes[6]': 206
+    'bytes[7]': 42
+    'bytes[8]': 151
+    'bytes[9]': 77
+    'bytes[10]': 67
+    'bytes[11]': 116
+    'bytes[12]': 170
+    'bytes[13]': 211
+    'bytes[14]': 109
+    'bytes[15]': 236

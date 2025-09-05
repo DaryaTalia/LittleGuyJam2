@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Scottish Gaelic (United Kingdom) (gd-GB)
   m_GUID: 167be363a3d11ff48a1902f8fcd5aa66
-  m_SerializeEntries:
-  - m_GUID: 940970919b0f0714392cf83e126ac42d
-    m_Address: GameTable_gd-GB
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-gd-GB
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 35940ff761560e446ba80d4068ffb238, type: 2}
     - {fileID: 11400000, guid: d7ad0c36560f1b24b97db06cc9323a72, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 228
+    'bytes[1]': 207
+    'bytes[2]': 45
+    'bytes[3]': 50
+    'bytes[4]': 160
+    'bytes[5]': 142
+    'bytes[6]': 120
+    'bytes[7]': 49
+    'bytes[8]': 101
+    'bytes[9]': 147
+    'bytes[10]': 182
+    'bytes[11]': 63
+    'bytes[12]': 5
+    'bytes[13]': 158
+    'bytes[14]': 253
+    'bytes[15]': 197

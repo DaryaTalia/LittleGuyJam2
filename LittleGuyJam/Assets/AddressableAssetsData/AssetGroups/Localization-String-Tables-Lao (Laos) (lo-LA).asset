@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Lao (Laos) (lo-LA)
   m_GUID: 58d33117f685bf4449e336b8bb645f99
-  m_SerializeEntries:
-  - m_GUID: 3250d3ca928ca0f40bbd0fe716074d8a
-    m_Address: GameTable_lo-LA
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-lo-LA
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 8f39354bf532126408c9ca9a9a5f0c8b, type: 2}
     - {fileID: 11400000, guid: da9aa511fddddc449bb8947cdde35133, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 123
+    'bytes[1]': 169
+    'bytes[2]': 199
+    'bytes[3]': 176
+    'bytes[4]': 90
+    'bytes[5]': 148
+    'bytes[6]': 125
+    'bytes[7]': 156
+    'bytes[8]': 200
+    'bytes[9]': 3
+    'bytes[10]': 23
+    'bytes[11]': 249
+    'bytes[12]': 2
+    'bytes[13]': 179
+    'bytes[14]': 255
+    'bytes[15]': 231

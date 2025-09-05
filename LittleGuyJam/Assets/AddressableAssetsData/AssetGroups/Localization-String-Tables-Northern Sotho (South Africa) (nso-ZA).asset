@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Northern Sotho (South Africa) (nso-ZA)
   m_GUID: bda5cf39df211b44aa592f2c330f010b
-  m_SerializeEntries:
-  - m_GUID: 1dda4a77b9e38974b95f1c5e16f1cf25
-    m_Address: GameTable_nso-ZA
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-nso-ZA
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 5f303d0820102064da9b75d19256d808, type: 2}
     - {fileID: 11400000, guid: ae53219461cdf7648994ecca26c0edaa, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 217
+    'bytes[1]': 211
+    'bytes[2]': 153
+    'bytes[3]': 244
+    'bytes[4]': 163
+    'bytes[5]': 70
+    'bytes[6]': 174
+    'bytes[7]': 139
+    'bytes[8]': 114
+    'bytes[9]': 239
+    'bytes[10]': 148
+    'bytes[11]': 16
+    'bytes[12]': 28
+    'bytes[13]': 252
+    'bytes[14]': 152
+    'bytes[15]': 27

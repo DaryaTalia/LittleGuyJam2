@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Yoruba (yo)
   m_GUID: bdc7146dd9eba6140b68e77ce85c66ca
-  m_SerializeEntries:
-  - m_GUID: e8fce772e3348ae4e9bb12039fbbc804
-    m_Address: GameTable_yo
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-yo
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 7d48e934345d77e4b99ae8b15efed1de, type: 2}
     - {fileID: 11400000, guid: 2329a787dc6b8114ca796c3b91b392b8, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 176
+    'bytes[1]': 181
+    'bytes[2]': 103
+    'bytes[3]': 35
+    'bytes[4]': 153
+    'bytes[5]': 184
+    'bytes[6]': 9
+    'bytes[7]': 33
+    'bytes[8]': 148
+    'bytes[9]': 78
+    'bytes[10]': 28
+    'bytes[11]': 36
+    'bytes[12]': 153
+    'bytes[13]': 230
+    'bytes[14]': 74
+    'bytes[15]': 104

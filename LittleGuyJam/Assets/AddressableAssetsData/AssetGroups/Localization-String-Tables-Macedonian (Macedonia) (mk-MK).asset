@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Macedonian (Macedonia) (mk-MK)
   m_GUID: 09cbbafee0f39ce4f8a72d1ec9539c55
-  m_SerializeEntries:
-  - m_GUID: 4edd49c7bf7362f4db545a592a8cd191
-    m_Address: GameTable_mk-MK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-mk-MK
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: d99289945a0305545ab47cb793fb6979, type: 2}
     - {fileID: 11400000, guid: 1fcc59aaeb7670240b1814a58ba31e63, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 162
+    'bytes[1]': 70
+    'bytes[2]': 242
+    'bytes[3]': 165
+    'bytes[4]': 169
+    'bytes[5]': 68
+    'bytes[6]': 81
+    'bytes[7]': 254
+    'bytes[8]': 173
+    'bytes[9]': 38
+    'bytes[10]': 90
+    'bytes[11]': 249
+    'bytes[12]': 42
+    'bytes[13]': 99
+    'bytes[14]': 13
+    'bytes[15]': 105

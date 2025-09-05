@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Northern Sami (se)
   m_GUID: 40b616acbd0c9754b800fd4d59a0d594
-  m_SerializeEntries:
-  - m_GUID: b159064466aeb38428426ac8d1acca72
-    m_Address: GameTable_se
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-se
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 2cab15766f63ee34483289bc3037e19c, type: 2}
     - {fileID: 11400000, guid: a39651daec5d3c1458527d2ed114f922, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 211
+    'bytes[1]': 53
+    'bytes[2]': 65
+    'bytes[3]': 226
+    'bytes[4]': 172
+    'bytes[5]': 48
+    'bytes[6]': 102
+    'bytes[7]': 155
+    'bytes[8]': 208
+    'bytes[9]': 59
+    'bytes[10]': 82
+    'bytes[11]': 82
+    'bytes[12]': 136
+    'bytes[13]': 238
+    'bytes[14]': 182
+    'bytes[15]': 244

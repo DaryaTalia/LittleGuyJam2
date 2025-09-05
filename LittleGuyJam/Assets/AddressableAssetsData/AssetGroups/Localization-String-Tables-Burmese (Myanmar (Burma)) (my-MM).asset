@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Burmese (Myanmar (Burma)) (my-MM)
   m_GUID: 6938ef2d9244cfb4d99ce2a8f6424e3c
-  m_SerializeEntries:
-  - m_GUID: 3f985ed2c73c44e4d9fd82a3492c57a8
-    m_Address: GameTable_my-MM
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-my-MM
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 07fbaac58a7c09447b23f41591e39959, type: 2}
     - {fileID: 11400000, guid: 8a5f09c411fe2e44fb919cc93afda503, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 74
+    'bytes[1]': 215
+    'bytes[2]': 223
+    'bytes[3]': 137
+    'bytes[4]': 122
+    'bytes[5]': 165
+    'bytes[6]': 244
+    'bytes[7]': 49
+    'bytes[8]': 82
+    'bytes[9]': 225
+    'bytes[10]': 190
+    'bytes[11]': 150
+    'bytes[12]': 190
+    'bytes[13]': 151
+    'bytes[14]': 49
+    'bytes[15]': 78

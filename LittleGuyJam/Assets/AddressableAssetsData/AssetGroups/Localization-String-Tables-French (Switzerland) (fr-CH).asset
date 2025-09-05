@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-French (Switzerland) (fr-CH)
   m_GUID: 491264534a3e41344bdaa2f3b1d874f9
-  m_SerializeEntries:
-  - m_GUID: e9a572622a6cc98479406260496a9f69
-    m_Address: GameTable_fr-CH
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-fr-CH
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: ad6640adae12e854b8e4cb7068da314c, type: 2}
     - {fileID: 11400000, guid: 9c9a366956a202a46bfe52c5f1eca5cf, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 25
+    'bytes[1]': 0
+    'bytes[2]': 14
+    'bytes[3]': 208
+    'bytes[4]': 10
+    'bytes[5]': 76
+    'bytes[6]': 173
+    'bytes[7]': 36
+    'bytes[8]': 220
+    'bytes[9]': 78
+    'bytes[10]': 14
+    'bytes[11]': 107
+    'bytes[12]': 66
+    'bytes[13]': 255
+    'bytes[14]': 17
+    'bytes[15]': 150

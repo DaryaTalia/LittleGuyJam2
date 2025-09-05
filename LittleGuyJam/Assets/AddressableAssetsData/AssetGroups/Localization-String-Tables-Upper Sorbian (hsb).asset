@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Upper Sorbian (hsb)
   m_GUID: 9a251e9a721946842882e0d6708525c0
-  m_SerializeEntries:
-  - m_GUID: 431b5c733e2cbb847a54c31317d3545c
-    m_Address: GameTable_hsb
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-hsb
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 6d90f007dbf7ba74193b873f9d927a62, type: 2}
     - {fileID: 11400000, guid: c90c2ed584ad97a45b52448f0637d918, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 232
+    'bytes[1]': 106
+    'bytes[2]': 233
+    'bytes[3]': 97
+    'bytes[4]': 22
+    'bytes[5]': 195
+    'bytes[6]': 6
+    'bytes[7]': 105
+    'bytes[8]': 110
+    'bytes[9]': 104
+    'bytes[10]': 60
+    'bytes[11]': 116
+    'bytes[12]': 63
+    'bytes[13]': 111
+    'bytes[14]': 166
+    'bytes[15]': 150

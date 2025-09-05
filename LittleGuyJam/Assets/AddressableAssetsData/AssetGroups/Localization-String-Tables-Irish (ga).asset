@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Irish (ga)
   m_GUID: fce92e1c54dbb414babfce16f9bb2a9b
-  m_SerializeEntries:
-  - m_GUID: 461e36b7685eedf43b4f8f18eb529590
-    m_Address: GameTable_ga
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ga
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: ad8e03ae073b60346b1abb80e4f6725f, type: 2}
     - {fileID: 11400000, guid: 866585f657e6194449ba3e1459558fac, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 168
+    'bytes[1]': 42
+    'bytes[2]': 46
+    'bytes[3]': 70
+    'bytes[4]': 216
+    'bytes[5]': 25
+    'bytes[6]': 222
+    'bytes[7]': 58
+    'bytes[8]': 118
+    'bytes[9]': 9
+    'bytes[10]': 192
+    'bytes[11]': 229
+    'bytes[12]': 202
+    'bytes[13]': 49
+    'bytes[14]': 204
+    'bytes[15]': 61

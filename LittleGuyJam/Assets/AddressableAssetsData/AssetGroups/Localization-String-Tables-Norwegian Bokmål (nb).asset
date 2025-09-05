@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: "Localization-String-Tables-Norwegian Bokm\xE5l (nb)"
   m_GUID: 13765b5a58c557f43a25f7177cbd2e1e
-  m_SerializeEntries:
-  - m_GUID: c2c08e824cd49024b8570e0f48c48286
-    m_Address: GameTable_nb
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-nb
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 0411caf018b9a444e855e31a8a1f6e1c, type: 2}
     - {fileID: 11400000, guid: b9dca4d2996ec434eb22358568491d24, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 235
+    'bytes[1]': 211
+    'bytes[2]': 194
+    'bytes[3]': 231
+    'bytes[4]': 16
+    'bytes[5]': 62
+    'bytes[6]': 97
+    'bytes[7]': 5
+    'bytes[8]': 76
+    'bytes[9]': 37
+    'bytes[10]': 199
+    'bytes[11]': 35
+    'bytes[12]': 94
+    'bytes[13]': 173
+    'bytes[14]': 29
+    'bytes[15]': 73

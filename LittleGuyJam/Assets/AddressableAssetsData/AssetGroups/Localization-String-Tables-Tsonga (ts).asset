@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Tsonga (ts)
   m_GUID: e9b8f3a4b3d2a67448e6c1f89c649cc6
-  m_SerializeEntries:
-  - m_GUID: 9b5a238fa4a38a44bbcf930056ecd14c
-    m_Address: GameTable_ts
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ts
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: be7b1a03742c4ea4a8bc07395b254abc, type: 2}
     - {fileID: 11400000, guid: 134b3566c911d4a45adb22b75625e016, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 252
+    'bytes[1]': 37
+    'bytes[2]': 134
+    'bytes[3]': 43
+    'bytes[4]': 213
+    'bytes[5]': 221
+    'bytes[6]': 230
+    'bytes[7]': 41
+    'bytes[8]': 78
+    'bytes[9]': 46
+    'bytes[10]': 18
+    'bytes[11]': 235
+    'bytes[12]': 50
+    'bytes[13]': 30
+    'bytes[14]': 238
+    'bytes[15]': 161

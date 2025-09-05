@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Tsonga (South Africa) (ts-ZA)
   m_GUID: d30013769e34ec24592bd128cc44d8ca
-  m_SerializeEntries:
-  - m_GUID: c234d20f86f18d8428e15feebeab56c5
-    m_Address: GameTable_ts-ZA
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ts-ZA
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: bb62254df0c2428478cfb1a76d36a6a8, type: 2}
     - {fileID: 11400000, guid: 14a494ed99a15f94680c5232c9663901, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 119
+    'bytes[1]': 177
+    'bytes[2]': 235
+    'bytes[3]': 197
+    'bytes[4]': 3
+    'bytes[5]': 175
+    'bytes[6]': 252
+    'bytes[7]': 6
+    'bytes[8]': 2
+    'bytes[9]': 255
+    'bytes[10]': 33
+    'bytes[11]': 123
+    'bytes[12]': 249
+    'bytes[13]': 136
+    'bytes[14]': 14
+    'bytes[15]': 139

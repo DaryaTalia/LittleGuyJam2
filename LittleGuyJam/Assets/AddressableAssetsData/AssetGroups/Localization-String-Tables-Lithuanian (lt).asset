@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Lithuanian (lt)
   m_GUID: e35ab42a1d7272944b4d445f3159bbf0
-  m_SerializeEntries:
-  - m_GUID: 32fef2315fea5f249b60ec4af32351da
-    m_Address: GameTable_lt
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-lt
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: f47f58122a8a7454fa69a2a92eb3f515, type: 2}
     - {fileID: 11400000, guid: b262fe4c85211434190ecb3f60ee767a, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 99
+    'bytes[1]': 11
+    'bytes[2]': 74
+    'bytes[3]': 208
+    'bytes[4]': 157
+    'bytes[5]': 155
+    'bytes[6]': 78
+    'bytes[7]': 1
+    'bytes[8]': 19
+    'bytes[9]': 48
+    'bytes[10]': 76
+    'bytes[11]': 27
+    'bytes[12]': 76
+    'bytes[13]': 72
+    'bytes[14]': 21
+    'bytes[15]': 228

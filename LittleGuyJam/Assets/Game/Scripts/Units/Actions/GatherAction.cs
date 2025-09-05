@@ -43,6 +43,7 @@ public class GatherAction : IAction
         if (unit.CollectedResources < unit.data.MaxResources)
         {
             Debug.Log(unit.name + " Gather +" + target.Value);
+            unit.resourceAnim.SetTrigger("collect");
             unit.CollectedResources += target.Value;
         }
         else

@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Somali (so)
   m_GUID: 654fdb9a48bf6de408556f678c020a43
-  m_SerializeEntries:
-  - m_GUID: 25da585dae46c8a4283fdc9c98e29e5a
-    m_Address: GameTable_so
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-so
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: d9d197b542332c74589e86e0d18a300c, type: 2}
     - {fileID: 11400000, guid: 02608f9f45f46924f83b6b2650ec7f75, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 76
+    'bytes[1]': 152
+    'bytes[2]': 115
+    'bytes[3]': 193
+    'bytes[4]': 213
+    'bytes[5]': 191
+    'bytes[6]': 90
+    'bytes[7]': 217
+    'bytes[8]': 84
+    'bytes[9]': 15
+    'bytes[10]': 17
+    'bytes[11]': 176
+    'bytes[12]': 183
+    'bytes[13]': 107
+    'bytes[14]': 214
+    'bytes[15]': 243

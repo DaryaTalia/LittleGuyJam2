@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Turkmen (tk)
   m_GUID: edb47191c79eff64f8df9280d4690dd0
-  m_SerializeEntries:
-  - m_GUID: 5afef5bb276d2604dbf73cafac91ba47
-    m_Address: GameTable_tk
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-tk
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 4d98daa7e1885d841af8997d901a3e08, type: 2}
     - {fileID: 11400000, guid: c0ce9d90fcb7bc844ac25a83cf9048a9, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 228
+    'bytes[1]': 83
+    'bytes[2]': 98
+    'bytes[3]': 251
+    'bytes[4]': 227
+    'bytes[5]': 210
+    'bytes[6]': 235
+    'bytes[7]': 108
+    'bytes[8]': 171
+    'bytes[9]': 52
+    'bytes[10]': 108
+    'bytes[11]': 191
+    'bytes[12]': 205
+    'bytes[13]': 158
+    'bytes[14]': 36
+    'bytes[15]': 155

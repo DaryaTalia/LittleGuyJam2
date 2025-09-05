@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Igbo (ig)
   m_GUID: 1c30798a89bbd0145a5e112c567a160e
-  m_SerializeEntries:
-  - m_GUID: 9cadd29da0575044eb3f474139f09726
-    m_Address: GameTable_ig
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ig
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: e3c9865f4bea7054683fb9e455bd219c, type: 2}
     - {fileID: 11400000, guid: 6b2305bd10cbe7e4fb02ca087e13ccfe, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 5
+    'bytes[1]': 139
+    'bytes[2]': 208
+    'bytes[3]': 201
+    'bytes[4]': 90
+    'bytes[5]': 148
+    'bytes[6]': 242
+    'bytes[7]': 62
+    'bytes[8]': 153
+    'bytes[9]': 108
+    'bytes[10]': 174
+    'bytes[11]': 6
+    'bytes[12]': 6
+    'bytes[13]': 224
+    'bytes[14]': 212
+    'bytes[15]': 13

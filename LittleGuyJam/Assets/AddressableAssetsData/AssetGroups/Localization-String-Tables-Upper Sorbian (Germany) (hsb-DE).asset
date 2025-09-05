@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Upper Sorbian (Germany) (hsb-DE)
   m_GUID: dbd9967d788e13f409487848ae9c9aca
-  m_SerializeEntries:
-  - m_GUID: 102422ce5d0f4274eb4452ea7e889491
-    m_Address: GameTable_hsb-DE
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-hsb-DE
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 9687b96ac49e4094a8b2d55e16b14868, type: 2}
     - {fileID: 11400000, guid: 309eb363d390f1940bda00c719ead8c1, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 145
+    'bytes[1]': 170
+    'bytes[2]': 150
+    'bytes[3]': 231
+    'bytes[4]': 90
+    'bytes[5]': 111
+    'bytes[6]': 64
+    'bytes[7]': 252
+    'bytes[8]': 77
+    'bytes[9]': 221
+    'bytes[10]': 17
+    'bytes[11]': 253
+    'bytes[12]': 6
+    'bytes[13]': 183
+    'bytes[14]': 193
+    'bytes[15]': 110

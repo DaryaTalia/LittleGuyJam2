@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Italian (it)
   m_GUID: b37d150b0ec4ded4a86eb8f3012ea905
-  m_SerializeEntries:
-  - m_GUID: b80f9d499c9b33a4a86d56fd98983499
-    m_Address: GameTable_it
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-it
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: eb5453f729895ca4db5624aa2b710bbc, type: 2}
     - {fileID: 11400000, guid: 7d850667e9330164a8d76aea4d742caa, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 173
+    'bytes[1]': 222
+    'bytes[2]': 68
+    'bytes[3]': 28
+    'bytes[4]': 132
+    'bytes[5]': 178
+    'bytes[6]': 60
+    'bytes[7]': 82
+    'bytes[8]': 225
+    'bytes[9]': 13
+    'bytes[10]': 118
+    'bytes[11]': 186
+    'bytes[12]': 252
+    'bytes[13]': 245
+    'bytes[14]': 61
+    'bytes[15]': 2

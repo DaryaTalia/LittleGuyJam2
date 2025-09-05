@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Xhosa (xh)
   m_GUID: 1fa6ff33dfc4c2a4981740f566ce5fea
-  m_SerializeEntries:
-  - m_GUID: 685a95ac0fe884f418c4f9197f93d9cc
-    m_Address: GameTable_xh
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-xh
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 1d614e27292504e48b3955feb9a62ca8, type: 2}
     - {fileID: 11400000, guid: 1dd61f4c4fc760440b882057d04d536c, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 53
+    'bytes[1]': 181
+    'bytes[2]': 219
+    'bytes[3]': 131
+    'bytes[4]': 24
+    'bytes[5]': 229
+    'bytes[6]': 244
+    'bytes[7]': 248
+    'bytes[8]': 120
+    'bytes[9]': 15
+    'bytes[10]': 83
+    'bytes[11]': 174
+    'bytes[12]': 20
+    'bytes[13]': 147
+    'bytes[14]': 101
+    'bytes[15]': 174

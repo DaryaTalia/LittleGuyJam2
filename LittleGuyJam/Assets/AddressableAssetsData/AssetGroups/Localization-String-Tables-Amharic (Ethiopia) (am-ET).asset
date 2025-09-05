@@ -14,16 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-String-Tables-Amharic (Ethiopia) (am-ET)
   m_GUID: 5334cad890a8de848993612a5d2722bc
-  m_SerializeEntries:
-  - m_GUID: 64db2003b8bb5a64faa337795a6caed5
-    m_Address: GameTable_am-ET
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-am-ET
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: c8f69290da509af498994d6cdfcbf0e8, type: 2}
     - {fileID: 11400000, guid: cee99997b0d08c04bb2d963f669e8d2e, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 136
+    'bytes[1]': 43
+    'bytes[2]': 113
+    'bytes[3]': 78
+    'bytes[4]': 155
+    'bytes[5]': 103
+    'bytes[6]': 181
+    'bytes[7]': 83
+    'bytes[8]': 152
+    'bytes[9]': 206
+    'bytes[10]': 126
+    'bytes[11]': 57
+    'bytes[12]': 159
+    'bytes[13]': 27
+    'bytes[14]': 190
+    'bytes[15]': 32
