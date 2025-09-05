@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95925a9dfd40cd948b878d800b0504c8, type: 3}
+  m_Name: MeleeUnitData
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  MovementSpeed: 2
+  DistanceThreshold: 1
+  MaxResources: 0
+  CollectionSpeed: 0
+  StorageSpeed: 5
+  AttackRange: 5
+  AttackDamage: 10
+  AttackSpeed: 5
+  RandomAutonomyMax: 250
+  BidRefreshRate: 5
+  RandomMoveAutonomy: 75
+  RandomGatherAutonomy: 0
+  RandomStoreAutonomy: 0
+  RandomAttackAutonomy: 75
+  RandomMoveAttackAutonomy: 90
+  RandomProtectAutonomy: 50

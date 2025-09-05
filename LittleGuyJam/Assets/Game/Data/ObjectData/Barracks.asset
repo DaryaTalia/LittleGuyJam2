@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 961d51490b0661e449da3747116fb110, type: 3}
-  m_Name: Background1
+  m_Script: {fileID: 11500000, guid: b4b0952d2f049bb4ba4b21b251d2ad7d, type: 3}
+  m_Name: Barracks
   m_EditorClassIdentifier: 
-  clip: {fileID: 0}
-  volume: 0
+  ResourceCost: 15
+  UnitTypePrefab: {fileID: 8668562598083124505, guid: 51dd11546b9396c4ba5828b0d5fb3f4f, type: 3}
