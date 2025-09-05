@@ -142,7 +142,6 @@ GameObject:
   - component: {fileID: 8051843398582405537}
   - component: {fileID: 3572127452538153053}
   - component: {fileID: 5832904051571387134}
-  - component: {fileID: 8940723428196723705}
   - component: {fileID: 4427585077989259864}
   m_Layer: 0
   m_Name: GameManager
@@ -181,11 +180,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: e11485f7f1dc71a41902edfd1fc2b588, type: 2}
-  status: 1
   mode: 0
   storageBuilding: {fileID: 0}
   barracksBuilding: {fileID: 0}
   rndBuilding: {fileID: 0}
+  map: {fileID: 0}
 --- !u!114 &8051843398582405537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,10 +197,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5637596e9ec104458093b7409521c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeUnitPool:
-  - {fileID: 0}
-  inActiveUnitPool: []
+  activeUnitPool: {fileID: 0}
+  inactiveUnitPool: {fileID: 0}
   selectedUnits: []
+  enemyMeleePrefab: {fileID: 0}
+  enemyRangedPrefab: {fileID: 0}
+  enemySpawn: {fileID: 0}
 --- !u!114 &3572127452538153053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,35 +248,6 @@ MonoBehaviour:
   wavesGUI: {fileID: 0}
   wavesText: {fileID: 0}
   wavesGUIEnabled: 0
---- !u!114 &8940723428196723705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5565030162092372640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea6f8692fb3eb1a4fa7b407ffbbda089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  status: 0
-  _mainMenuPanel: {fileID: 0}
-  _playGameButton: {fileID: 0}
-  _settingsButton: {fileID: 0}
-  _creditsButton: {fileID: 0}
-  _quitGameButton: {fileID: 0}
-  _gameModePanel: {fileID: 0}
-  _settingsPanel: {fileID: 0}
-  _allVolumeSlider: {fileID: 0}
-  _musicVolumeSlider: {fileID: 0}
-  _sfxVolumeSlider: {fileID: 0}
-  _creditsPanel: {fileID: 0}
-  _pauseMenuPanel: {fileID: 0}
-  _resumeGameButton: {fileID: 0}
-  _settingsButtonPause: {fileID: 0}
-  _creditsButtonPause: {fileID: 0}
-  _quitGameButtonPause: {fileID: 0}
 --- !u!114 &4427585077989259864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +262,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 9175768231995238451}
   sfxSource: {fileID: 2880290264472779758}
+  audioData: {fileID: 0}
+  audioMixer: {fileID: 0}
+  _allVolumeSlider: {fileID: 0}
+  _musicVolumeSlider: {fileID: 0}
+  _sfxVolumeSlider: {fileID: 0}
 --- !u!1 &7497218914616665210
 GameObject:
   m_ObjectHideFlags: 0

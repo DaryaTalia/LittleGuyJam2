@@ -59,7 +59,6 @@ public class GameManager : MonoBehaviour
         menuManager.status = MenuManager.MenuStatus.MainMenu;
         UnitManager.StartUnits();
         unitManager.DeactivatePool();
-        map.SetActive(false);
     }
 
     public void Update()
