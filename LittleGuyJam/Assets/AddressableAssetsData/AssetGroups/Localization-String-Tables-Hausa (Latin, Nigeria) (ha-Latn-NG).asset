@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Hausa (Latin, Nigeria) (ha-Latn-NG)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Hausa (Latin, Nigeria) (ha-Latn-NG)
+  m_GUID: 9b044cc9b49d45c4c95722595968dc74
+  m_SerializeEntries:
+  - m_GUID: 146cbc1fa0e26fe498899cfdca75e18f
+    m_Address: GameTable_ha-Latn-NG
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ha-Latn-NG
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ba8ef2105b86fad4d87823d7a27f417e, type: 2}
+    - {fileID: 11400000, guid: fc52347230b409e4fbd9f0a67e2224d0, type: 2}

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Georgian (ka)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Georgian (ka)
+  m_GUID: 44c0a9e08b4b2e54489993593f3e1b16
+  m_SerializeEntries:
+  - m_GUID: 76470bdd1b242d444a55b51f125ec1e7
+    m_Address: GameTable_ka
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ka
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 56a1d6005fb27994090f88c8bba89ace, type: 2}
+    - {fileID: 11400000, guid: fdc6ea01b63660c46a6c45d138fe5d37, type: 2}

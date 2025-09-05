@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Estonian (Estonia) (et-EE)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Estonian (Estonia) (et-EE)
+  m_GUID: b678bce0a48b77b46997f6697e29df66
+  m_SerializeEntries:
+  - m_GUID: e50b9dd3ecdb15746b7c4dfbb274d3e4
+    m_Address: GameTable_et-EE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-et-EE
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d9bf23dd4361a3443a07df9ed5009842, type: 2}
+    - {fileID: 11400000, guid: 80de631575509cb4ea9139b1c9534450, type: 2}

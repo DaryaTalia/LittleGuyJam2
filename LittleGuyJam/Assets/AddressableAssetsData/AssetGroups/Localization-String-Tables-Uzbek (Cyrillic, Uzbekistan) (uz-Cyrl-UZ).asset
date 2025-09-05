@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Uzbek (Cyrillic, Uzbekistan) (uz-Cyrl-UZ)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Uzbek (Cyrillic, Uzbekistan) (uz-Cyrl-UZ)
+  m_GUID: 991e23c86b0ea1f43b23cdb637206f49
+  m_SerializeEntries:
+  - m_GUID: 2e1dd0f7b7e7a1d49a42af7011c3d780
+    m_Address: GameTable_uz-Cyrl-UZ
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uz-Cyrl-UZ
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d61c515f28e147e4c8f81bf993781731, type: 2}
+    - {fileID: 11400000, guid: 0fe6be54d3b819d479646c6578ffe3c1, type: 2}

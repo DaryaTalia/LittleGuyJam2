@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Mongolian (Mongolia) (mn-MN)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Mongolian (Mongolia) (mn-MN)
+  m_GUID: 98043fe62397e5b4097bf220934d350d
+  m_SerializeEntries:
+  - m_GUID: fe461c5fd0104384fb33175c926affbe
+    m_Address: GameTable_mn-MN
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-mn-MN
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8a1ab3e73d99a2247b03dfabe3636609, type: 2}
+    - {fileID: 11400000, guid: 16427ed32aebd3942af85c5b2615298e, type: 2}

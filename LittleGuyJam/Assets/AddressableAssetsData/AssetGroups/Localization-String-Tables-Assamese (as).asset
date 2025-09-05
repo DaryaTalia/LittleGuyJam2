@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Assamese (as)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Assamese (as)
+  m_GUID: 917613387044f214dbffbe0c6e0fdcb7
+  m_SerializeEntries:
+  - m_GUID: 76b4951ff5cfd9647a0991a9102bbca5
+    m_Address: GameTable_as
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-as
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: bc249ec6305f9a1499399e29b383df42, type: 2}
+    - {fileID: 11400000, guid: dfc27a2e47c4e9a4c91c1e5e66d0bc37, type: 2}

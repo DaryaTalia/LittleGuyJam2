@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Inari Sami (smn)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Inari Sami (smn)
+  m_GUID: baf25c2363b39ef4eb755f4455c15012
+  m_SerializeEntries:
+  - m_GUID: bbba6cc7d1c7bb24b91192e4ef02db82
+    m_Address: GameTable_smn
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-smn
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ffac1697561586f40b93e3f0db72c787, type: 2}
+    - {fileID: 11400000, guid: 2ba178be2d78feb4386daa8fae3afdf9, type: 2}

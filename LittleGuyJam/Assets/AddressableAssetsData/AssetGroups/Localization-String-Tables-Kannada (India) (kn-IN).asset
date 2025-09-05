@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Kannada (India) (kn-IN)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Kannada (India) (kn-IN)
+  m_GUID: a1d0ffe720b6ed449bef5880c8df9c05
+  m_SerializeEntries:
+  - m_GUID: dd3ff754c36e6df4691da79d2acfc0a8
+    m_Address: GameTable_kn-IN
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kn-IN
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d3d314d08cef8284d8ab91d88a590c5a, type: 2}
+    - {fileID: 11400000, guid: 8d04df2ecac6fe34eb2e946c69ff5138, type: 2}

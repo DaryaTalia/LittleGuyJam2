@@ -9,6 +9,7 @@ EditorBuildSettings:
     path: Assets/Game/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 81ba89e4bd1e1004a91d063b7499b0ae, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: bd76fc1b1b69d674ba2e23f5bb192bf7, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
     com.unity.localization.settings: {fileID: 11400000, guid: 3822440c72337924496e77726509c109, type: 2}

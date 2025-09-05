@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Somali (so)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Somali (so)
+  m_GUID: 654fdb9a48bf6de408556f678c020a43
+  m_SerializeEntries:
+  - m_GUID: 25da585dae46c8a4283fdc9c98e29e5a
+    m_Address: GameTable_so
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-so
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d9d197b542332c74589e86e0d18a300c, type: 2}
+    - {fileID: 11400000, guid: 02608f9f45f46924f83b6b2650ec7f75, type: 2}

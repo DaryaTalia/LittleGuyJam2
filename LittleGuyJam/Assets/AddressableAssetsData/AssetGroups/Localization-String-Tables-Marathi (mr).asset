@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Marathi (mr)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Marathi (mr)
+  m_GUID: d72a0a9ffacf34f4ba009e19ffab7532
+  m_SerializeEntries:
+  - m_GUID: 3bc823ecd89d1ce4c8db69eb85594d22
+    m_Address: GameTable_mr
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-mr
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a35e9d21420f4f6448e52739845da5ae, type: 2}
+    - {fileID: 11400000, guid: 4584cd498785cd64f901e46b7612c4fc, type: 2}

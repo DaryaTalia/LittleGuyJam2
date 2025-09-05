@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Macedonian (mk)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Macedonian (mk)
+  m_GUID: d898bffcbc649974094fc7e9437323cc
+  m_SerializeEntries:
+  - m_GUID: 866a9b20e112d1f46b688b3e69d32821
+    m_Address: GameTable_mk
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-mk
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b5400a50b41031d41a41f2d4c516e16b, type: 2}
+    - {fileID: 11400000, guid: 5e362cf781699604db71a5ab549c8935, type: 2}

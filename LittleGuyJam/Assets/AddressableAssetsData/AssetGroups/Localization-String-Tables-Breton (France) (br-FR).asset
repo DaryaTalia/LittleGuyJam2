@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Breton (France) (br-FR)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Breton (France) (br-FR)
+  m_GUID: ed3819f834d232b409444f46cf975019
+  m_SerializeEntries:
+  - m_GUID: b14d2c63c14e32245ada90b39bff9e85
+    m_Address: GameTable_br-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-br-FR
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 1511d89e6c30b0641ad4ae2c4ef0aede, type: 2}
+    - {fileID: 11400000, guid: da85e4c513eab0641af5c6bd0fb97261, type: 2}

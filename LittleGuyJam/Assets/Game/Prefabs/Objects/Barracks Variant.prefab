@@ -56,17 +56,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barracks Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7680897999168127443, guid: 0e5251f4574b32a4ab2325ce3a916db3, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.225
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680897999168127443, guid: 0e5251f4574b32a4ab2325ce3a916db3, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788339188480756471, guid: 0e5251f4574b32a4ab2325ce3a916db3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4874497718291334206, guid: f592791e3f47154429643b9e0bbb0fe5, type: 3}
     - target: {fileID: 8788339188480756471, guid: 0e5251f4574b32a4ab2325ce3a916db3, type: 3}
       propertyPath: m_Color.b
-      value: 0.69803923
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8788339188480756471, guid: 0e5251f4574b32a4ab2325ce3a916db3, type: 3}
       propertyPath: m_Color.g
-      value: 0.5532155
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8788339188480756471, guid: 0e5251f4574b32a4ab2325ce3a916db3, type: 3}
       propertyPath: m_Color.r
-      value: 0.48235294
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

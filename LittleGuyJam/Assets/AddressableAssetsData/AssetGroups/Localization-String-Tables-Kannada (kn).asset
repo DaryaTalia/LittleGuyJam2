@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Kannada (kn)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Kannada (kn)
+  m_GUID: 42cf08a5579f0bc47833042b2bb12568
+  m_SerializeEntries:
+  - m_GUID: a1eddd12908bda542b03eb0b7bf031b7
+    m_Address: GameTable_kn
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kn
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 94a5d42b615c8af498324a8cd4d8e54c, type: 2}
+    - {fileID: 11400000, guid: f7539dec25bf7654dbcf918be980e7a6, type: 2}
