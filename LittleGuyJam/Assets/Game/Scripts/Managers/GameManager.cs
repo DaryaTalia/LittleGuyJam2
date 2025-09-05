@@ -92,15 +92,19 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator TimerAscending()
     {
-        if (menuManager.status == MenuManager.MenuStatus.Game)
+        while(menuManager.status != MenuManager.MenuStatus.MainMenu && 
+menuManager.status != MenuManager.MenuStatus.GameModeSelection)
         {
-            yield return new WaitForSeconds(1);
-            data.TotalGameTime++;
-        }
-        else
-        {
-            yield return new WaitForSeconds(1);
-        }
+            if (menuManager.status == MenuManager.MenuStatus.Game)
+            {
+                yield return new WaitForSeconds(1);
+                data.TotalGameTime++;
+            }
+            else
+            {
+                yield return new WaitForSeconds(1);
+            }
+        }        
     }
 
     public void PlayGame()
@@ -209,19 +213,32 @@ public class GameManager : MonoBehaviour
         }
 
         // Spawn Enemies
-        if (unitManager.activeUnitPool.
-            GetComponentsInChildren<AttackUnit>().
-            Where(u => u.Alignment == UnitManager.UnitAlignment.ally).
-            Count() > 1)
-        {
-            int chance = Random.Range(0, 200);
+        bool allyAttackUnits = false;
 
-            if (chance < 20)
+        foreach(AttackUnit a in unitManager.activeUnitPool.
+            GetComponentsInChildren<AttackUnit>())
+        {
+            if(a.Alignment != UnitManager.UnitAlignment.ally)
+            {
+                break;
+            }
+            else
+            {
+                allyAttackUnits = true;
+                break;
+            }
+        }
+
+        if (allyAttackUnits)
+        {
+            int chance = Random.Range(0, 3000);
+
+            if (chance < 4)
             {
                 if (chance % 2 == 0)
                 {
                     SpawnUnit(unitManager.enemyMeleePrefab, unitManager.enemySpawn.position);
-                } 
+                }
                 else
                 {
                     SpawnUnit(unitManager.enemyRangedPrefab, unitManager.enemySpawn.position);
@@ -229,7 +246,6 @@ public class GameManager : MonoBehaviour
 
             }
         }
-
     }
 
     public void CheckEliminationProgression()

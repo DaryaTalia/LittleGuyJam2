@@ -19,6 +19,11 @@ public class AttackUnit : Unit
 
     public override bool AutonomyBid(string action)
     {
+        if (actionQueue.Last<IAction>().FromPlayer)
+        {
+            canBid = true;
+        }
+
         if (canBid)
         {
             int bid = Random.Range(0, data.RandomAutonomyMax);
@@ -55,19 +60,29 @@ public class AttackUnit : Unit
 
     public void FindEnemy()
     {
-        List<Unit> enemies;
+        List<Unit> enemies = new List<Unit>();
 
         if (Alignment == UnitAlignment.ally)
         {
-            enemies = GameManager.instance.
-                UnitManager.activeUnitPool.GetComponentsInChildren<Unit>().
-                ToList().FindAll(u => u.GetComponent<Unit>().Alignment == UnitAlignment.enemy);
+            foreach(Unit u in GameManager.instance.
+                UnitManager.activeUnitPool.GetComponentsInChildren<Unit>())
+            {
+                if(u.Alignment == UnitAlignment.enemy)
+                {
+                    enemies.Add(u);
+                }
+            }
         }
         else
         {
-            enemies = GameManager.instance.
-                UnitManager.activeUnitPool.GetComponentsInChildren<Unit>().
-                ToList().FindAll(u => u.GetComponent<Unit>().Alignment == UnitAlignment.ally);
+            foreach (Unit u in GameManager.instance.
+                UnitManager.activeUnitPool.GetComponentsInChildren<Unit>())
+            {
+                if (u.Alignment == UnitAlignment.ally)
+                {
+                    enemies.Add(u);
+                }
+            }
         }
 
         int randomTarget = Random.Range(0, enemies.Count);

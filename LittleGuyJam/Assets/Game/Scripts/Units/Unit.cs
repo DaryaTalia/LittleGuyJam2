@@ -47,10 +47,9 @@ public class Unit : MonoBehaviour
         health = data.MaxHealth;
         CurrentState = UnitStates.Hold;
         canBid = true;
-
         actionQueue = new List<IAction>();
         actionQueue.Clear();
-        actionQueue.Add(NewHoldAction(true));
+        actionQueue.Add(NewHoldAction(false));
     }
 
     public virtual bool AutonomyBid(string action) { return false; }
@@ -93,9 +92,7 @@ public class Unit : MonoBehaviour
     {
         if(alignment == UnitAlignment.ally)
         {
-            GameManager.instance.UnitManager.selectedUnits.Clear();
             GameManager.instance.UnitManager.selectedUnits.Add(this);
-
         } 
         else
         {
@@ -107,9 +104,9 @@ public class Unit : MonoBehaviour
                     a.actionQueue.Add(a.NewAttackAction(true));
                     a.AttackTarget = this;
                     a.actionQueue.Add(a.NewMoveAction(true));
-                    a.actionQueue.Last<IAction>().ConvertTo<MoveAction>().DistanceCap = a.data.AttackRange;
+                    a.actionQueue.Last<IAction>().ConvertTo<MoveAction>().DistanceCap = a.data.AttackRange;   
+                    GameManager.instance.UnitManager.selectedUnits.Remove(a);
                 }
-                GameManager.instance.UnitManager.selectedUnits.Clear();
             }
         }
     }

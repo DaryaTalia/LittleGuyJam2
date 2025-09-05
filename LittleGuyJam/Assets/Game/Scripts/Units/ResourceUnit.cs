@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using static UnitManager;
 
@@ -14,6 +15,11 @@ public class ResourceUnit : Unit
 
     public override bool AutonomyBid(string action)
     {
+        if (actionQueue.Last<IAction>().FromPlayer)
+        {
+            canBid = true;
+        }
+
         if (canBid)
         {
             int bid = Random.Range(0, data.RandomAutonomyMax);

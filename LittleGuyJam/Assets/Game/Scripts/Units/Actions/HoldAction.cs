@@ -29,17 +29,24 @@ public class HoldAction : IAction
 
     public bool CheckCanExecute()
     {
+        if (unit.coroutineRunning)
+        {
+            return false;
+        }
+
         if (unit.GetType() == typeof(ResourceUnit))
         {
             ResourceUnit r = (ResourceUnit)unit;
 
-            if (r.CollectedResources == r.data.MaxResources && r.AutonomyBid("Store"))
+            if (r.CollectedResources == r.data.MaxResources && 
+                r.AutonomyBid("Store"))
             {
                 r.actionQueue.Add(r.NewStoreAction(false));
                 return false;
             }
             else
-            if (r.CollectedResources < r.data.MaxResources && r.AutonomyBid("Gather"))
+            if (r.CollectedResources < r.data.MaxResources && 
+                r.AutonomyBid("Gather"))
             {
                 r.actionQueue.Add(r.NewGatherAction(false));
                 return false;
