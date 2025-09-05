@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-    public enum MenuStatus { Game, MainMenu, GameModeSelection, Pause, Settings, Credits };
+    public enum MenuStatus { Game, HowToPlay, MainMenu, GameModeSelection, Pause, Settings, Credits };
     public MenuStatus status;
     public MenuStatus lastStatus;
 
@@ -43,6 +43,27 @@ public class MenuManager : MonoBehaviour
             QuitGame();
         }
     }
+
+
+    [Header("How To Play")]
+    [SerializeField]
+    GameObject _howToPlayPanel;
+
+    public void OpenHTPPanel()
+    {
+        lastStatus = status;
+        status = MenuStatus.HowToPlay;
+        _howToPlayPanel.SetActive(true);
+    }
+
+    public void CloseHTPPanel()
+    {
+        status = lastStatus;
+        _howToPlayPanel.SetActive(false);
+    }
+
+
+
 
     #region Main Menu
 
