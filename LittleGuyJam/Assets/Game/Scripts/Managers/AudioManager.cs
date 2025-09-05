@@ -29,9 +29,8 @@ public class AudioManager : MonoBehaviour
 
     public void InitializeMusic()
     {
-        sfxSource.volume = Mathf.Log10(audioData.musicVolume) * 20;
+        musicSource.volume = Mathf.Log10(audioData.musicVolume) * 20;
         musicSource.loop = true;
-        musicSource.clip = audioData.GetAudioTrack("Background")?.Clip;
     }
 
     public void InitializeSFX()
@@ -42,22 +41,34 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusic()
     {
-        musicSource?.Play();
+        if(musicSource != null)
+        {
+            musicSource?.Play();
+        }
     }
 
     public void StopMusic()
     {
-        musicSource?.Stop();
+        if (musicSource != null)
+        {
+            musicSource?.Stop();
+        }
     }
 
     public void PlaySFX()
     {
-        sfxSource?.Play();
+        if (musicSource != null)
+        {
+            sfxSource?.Play();
+        }
     }
 
     public void StopSFX()
     {
-        sfxSource?.Stop();
+        if (musicSource != null)
+        {
+            sfxSource?.Stop();
+        }
     }
 
     public void UpdateAllVolume()
