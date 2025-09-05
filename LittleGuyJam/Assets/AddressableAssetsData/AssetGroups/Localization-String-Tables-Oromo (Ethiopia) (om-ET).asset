@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Oromo (Ethiopia) (om-ET)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Oromo (Ethiopia) (om-ET)
+  m_GUID: 2a04e8f171bebb34db78b567673784dc
+  m_SerializeEntries: []
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f6c9f9080ef945343aff4cee82764fdd, type: 2}
+    - {fileID: 11400000, guid: 4ac676e56437c7243b474e96aa10b821, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 36
+    'bytes[1]': 138
+    'bytes[2]': 175
+    'bytes[3]': 207
+    'bytes[4]': 163
+    'bytes[5]': 207
+    'bytes[6]': 246
+    'bytes[7]': 75
+    'bytes[8]': 239
+    'bytes[9]': 72
+    'bytes[10]': 113
+    'bytes[11]': 171
+    'bytes[12]': 246
+    'bytes[13]': 27
+    'bytes[14]': 50
+    'bytes[15]': 70

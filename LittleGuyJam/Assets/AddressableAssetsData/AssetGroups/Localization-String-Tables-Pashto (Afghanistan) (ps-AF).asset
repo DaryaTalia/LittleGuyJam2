@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Pashto (Afghanistan) (ps-AF)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Pashto (Afghanistan) (ps-AF)
+  m_GUID: 7524838fed1e5d74dbe67168e3b8bd04
+  m_SerializeEntries: []
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ac3f588447235b945ab9f4ed042b767d, type: 2}
+    - {fileID: 11400000, guid: c6630e1b2535ada43b074758d4bf9890, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 28
+    'bytes[1]': 134
+    'bytes[2]': 148
+    'bytes[3]': 154
+    'bytes[4]': 38
+    'bytes[5]': 5
+    'bytes[6]': 27
+    'bytes[7]': 201
+    'bytes[8]': 66
+    'bytes[9]': 81
+    'bytes[10]': 223
+    'bytes[11]': 168
+    'bytes[12]': 88
+    'bytes[13]': 96
+    'bytes[14]': 67
+    'bytes[15]': 249

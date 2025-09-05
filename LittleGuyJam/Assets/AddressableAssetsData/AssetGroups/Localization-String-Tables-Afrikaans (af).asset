@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Afrikaans (af)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Afrikaans (af)
+  m_GUID: f541d4cf37d5b824397a13f232669a9a
+  m_SerializeEntries: []
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: aabfdac43f0a86546af6875fa7d03054, type: 2}
+    - {fileID: 11400000, guid: 6897b2e07c9dbf24f917691ba7ac3bb2, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 83
+    'bytes[1]': 169
+    'bytes[2]': 10
+    'bytes[3]': 140
+    'bytes[4]': 138
+    'bytes[5]': 55
+    'bytes[6]': 74
+    'bytes[7]': 145
+    'bytes[8]': 201
+    'bytes[9]': 180
+    'bytes[10]': 66
+    'bytes[11]': 59
+    'bytes[12]': 240
+    'bytes[13]': 154
+    'bytes[14]': 173
+    'bytes[15]': 163

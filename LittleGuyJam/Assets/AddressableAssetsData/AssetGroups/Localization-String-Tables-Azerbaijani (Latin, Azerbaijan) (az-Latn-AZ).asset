@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Azerbaijani (Latin, Azerbaijan) (az-Latn-AZ)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Azerbaijani (Latin, Azerbaijan) (az-Latn-AZ)
+  m_GUID: a0851f211346d5e489cf4c4bf377c649
+  m_SerializeEntries: []
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f73f954b3613ac84c966f4ea9807a0c1, type: 2}
+    - {fileID: 11400000, guid: 74ff65a1cfd92834fb6d895778e23719, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 176
+    'bytes[1]': 131
+    'bytes[2]': 154
+    'bytes[3]': 173
+    'bytes[4]': 5
+    'bytes[5]': 16
+    'bytes[6]': 100
+    'bytes[7]': 164
+    'bytes[8]': 98
+    'bytes[9]': 122
+    'bytes[10]': 45
+    'bytes[11]': 142
+    'bytes[12]': 226
+    'bytes[13]': 198
+    'bytes[14]': 207
+    'bytes[15]': 254

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Marathi (India) (mr-IN)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Marathi (India) (mr-IN)
+  m_GUID: 73a6e7dcd9b90824fa6171f666e0f1e5
+  m_SerializeEntries: []
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 90af11efa7705b145b9b881494534a42, type: 2}
+    - {fileID: 11400000, guid: 6754beff43c6c1e4cb8aa794761babcc, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 2
+    'bytes[1]': 16
+    'bytes[2]': 113
+    'bytes[3]': 170
+    'bytes[4]': 125
+    'bytes[5]': 168
+    'bytes[6]': 220
+    'bytes[7]': 29
+    'bytes[8]': 111
+    'bytes[9]': 42
+    'bytes[10]': 195
+    'bytes[11]': 57
+    'bytes[12]': 64
+    'bytes[13]': 255
+    'bytes[14]': 229
+    'bytes[15]': 53

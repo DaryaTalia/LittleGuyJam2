@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Khmer (Cambodia) (km-KH)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Khmer (Cambodia) (km-KH)
+  m_GUID: 83bdf1ee131be484ca2c43607dfe61ae
+  m_SerializeEntries: []
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 25c90304d65275d4bb21a0c505e60c6a, type: 2}
+    - {fileID: 11400000, guid: 2f844df602b4d2f46892844174cf2648, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 119
+    'bytes[1]': 221
+    'bytes[2]': 1
+    'bytes[3]': 37
+    'bytes[4]': 197
+    'bytes[5]': 189
+    'bytes[6]': 203
+    'bytes[7]': 65
+    'bytes[8]': 136
+    'bytes[9]': 63
+    'bytes[10]': 197
+    'bytes[11]': 67
+    'bytes[12]': 121
+    'bytes[13]': 177
+    'bytes[14]': 10
+    'bytes[15]': 122

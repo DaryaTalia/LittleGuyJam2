@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Malayalam (India) (ml-IN)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Malayalam (India) (ml-IN)
+  m_GUID: 8fcf00c8c84851a43ad5f254cb1fa5d1
+  m_SerializeEntries: []
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7230b98ee82984247a3c7899a0cc66c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a15fa382e7735454d821678d87e96fd8, type: 2}
+    - {fileID: 11400000, guid: c169a3105cfc78a40a50ec7e8cf54f9b, type: 2}
+  m_FolderEntryCache: []
+  <FlaggedDuringContentUpdateRestriction>k__BackingField: 0
+  m_CurrentHash:
+    'bytes[0]': 73
+    'bytes[1]': 103
+    'bytes[2]': 149
+    'bytes[3]': 18
+    'bytes[4]': 186
+    'bytes[5]': 99
+    'bytes[6]': 188
+    'bytes[7]': 29
+    'bytes[8]': 206
+    'bytes[9]': 243
+    'bytes[10]': 33
+    'bytes[11]': 14
+    'bytes[12]': 195
+    'bytes[13]': 168
+    'bytes[14]': 167
+    'bytes[15]': 48
