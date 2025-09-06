@@ -106,6 +106,7 @@ public class Unit : MonoBehaviour
                     a.actionQueue.Add(a.NewMoveAction(true));
                     a.actionQueue.Last<IAction>().ConvertTo<MoveAction>().DistanceCap = a.data.AttackRange;   
                     GameManager.instance.UnitManager.selectedUnits.Remove(a);
+                    break;
                 }
             }
         }

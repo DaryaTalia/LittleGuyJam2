@@ -39,21 +39,18 @@ public class AttackAction : IAction
         }
 
         // Attack
-        if (unit.AttackTarget.Health > 0)
+        if (unit.AttackTarget.TakeDamage(unit.data.AttackDamage) <= 0)
         {
-            if (unit.AttackTarget.TakeDamage(unit.data.AttackDamage) <= 0)
-            {
-                Debug.Log(unit.name + " Killed " + unit.AttackTarget.name);
-                unit.AttackTarget = null;
-                isAttacking = false;
-                unit.nearTarget = false;
-                unit.actionQueue.Remove(this);
-            } 
-            else
-            {
-                Debug.Log(unit.name + " Attacked " + unit.AttackTarget.name);
-            }
-        }
+            Debug.Log(unit.name + " Killed " + unit.AttackTarget.name);
+            unit.AttackTarget = null;
+            isAttacking = false;
+            unit.nearTarget = false;
+            unit.actionQueue.Remove(this);
+        } 
+        else
+        {
+            Debug.Log(unit.name + " Attacked " + unit.AttackTarget.name);
+        }        
     }
 
     public bool CheckCanExecute()

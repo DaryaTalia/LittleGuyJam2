@@ -196,9 +196,30 @@ public class HUDManager : MonoBehaviour
             // Time counting up, not time counting down
             System.TimeSpan t = System.TimeSpan.FromSeconds(GameManager.instance.data.TotalGameTime);
 
-            string time = string.Format("{0:D2}m:{1:D2}s",
+            string time = "";
+
+            if (t.Seconds < 10)
+            {
+                time = string.Format("{0:D1}",
+                                t.Seconds);
+            } 
+            else if(t.Seconds < 60)
+            {
+                time = string.Format("{0:D2}",
+                t.Seconds);
+            }
+            else if(t.Minutes < 10)
+            {
+                time = string.Format("{0:D1}:{1:D2}",
                 t.Minutes,
                 t.Seconds);
+            }
+            else
+            {
+                time = string.Format("{0:D2}:{1:D2}",
+                t.Minutes,
+                t.Seconds);
+            }
 
             timePassedText.text = time;
         }

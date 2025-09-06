@@ -32,9 +32,9 @@ public class Resource : MonoBehaviour
                 r.actionQueue.Add(r.NewMoveAction(true));
                 r.actionQueue.Last<IAction>().ConvertTo<MoveAction>().Target = r.NextTarget;
                 r.actionQueue.Last<IAction>().ConvertTo<MoveAction>().DistanceCap = r.data.DistanceThreshold;
+                GameManager.instance.UnitManager.selectedUnits.Remove(r);
+                break;
             }
-
-            GameManager.instance.UnitManager.selectedUnits.Clear();
         }
     }
 
