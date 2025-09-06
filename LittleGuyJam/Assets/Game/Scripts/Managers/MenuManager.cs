@@ -59,9 +59,9 @@ public class MenuManager : MonoBehaviour
     public void CloseHTPPanel()
     {
         status = lastStatus;
+        lastStatus = MenuStatus.HowToPlay;
         _howToPlayPanel.SetActive(false);
     }
-
 
 
 
@@ -193,7 +193,7 @@ public class MenuManager : MonoBehaviour
             lastStatus = status;
             status = MenuStatus.Pause;
             _pauseMenuPanel.SetActive(true);
-            GameManager.instance.Map.SetActive(false);
+            GameManager.instance.Map.GetComponent<MapCollider>().enabled = false;
 
             Time.timeScale = 0;
         } 
@@ -210,7 +210,7 @@ public class MenuManager : MonoBehaviour
             _pauseMenuPanel.SetActive(false);
             CloseCredits();
             CloseSettings();
-            GameManager.instance.Map.SetActive(true);
+            GameManager.instance.Map.GetComponent<MapCollider>().enabled = true;
 
             Time.timeScale = 1;
         }
