@@ -30,7 +30,7 @@ public class AttackUnit : Unit
 
             switch (action)
             {
-                case "Action":
+                case "Attack":
                     {
                         if (bid < data.RandomAttackAutonomy)
                         {
