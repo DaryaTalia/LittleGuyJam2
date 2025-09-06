@@ -13,9 +13,6 @@ public class Unit : MonoBehaviour
     [SerializeField]
     UnitRole role;
 
-    [SerializeField]
-    UnitStates currentState;
-
     public UnitData data;
 
     [SerializeField]
@@ -45,7 +42,6 @@ public class Unit : MonoBehaviour
     public void Reset()
     {
         health = data.MaxHealth;
-        CurrentState = UnitStates.Hold;
         canBid = true;
         actionQueue = new List<IAction>();
         actionQueue.Clear();
@@ -106,6 +102,7 @@ public class Unit : MonoBehaviour
                     a.actionQueue.Add(a.NewMoveAction(true));
                     a.actionQueue.Last<IAction>().ConvertTo<MoveAction>().DistanceCap = a.data.AttackRange;   
                     GameManager.instance.UnitManager.selectedUnits.Remove(a);
+                    break;
                 }
             }
         }
@@ -127,12 +124,6 @@ public class Unit : MonoBehaviour
         get { return role; }
         set { role = value; }
         }
-
-    public UnitStates CurrentState
-    {
-        get { return currentState; }
-        set { currentState = value; }
-    }
 
     public float Health {
         get { return health; }

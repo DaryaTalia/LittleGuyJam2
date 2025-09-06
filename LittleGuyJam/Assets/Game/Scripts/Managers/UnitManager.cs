@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class UnitManager : MonoBehaviour
 {
-    public enum UnitStates { Hold, Move, Gather, Store, Attack, MoveAttack, Protect, Inactive };
     public enum UnitAlignment { ally, enemy };
     public enum UnitRole { resource, melee, ranged };
 
@@ -113,6 +112,10 @@ public class UnitManager : MonoBehaviour
                 activeUnitPool.transform.
                     GetChild(i).gameObject.transform.
                     SetParent(inactiveUnitPool.transform);
+
+                activeUnitPool.transform.
+                    GetChild(i).gameObject.
+                    SetActive(false);
             }
         }
 
@@ -132,6 +135,15 @@ public class UnitManager : MonoBehaviour
                 inactiveUnitPool.transform.
                     GetChild(i).gameObject.transform.
                     SetParent(activeUnitPool.transform);
+
+                activeUnitPool.transform.
+                    GetChild(i).gameObject.
+                    SetActive(true);
+
+                activeUnitPool.transform.
+                    GetChild(i).
+                    GetComponent<Unit>().
+                    StartUnit();
             }
         }
     }
@@ -140,7 +152,8 @@ public class UnitManager : MonoBehaviour
     {
         if (u.Health <= 0)
         {
-            u.CurrentState = UnitStates.Inactive;
+            u.gameObject.transform.SetParent(inactiveUnitPool.transform);
+            u.gameObject.SetActive(false);
         }
     }
 

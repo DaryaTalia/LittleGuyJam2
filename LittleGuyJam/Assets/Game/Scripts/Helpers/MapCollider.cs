@@ -16,8 +16,9 @@ public class MapCollider : MonoBehaviour
                 u.NextTarget = worldPosition;
                 u.actionQueue.Add(u.NewMoveAction(true));
                 u.actionQueue.Last<IAction>().ConvertTo<MoveAction>().DistanceCap = u.data.DistanceThreshold;
+                GameManager.instance.UnitManager.selectedUnits.Remove(u);
+                break;
             }
-            GameManager.instance.UnitManager.selectedUnits.Clear();
         }
     }
 }

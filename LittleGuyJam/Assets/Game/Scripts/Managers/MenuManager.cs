@@ -29,11 +29,11 @@ public class MenuManager : MonoBehaviour
 
     public void UpdateMenu()
     {
-        if (status == MenuStatus.Game && Input.GetKey(KeyCode.P))
+        if (status == MenuStatus.Game && Input.GetKeyDown(KeyCode.P))
         {
             PauseGame();
         }        
-        else if (status != MenuStatus.MainMenu && Input.GetKey(KeyCode.P))
+        else if (status == MenuStatus.Pause && Input.GetKeyDown(KeyCode.P))
         {
             ResumeGame();
         }
@@ -59,9 +59,9 @@ public class MenuManager : MonoBehaviour
     public void CloseHTPPanel()
     {
         status = lastStatus;
+        lastStatus = MenuStatus.HowToPlay;
         _howToPlayPanel.SetActive(false);
     }
-
 
 
 
@@ -193,7 +193,9 @@ public class MenuManager : MonoBehaviour
             lastStatus = status;
             status = MenuStatus.Pause;
             _pauseMenuPanel.SetActive(true);
-            GameManager.instance.Map.SetActive(false);
+            GameManager.instance.Map.GetComponentInChildren<MapCollider>().enabled = false;
+
+            GameManager.instance.StopAllCoroutines();
 
             Time.timeScale = 0;
         } 
@@ -208,9 +210,9 @@ public class MenuManager : MonoBehaviour
             lastStatus = status;
             status = MenuStatus.Game;
             _pauseMenuPanel.SetActive(false);
-            CloseCredits();
-            CloseSettings();
-            GameManager.instance.Map.SetActive(true);
+            GameManager.instance.Map.GetComponentInChildren<MapCollider>().enabled = true;
+
+            GameManager.instance.StartCoroutine(GameManager.instance.TimerAscending());
 
             Time.timeScale = 1;
         }

@@ -63,12 +63,13 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
-        if (menuManager.status != MenuManager.MenuStatus.Game)
+        if (menuManager.status == MenuManager.MenuStatus.Pause)
         {
-            hudManager.hudPanel.SetActive(false);
-            Map.SetActive(false);
+            //hudManager.hudPanel.SetActive(false);
+            //Map.SetActive(false);
+            menuManager.UpdateMenu();
         } 
-        else
+        else if (menuManager.status == MenuManager.MenuStatus.Game)
         {
             unitManager.UpdateUnits();
             hudManager.UpdateHUD();
@@ -91,19 +92,11 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator TimerAscending()
     {
-        while(menuManager.status != MenuManager.MenuStatus.MainMenu && 
-menuManager.status != MenuManager.MenuStatus.GameModeSelection)
+        while(menuManager.status == MenuManager.MenuStatus.Game)
         {
-            if (menuManager.status == MenuManager.MenuStatus.Game)
-            {
-                yield return new WaitForSeconds(1);
-                data.TotalGameTime++;
-            }
-            else
-            {
-                yield return new WaitForSeconds(1);
-            }
-        }        
+            yield return new WaitForSeconds(1);
+            data.TotalGameTime++;
+        }
     }
 
     public void PlayGame()
