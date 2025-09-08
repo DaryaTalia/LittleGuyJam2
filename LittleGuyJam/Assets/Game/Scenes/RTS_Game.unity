@@ -40665,7 +40665,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Little Guy RTS
+  m_text: Forest Fortress
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d432bc9a245891d41b8eb676e2b7fe68, type: 2}
   m_sharedMaterial: {fileID: 2406585565665884384, guid: d432bc9a245891d41b8eb676e2b7fe68, type: 2}

@@ -235,7 +235,7 @@ public class GameManager : MonoBehaviour
 
         if (allyAttackUnits)
         {
-            int chance = Random.Range(0, 20000);
+            int chance = Random.Range(0, 15000);
 
             if (chance < 11)
             {

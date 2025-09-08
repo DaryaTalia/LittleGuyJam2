@@ -198,12 +198,12 @@ public class HUDManager : MonoBehaviour
 
             string time = "";
 
-            if (t.Seconds < 10)
+            if (t.Seconds < 10 && t.Minutes < 1)
             {
                 time = string.Format("{0:D1}",
                                 t.Seconds);
             } 
-            else if(t.Seconds < 60)
+            else if(t.Seconds < 60 && t.Minutes < 1)
             {
                 time = string.Format("{0:D2}",
                 t.Seconds);
