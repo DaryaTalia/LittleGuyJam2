@@ -101,17 +101,21 @@ public class Unit : GamePiece
         {
             if (GameManager.instance.UnitManager.selectedUnits.Count > 0)
             {
-                foreach (AttackUnit a in GameManager.instance.UnitManager.selectedUnits)
+                if(GameManager.instance.UnitManager.selectedUnits[0].GetComponent<AttackUnit>())
                 {
+                    AttackUnit a = GameManager.instance.UnitManager.selectedUnits[0].GetComponent<AttackUnit>();
+
                     a.NextTarget = this;
+                    a.actionQueue.Clear();
+                    a.actionQueue.Add(a.NewHoldAction(true));
                     a.actionQueue.Add(a.NewAttackAction(true));
                     a.actionQueue.Last<IAction>().ConvertTo<AttackAction>().Target = this;
                     a.actionQueue.Add(a.NewMoveAction(true));
-                    a.actionQueue.Last<IAction>().ConvertTo<MoveAction>().DistanceCap = a.data.AttackRange;   
+                    a.actionQueue.Last<IAction>().ConvertTo<MoveAction>().DistanceCap = a.data.AttackRange;
+
                     GameManager.instance.UnitManager.selectedUnits.Remove(a);
                     GameManager.instance.UnitManager.selectedUnits.Clear();
-                    break;
-                }
+                }                
             }
         }
     }

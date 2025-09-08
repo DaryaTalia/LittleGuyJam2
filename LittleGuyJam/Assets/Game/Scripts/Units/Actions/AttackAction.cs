@@ -67,6 +67,11 @@ public class AttackAction : IAction
             return false;
         }
 
+        if(Vector3.Distance(unit.gameObject.transform.position, target.transform.position) > unit.data.DistanceThreshold)
+        {
+            unit.nearTarget = false;
+        }
+
         if (!unit.nearTarget 
             && unit.actionQueue.Count < 3 
             && unit.actionQueue.Last().GetType() != typeof(MoveAction))

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b0952d2f049bb4ba4b21b251d2ad7d, type: 3}
   m_Name: Barracks
   m_EditorClassIdentifier: 
-  ResourceCost: 15
+  ResourceCost: 20
   UnitTypePrefab: {fileID: 8668562598083124505, guid: 51dd11546b9396c4ba5828b0d5fb3f4f, type: 3}

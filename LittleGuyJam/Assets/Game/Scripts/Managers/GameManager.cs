@@ -108,6 +108,7 @@ public class GameManager : MonoBehaviour
         hudManager.hudPanel.SetActive(true);
         map.SetActive(true);
         menuManager.status = MenuManager.MenuStatus.Game;
+
         SpawnUnit(Storage.GetComponent<Building>().data.UnitTypePrefab, Storage.transform.position);
         unitManager.ActivatePool();
         UnitManager.StartUnits();
@@ -123,6 +124,9 @@ public class GameManager : MonoBehaviour
                 {
                     mode = GameMode.timed;
                     hudManager.timeGUIEnabled = true;
+
+                    barracksBuilding.SetActive(false);
+                    rndBuilding.SetActive(false);
                     break;
                 }
 
@@ -144,6 +148,9 @@ public class GameManager : MonoBehaviour
                 {
                     mode = GameMode.timed;
                     hudManager.timeGUIEnabled = true;
+
+                    barracksBuilding.SetActive(false);
+                    rndBuilding.SetActive(false);
                     break;
                 }
         }
@@ -180,6 +187,7 @@ public class GameManager : MonoBehaviour
             position.y + yOffset, -11);
 
         newUnit.GetComponent<Unit>().StartUnit();
+        newUnit.GetComponent<Unit>().NewHoldAction(true);
     }
 
     public void ResetGameData()
@@ -201,7 +209,8 @@ public class GameManager : MonoBehaviour
         {
             barracksBuilding.SetActive(true);
         }
-        else if (data.TotalCollectedResources >= 250
+        
+        if (data.TotalCollectedResources >= 250
             && !rndBuilding.activeInHierarchy)
         {
             rndBuilding.SetActive(true);
@@ -226,11 +235,11 @@ public class GameManager : MonoBehaviour
 
         if (allyAttackUnits)
         {
-            int chance = Random.Range(0, 3000);
+            int chance = Random.Range(0, 15000);
 
-            if (chance < 4)
+            if (chance < 11)
             {
-                if (chance % 2 == 0)
+                if (chance % 5 <= 3)
                 {
                     SpawnUnit(unitManager.enemyMeleePrefab, unitManager.enemySpawn.position);
                 }
@@ -238,7 +247,6 @@ public class GameManager : MonoBehaviour
                 {
                     SpawnUnit(unitManager.enemyRangedPrefab, unitManager.enemySpawn.position);
                 }
-
             }
         }
     }
