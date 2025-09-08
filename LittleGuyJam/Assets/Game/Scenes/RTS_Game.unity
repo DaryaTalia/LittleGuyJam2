@@ -5552,9 +5552,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Move your Log Bunny to Logs in the game to collect them.  When they are
-    stored in the Storage Building, you can click the Storage Building to buy more
-    Log Bunnies using your collected resources.
+  m_text: Move your Collector Pixie to Logs in the game to collect them.  When they
+    are stored in the Storage Building, you can click the Storage Building to buy
+    more Collected Resources using your collected resources.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f5da3d224fb82694a815593d14fa7971, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22649,6 +22649,10 @@ PrefabInstance:
       value: -34.561554
       objectReference: {fileID: 0}
     - target: {fileID: 3646816591599218469, guid: 40870cd7eb804834b8972061573bfa7f, type: 3}
+      propertyPath: m_text
+      value: Resources
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646816591599218469, guid: 40870cd7eb804834b8972061573bfa7f, type: 3}
       propertyPath: m_fontSize
       value: 18
       objectReference: {fileID: 0}
@@ -22739,6 +22743,10 @@ PrefabInstance:
     - target: {fileID: 4635063223237703580, guid: 40870cd7eb804834b8972061573bfa7f, type: 3}
       propertyPath: m_Color.a
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070525898253054751, guid: 40870cd7eb804834b8972061573bfa7f, type: 3}
+      propertyPath: m_text
+      value: Units
       objectReference: {fileID: 0}
     - target: {fileID: 5070525898253054751, guid: 40870cd7eb804834b8972061573bfa7f, type: 3}
       propertyPath: m_fontSize

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b0952d2f049bb4ba4b21b251d2ad7d, type: 3}
   m_Name: RnD
   m_EditorClassIdentifier: 
-  ResourceCost: 35
+  ResourceCost: 50
   UnitTypePrefab: {fileID: 7203440703574657013, guid: 75258df6beffdab4ab0c404dde45f1ae, type: 3}
