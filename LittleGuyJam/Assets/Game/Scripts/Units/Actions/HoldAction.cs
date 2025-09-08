@@ -56,15 +56,10 @@ public class HoldAction : IAction
         if (unit.GetType() == typeof(AttackUnit))
         {
             AttackUnit a = (AttackUnit)unit;
-            if (a.AttackTarget != null && a.AutonomyBid("Attack"))
+            if (a.AutonomyBid("Attack"))
             {
                 a.actionQueue.Add(a.NewAttackAction(false));
                 return false;
-            } 
-            else 
-            if(a.AttackTarget == null)
-            {
-                a.FindEnemy();
             }
         }
 

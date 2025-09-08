@@ -10,8 +10,6 @@ public class AttackUnit : Unit
     [SerializeField]
     CircleCollider2D protectionRange;
 
-    Unit attackTarget;
-
     public AttackUnit(UnitAlignment _a) : base(_a)
     {
 
@@ -51,14 +49,14 @@ public class AttackUnit : Unit
         AttackAction action = new AttackAction();
 
         action.AssignUnit(this, fromPlayer);
-        FindEnemy();
-        nextTarget = attackTarget.transform.position;
+        action.Target = FindEnemy();
+        nextTarget = action.Target;
         nearTarget = false;
 
         return action;
     }
 
-    public void FindEnemy()
+    public Unit FindEnemy()
     {
         List<Unit> enemies = new List<Unit>();
 
@@ -89,9 +87,9 @@ public class AttackUnit : Unit
 
         if (enemies.Count > 0)
         {
-            attackTarget = enemies[randomTarget].GetComponent<Unit>();
-            nextTarget = attackTarget.transform.position;
+            return enemies[randomTarget].GetComponent<Unit>();
         }
+        return null;
     }
 
     public void FindAlly()
@@ -116,13 +114,8 @@ public class AttackUnit : Unit
         if (allies.Count > 0)
         {            
             nextTarget = allies[randomTarget].
-                GetComponent<Unit>().transform.position;
+                GetComponent<Unit>();
         }
     }
 
-    public Unit AttackTarget
-    {
-        get { return attackTarget; }
-        set { attackTarget = value; }
-    }
 }

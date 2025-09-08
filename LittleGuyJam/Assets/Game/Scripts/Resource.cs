@@ -3,11 +3,14 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public class Resource : MonoBehaviour
+public class Resource : GamePiece
 {
     public ResourceData data;
 
     bool collected;
+
+    [SerializeField]
+    public GameObject infoUI;
 
     public bool Collected
     {
@@ -26,20 +29,32 @@ public class Resource : MonoBehaviour
         {
             foreach(ResourceUnit r in GameManager.instance.UnitManager.selectedUnits)
             {
-                r.NextTarget = transform.position;
+                r.NextTarget = this;
                 r.actionQueue.Add(r.NewGatherAction(true));
                 r.actionQueue.Last<IAction>().ConvertTo<GatherAction>().ResourceTarget = this;
                 r.actionQueue.Add(r.NewMoveAction(true));
-                r.actionQueue.Last<IAction>().ConvertTo<MoveAction>().Target = r.NextTarget;
+                r.actionQueue.Last<IAction>().ConvertTo<MoveAction>().Target = this;
                 r.actionQueue.Last<IAction>().ConvertTo<MoveAction>().DistanceCap = r.data.DistanceThreshold;
                 GameManager.instance.UnitManager.selectedUnits.Remove(r);
+                GameManager.instance.UnitManager.selectedUnits.Clear();
                 break;
             }
         }
     }
 
-    private void OnMouseOver()
+    private void OnMouseEnter()
     {
-        // Show Info Tooltip
+        if (infoUI != null)
+        {
+            infoUI.SetActive(true);
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        if (infoUI != null)
+        {
+            infoUI.SetActive(false);
+        }
     }
 }

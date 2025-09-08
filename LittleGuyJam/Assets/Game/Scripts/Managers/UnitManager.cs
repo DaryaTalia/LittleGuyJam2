@@ -44,6 +44,8 @@ public class UnitManager : MonoBehaviour
     void RunUnitQueue() {
         foreach (Unit unit in activeUnitPool.GetComponentsInChildren<Unit>())
         {
+            CheckHealth(unit);
+
             if (unit.actionQueue?.Count > 0)
             {
                 IAction lastAction = unit.actionQueue.Last();

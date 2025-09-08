@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using static UnitManager;
 
@@ -9,6 +10,9 @@ public class ResourceUnit : Unit
 
     [SerializeField]
     int collectedResources;
+
+    [SerializeField]
+    public TextMeshProUGUI resourcesUI;
 
     public ResourceUnit(UnitAlignment _a) : base(_a)
     {
@@ -75,7 +79,7 @@ public class ResourceUnit : Unit
         if (!fromPlayer)
         {
             action.ResourceTarget = FindResource();
-            nextTarget = action.ResourceTarget.transform.position;
+            nextTarget = action.ResourceTarget;
         }
 
         return action;
@@ -86,7 +90,7 @@ public class ResourceUnit : Unit
         StoreAction action = new StoreAction();
 
         action.AssignUnit(this, fromPlayer);
-        nextTarget = GameManager.instance.Storage.transform.position;
+        nextTarget = GameManager.instance.Storage.GetComponent<Building>();
 
         return action;
     }
