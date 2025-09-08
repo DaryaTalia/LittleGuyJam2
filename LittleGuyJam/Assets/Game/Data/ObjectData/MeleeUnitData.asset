@@ -18,7 +18,7 @@ MonoBehaviour:
   MaxResources: 0
   CollectionSpeed: 0
   StorageSpeed: 5
-  AttackRange: 5
+  AttackRange: 1
   AttackDamage: 10
   AttackSpeed: 5
   RandomAutonomyMax: 250

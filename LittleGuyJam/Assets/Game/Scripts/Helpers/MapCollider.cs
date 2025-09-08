@@ -6,6 +6,9 @@ public class MapCollider : MonoBehaviour
 {
     private void OnMouseDown()
     {
+        return;
+        // TODO: solve map position problem
+
         if (GameManager.instance.UnitManager.selectedUnits.Count > 0)
         {
             Vector3 mousePosition = Input.mousePosition;
@@ -13,7 +16,7 @@ public class MapCollider : MonoBehaviour
 
             foreach (Unit u in GameManager.instance.UnitManager.selectedUnits)
             {
-                u.NextTarget = worldPosition;
+                //u.NextTarget = worldPosition;
                 u.actionQueue.Add(u.NewMoveAction(true));
                 u.actionQueue.Last<IAction>().ConvertTo<MoveAction>().DistanceCap = u.data.DistanceThreshold;
                 GameManager.instance.UnitManager.selectedUnits.Remove(u);

@@ -235,5 +235,19 @@ public class HUDManager : MonoBehaviour
         }
     }
 
+    public void UpdateUnits(Unit[] units)
+    {
+        foreach (Unit unit in units)
+        {
+            unit.healthTextUI.text = unit.Health + "/" + unit.data.MaxHealth;
+
+            if (unit.GetType() == typeof(ResourceUnit))
+            {
+                ResourceUnit runit = (ResourceUnit)unit;
+                runit.resourcesUI.text = runit.CollectedResources.ToString();
+            }
+        }
+    }
+
 
 }

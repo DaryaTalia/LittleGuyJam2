@@ -7,6 +7,7 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class AttackAction : IAction
 {
     AttackUnit unit;
+    Unit target;
 
     bool fromPlayer;
     bool isAttacking;
@@ -39,29 +40,29 @@ public class AttackAction : IAction
         }
 
         // Attack
-        if (unit.AttackTarget.TakeDamage(unit.data.AttackDamage) <= 0)
+        if (target.TakeDamage(unit.data.AttackDamage) <= 0)
         {
-            Debug.Log(unit.name + " Killed " + unit.AttackTarget.name);
-            unit.AttackTarget = null;
+            Debug.Log(unit.name + " Killed " + target.name);
+            target = null;
             isAttacking = false;
             unit.nearTarget = false;
             unit.actionQueue.Remove(this);
         } 
         else
         {
-            Debug.Log(unit.name + " Attacked " + unit.AttackTarget.name);
+            Debug.Log(unit.name + " Attacked " + target.name);
         }        
     }
 
     public bool CheckCanExecute()
     {
-        if(unit.AttackTarget == null)
+        if(target == null)
         {
             unit.FindEnemy();
             return false;
         }
 
-        if(unit.AttackTarget.Alignment == unit.Alignment)
+        if(target.Alignment == unit.Alignment)
         {
             return false;
         }
@@ -71,14 +72,14 @@ public class AttackAction : IAction
             && unit.actionQueue.Last().GetType() != typeof(MoveAction))
         {
             MoveAction newMA = unit.NewMoveAction(false);
-            newMA.Target = unit.NextTarget;
+            newMA.Target = target;
             newMA.DistanceCap = unit.data.AttackRange;
 
             unit.actionQueue.Add(newMA);
             return false;
         }
 
-        if (unit.nearTarget && unit.AttackTarget != null)
+        if (unit.nearTarget && target != null)
         {
             isAttacking = true;
         }
@@ -100,5 +101,11 @@ public class AttackAction : IAction
     {
         get { return isAttacking; }
         set {  isAttacking = value; }
+    }
+
+    public Unit Target
+    {
+        get { return target; }
+        set { target = value; }
     }
 }

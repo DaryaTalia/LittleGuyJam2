@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnitManager;
 
-public class Unit : MonoBehaviour
+public class Unit : GamePiece
 {
     [SerializeField]
     UnitAlignment alignment;
@@ -26,7 +27,13 @@ public class Unit : MonoBehaviour
     public bool coroutineRunning;
     public bool canBid;
 
-    protected Vector3 nextTarget;
+    protected GamePiece nextTarget;
+
+    [SerializeField]
+    public GameObject infoUI;
+
+    [SerializeField]
+    public TextMeshProUGUI healthTextUI;
 
     public Unit(UnitAlignment _a)
     {
@@ -96,21 +103,33 @@ public class Unit : MonoBehaviour
             {
                 foreach (AttackUnit a in GameManager.instance.UnitManager.selectedUnits)
                 {
-                    a.NextTarget = transform.position;
+                    a.NextTarget = this;
                     a.actionQueue.Add(a.NewAttackAction(true));
-                    a.AttackTarget = this;
+                    a.actionQueue.Last<IAction>().ConvertTo<AttackAction>().Target = this;
                     a.actionQueue.Add(a.NewMoveAction(true));
                     a.actionQueue.Last<IAction>().ConvertTo<MoveAction>().DistanceCap = a.data.AttackRange;   
                     GameManager.instance.UnitManager.selectedUnits.Remove(a);
+                    GameManager.instance.UnitManager.selectedUnits.Clear();
                     break;
                 }
             }
         }
     }
 
-    private void OnMouseOver()
+    private void OnMouseEnter()
     {
-        // Show Info Tooltip
+        if (infoUI != null)
+        {
+            infoUI.SetActive(true);
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        if (infoUI != null)
+        {
+            infoUI.SetActive(false);
+        }
     }
 
     // Accessors 
@@ -167,7 +186,7 @@ public class Unit : MonoBehaviour
         }
     }
 
-    public Vector3 NextTarget
+    public GamePiece NextTarget
     {
         get { return nextTarget; }
         set { nextTarget = value; }

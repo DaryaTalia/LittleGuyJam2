@@ -59,7 +59,7 @@ public class StoreAction : IAction
             isStoring = false;
 
             MoveAction newMA = unit.NewMoveAction(false);
-            newMA.Target = GameManager.instance.Storage.transform.position;
+            newMA.Target = GameManager.instance.Storage.GetComponent<Building>();
             unit.NextTarget = newMA.Target;
             newMA.DistanceCap = unit.data.DistanceThreshold;
 

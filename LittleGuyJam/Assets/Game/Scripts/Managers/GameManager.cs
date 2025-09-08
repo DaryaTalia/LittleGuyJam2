@@ -57,7 +57,6 @@ public class GameManager : MonoBehaviour
         audioManager.StartAudio();
         menuManager.StartMenu();
         menuManager.status = MenuManager.MenuStatus.MainMenu;
-        UnitManager.StartUnits();
         unitManager.DeactivatePool();
     }
 
@@ -73,6 +72,7 @@ public class GameManager : MonoBehaviour
         {
             unitManager.UpdateUnits();
             hudManager.UpdateHUD();
+            hudManager.UpdateUnits(UnitManager.activeUnitPool.GetComponentsInChildren<Unit>());
             menuManager.UpdateMenu();
 
             if (mode == GameMode.timed)
@@ -110,6 +110,7 @@ public class GameManager : MonoBehaviour
         menuManager.status = MenuManager.MenuStatus.Game;
         SpawnUnit(Storage.GetComponent<Building>().data.UnitTypePrefab, Storage.transform.position);
         unitManager.ActivatePool();
+        UnitManager.StartUnits();
 
         StartCoroutine(TimerAscending());
     }
@@ -177,6 +178,8 @@ public class GameManager : MonoBehaviour
         newUnit.transform.position = new Vector3(
             position.x + xOffset,
             position.y + yOffset, -11);
+
+        newUnit.GetComponent<Unit>().StartUnit();
     }
 
     public void ResetGameData()

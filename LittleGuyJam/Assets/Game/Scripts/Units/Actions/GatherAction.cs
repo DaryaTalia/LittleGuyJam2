@@ -73,7 +73,7 @@ public class GatherAction : IAction
             isGathering = false;
 
             MoveAction newMA = unit.NewMoveAction(false);
-            newMA.Target = target.transform.position;
+            newMA.Target = target;
             unit.NextTarget = newMA.Target;
             newMA.DistanceCap = unit.data.DistanceThreshold;
 

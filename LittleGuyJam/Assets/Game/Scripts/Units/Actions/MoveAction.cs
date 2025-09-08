@@ -6,11 +6,12 @@ using UnityEngine;
 public class MoveAction : IAction
 {
     Unit unit;
+    GamePiece target;
+    Vector3 targetVector;
 
     bool fromPlayer;
 
     bool isMoving;
-    Vector3 target;
     float distanceCap;
 
     public void AssignUnit(Unit unit, bool player)
@@ -29,12 +30,12 @@ public class MoveAction : IAction
     void Move()
     {
             // Translate Position
-            if (Vector3.Distance(unit.gameObject.transform.position, target) > distanceCap)
+            if (Vector3.Distance(unit.gameObject.transform.position, target.transform.position) > distanceCap)
         {
             Debug.Log(unit.name + " Moving");
 
             isMoving = true;
-            unit.gameObject.transform.position = Vector3.MoveTowards(unit.gameObject.transform.position, target, unit.data.MovementSpeed * Time.deltaTime);
+            unit.gameObject.transform.position = Vector3.MoveTowards(unit.gameObject.transform.position, target.transform.position, unit.data.MovementSpeed * Time.deltaTime);
         } 
         else
         {
@@ -52,7 +53,7 @@ public class MoveAction : IAction
             return false;
         }
 
-        if (target != unit.NextTarget)
+        if (target.transform.position != unit.NextTarget.transform.position)
         {
             return false;
         }
@@ -76,7 +77,7 @@ public class MoveAction : IAction
         set { isMoving = value; }
     }
 
-    public Vector3 Target
+    public GamePiece Target
     {
         get { return target; }
         set { target = value; }
