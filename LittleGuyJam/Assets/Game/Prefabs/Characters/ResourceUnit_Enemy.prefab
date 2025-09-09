@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4820532669776591229}
   - component: {fileID: 1749960817928464928}
   - component: {fileID: 8553957728175334785}
+  - component: {fileID: 4826060951145703780}
   m_Layer: 0
   m_Name: ResourceUnit_Enemy
   m_TagString: Unit
@@ -75,8 +76,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 669560049
-  m_SortingLayer: 4
+  m_SortingLayerID: -381737049
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 5233363048013544328, guid: 10ae88970400dc1459317d7d970f8850, type: 3}
   m_Color: {r: 0.9245283, g: 0.68467426, b: 0.68467426, a: 1}
@@ -119,12 +120,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.23
 --- !u!114 &8553957728175334785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,11 +140,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alignment: 1
   role: 0
-  currentState: 0
   data: {fileID: 11400000, guid: 5250219da576e6549bab8c2418d0bd91, type: 2}
   health: 0
   nearTarget: 0
   coroutineRunning: 0
   canBid: 0
+  infoUI: {fileID: 0}
+  healthTextUI: {fileID: 0}
   resourceAnim: {fileID: 0}
   collectedResources: 0
+  resourcesUI: {fileID: 0}
+--- !u!114 &4826060951145703780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5380220068743566979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 129308eaa7a31c844b7237bcb8811ac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

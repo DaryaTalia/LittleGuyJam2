@@ -57,6 +57,14 @@ PrefabInstance:
       value: RnD Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7680897999168127443, guid: 0e5251f4574b32a4ab2325ce3a916db3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680897999168127443, guid: 0e5251f4574b32a4ab2325ce3a916db3, type: 3}
+      propertyPath: m_Size.y
+      value: 1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680897999168127443, guid: 0e5251f4574b32a4ab2325ce3a916db3, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 1.15
       objectReference: {fileID: 0}

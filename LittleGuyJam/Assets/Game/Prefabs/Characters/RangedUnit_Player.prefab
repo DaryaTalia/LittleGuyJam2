@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 491915739713718786}
   - component: {fileID: 8460669745857259437}
   - component: {fileID: 3488325620637701886}
+  - component: {fileID: -172556999525280476}
   m_Layer: 0
   m_Name: RangedUnit_Player
   m_TagString: Unit
@@ -145,8 +146,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 669560049
-  m_SortingLayer: 5
+  m_SortingLayerID: -381737049
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1238780627, guid: 10ae88970400dc1459317d7d970f8850, type: 3}
   m_Color: {r: 0.22106217, g: 0.46226418, b: 0.20714669, a: 1}
@@ -194,7 +195,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.23
 --- !u!114 &3488325620637701886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +218,18 @@ MonoBehaviour:
   infoUI: {fileID: 3756414438664853984}
   healthTextUI: {fileID: 7831440523973321772}
   protectionRange: {fileID: 1192137717168888603}
+--- !u!114 &-172556999525280476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7203440703574657013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 129308eaa7a31c844b7237bcb8811ac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5780846795954139533
 PrefabInstance:
   m_ObjectHideFlags: 0

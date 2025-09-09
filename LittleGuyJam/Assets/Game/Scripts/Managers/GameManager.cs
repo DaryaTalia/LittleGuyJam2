@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
         audioManager = GetComponent<AudioManager>();
 
         audioManager.StartAudio();
+        audioManager.PlayMusic("BG");
         menuManager.StartMenu();
         menuManager.status = MenuManager.MenuStatus.MainMenu;
         unitManager.DeactivatePool();
@@ -64,8 +65,6 @@ public class GameManager : MonoBehaviour
     {
         if (menuManager.status == MenuManager.MenuStatus.Pause)
         {
-            //hudManager.hudPanel.SetActive(false);
-            //Map.SetActive(false);
             menuManager.UpdateMenu();
         } 
         else if (menuManager.status == MenuManager.MenuStatus.Game)
@@ -266,6 +265,11 @@ public class GameManager : MonoBehaviour
     public UnitManager UnitManager
     {
         get { return unitManager; }
+    }
+
+    public AudioManager AudioManager
+    {
+        get { return audioManager; }
     }
 
     public ResourceManager ResourceManager

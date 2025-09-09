@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7712703663021747014}
   - component: {fileID: 2202752929672742950}
   - component: {fileID: 5623451586704459824}
+  - component: {fileID: -7675269457610687116}
   m_Layer: 0
   m_Name: RangedUnit_Enemy
   m_TagString: Unit
@@ -77,8 +78,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 669560049
-  m_SortingLayer: 5
+  m_SortingLayerID: -381737049
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1238780627, guid: 10ae88970400dc1459317d7d970f8850, type: 3}
   m_Color: {r: 0.9245283, g: 0.68467426, b: 0.68467426, a: 1}
@@ -121,12 +122,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.23
 --- !u!114 &5623451586704459824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +150,18 @@ MonoBehaviour:
   infoUI: {fileID: 2300831898086968812}
   healthTextUI: {fileID: 5143560224524709920}
   protectionRange: {fileID: 5022679078550729646}
+--- !u!114 &-7675269457610687116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887275952477521109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 129308eaa7a31c844b7237bcb8811ac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7899848911183399504
 GameObject:
   m_ObjectHideFlags: 0

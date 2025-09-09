@@ -13,14 +13,19 @@ public class Building : GamePiece
 
     private void OnMouseDown()
     {
-        GameManager.instance.SendMessage("BuyUnit", this);
+        if (activeBuilding)
+        {
+            GameManager.instance.SendMessage("BuyUnit", this);
+        }
     }
 
     private void OnMouseEnter()
     {
-        if (infoUI != null && activeBuilding)
+        if (infoUI != null)
         {
             infoUI.SetActive(true);
+
+            GetComponent<SpriteRenderer>().color = new Color(GetComponent<SpriteRenderer>().color.r, GetComponent<SpriteRenderer>().color.g, GetComponent<SpriteRenderer>().color.b, .5f);
         }
     }
 
@@ -29,6 +34,8 @@ public class Building : GamePiece
         if (infoUI != null)
         {
             infoUI.SetActive(false);
+
+            GetComponent<SpriteRenderer>().color = new Color(GetComponent<SpriteRenderer>().color.r, GetComponent<SpriteRenderer>().color.g, GetComponent<SpriteRenderer>().color.b, 1f);
         }
     }
 }

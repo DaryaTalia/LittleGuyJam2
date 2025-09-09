@@ -5,7 +5,7 @@ public class InfoCanvas : MonoBehaviour
     private void Awake()
     {
         GetComponent<Canvas>().worldCamera = Camera.main;
-        GetComponent<Canvas>().sortingLayerName = "UI";
-        GetComponent<Canvas>().sortingOrder = 10;
+        GetComponent<Canvas>().sortingLayerName = "Objects";
+        GetComponent<Canvas>().sortingOrder = 1000;
     }
 }
