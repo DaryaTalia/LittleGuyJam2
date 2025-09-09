@@ -156,6 +156,7 @@ public class UnitManager : MonoBehaviour
         {
             u.gameObject.transform.SetParent(inactiveUnitPool.transform);
             u.gameObject.SetActive(false);
+            GameManager.instance.AudioManager.PlaySFX("Hit2");
         }
     }
 

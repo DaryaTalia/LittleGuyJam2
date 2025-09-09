@@ -24,26 +24,26 @@ public class AudioManager : MonoBehaviour
     {
         InitializeMusic();
         InitializeSFX();
-        PlayMusic();
     }
 
     public void InitializeMusic()
     {
-        musicSource.volume = Mathf.Log10(audioData.musicVolume) * 20;
-        musicSource.loop = true;
+        musicSource.volume = audioData.musicVolume;
+        _musicVolumeSlider.value = audioData.musicVolume;
     }
 
     public void InitializeSFX()
     {
-        sfxSource.volume = Mathf.Log10(audioData.sfxVolume) * 20;
-        musicSource.loop = false;
+        sfxSource.volume = audioData.sfxVolume;
+        _sfxVolumeSlider.value = audioData.sfxVolume;
     }
 
-    public void PlayMusic()
+    public void PlayMusic(string clipName)
     {
         if(musicSource != null)
         {
-            musicSource?.Play();
+            musicSource.clip = audioData.GetAudioClip(clipName);
+            musicSource.Play();
         }
     }
 
@@ -51,23 +51,31 @@ public class AudioManager : MonoBehaviour
     {
         if (musicSource != null)
         {
-            musicSource?.Stop();
+            musicSource.Stop();
         }
     }
 
-    public void PlaySFX()
+    public void PlaySFX(string clipName)
     {
-        if (musicSource != null)
+        if (sfxSource != null)
         {
-            sfxSource?.Play();
+            RandomizePitch();
+            sfxSource.clip = audioData.GetAudioClip(clipName);
+            sfxSource.Play();
         }
+    }
+
+    void RandomizePitch()
+    {
+        float rand = Random.Range(1f, 2.5f);
+        sfxSource.pitch = rand;
     }
 
     public void StopSFX()
     {
-        if (musicSource != null)
+        if (sfxSource != null)
         {
-            sfxSource?.Stop();
+            sfxSource.Stop();
         }
     }
 
@@ -78,11 +86,11 @@ public class AudioManager : MonoBehaviour
 
     public void UpdateMusicVolume()
     {
-        musicSource.volume = Mathf.Log10(_musicVolumeSlider.value) * 20;
+        musicSource.volume = _musicVolumeSlider.value;
     }
 
     public void UpdateSFXVolume()
     {
-        sfxSource.volume = Mathf.Log10(_sfxVolumeSlider.value) * 20;
+        sfxSource.volume = _sfxVolumeSlider.value;
     }
 }

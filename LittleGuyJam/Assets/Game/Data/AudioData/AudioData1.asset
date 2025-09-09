@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961d51490b0661e449da3747116fb110, type: 3}
   m_Name: AudioData1
   m_EditorClassIdentifier: 
-  mainVolume: 50
-  musicVolume: 100
-  sfxVolume: 100
+  mainVolume: 1
+  musicVolume: 0.8
+  sfxVolume: 0.8
+  tracks:
+  - audioName: BG
+    clip: {fileID: 8300000, guid: 54c1d69309a10814f9cad45b1a29b366, type: 3}
+  - audioName: Success
+    clip: {fileID: 8300000, guid: adf6578d61c6d6b4b8e64518d4ef3ab4, type: 3}
+  - audioName: Hit1
+    clip: {fileID: 8300000, guid: 3ce1b9517c0c19f429a0141a64de6b12, type: 3}
+  - audioName: Hit2
+    clip: {fileID: 8300000, guid: 618758587fe18e447a17026147179998, type: 3}

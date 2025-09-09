@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 513564354087098983}
   - component: {fileID: 5845063421534547603}
   - component: {fileID: 2445892402733830485}
+  - component: {fileID: 4090519966701368020}
   m_Layer: 0
   m_Name: MeleeUnit_Player
   m_TagString: Unit
@@ -145,8 +146,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 669560049
-  m_SortingLayer: 5
+  m_SortingLayerID: -381737049
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 5233363048013544328, guid: 10ae88970400dc1459317d7d970f8850, type: 3}
   m_Color: {r: 0.40591258, g: 0.6132076, b: 0.39627093, a: 1}
@@ -189,12 +190,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.23
 --- !u!114 &2445892402733830485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +218,18 @@ MonoBehaviour:
   infoUI: {fileID: 6177756401526336693}
   healthTextUI: {fileID: 951497679766835577}
   protectionRange: {fileID: 7999163056097626917}
+--- !u!114 &4090519966701368020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8668562598083124505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 129308eaa7a31c844b7237bcb8811ac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3576713766942147800
 PrefabInstance:
   m_ObjectHideFlags: 0

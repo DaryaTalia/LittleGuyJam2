@@ -42,7 +42,7 @@ public class StoreAction : IAction
         GameManager.instance.data.TotalCollectedResources += unit.CollectedResources;
         GameManager.instance.data.CurrentAvailableResources += unit.CollectedResources;
         unit.resourceAnim.SetTrigger("collect");
-        //Debug.Log(unit.name + " Stored " + unit.CollectedResources);
+        GameManager.instance.AudioManager.PlaySFX("Success");
         unit.CollectedResources = 0;
         isStoring = false;
         unit.nearTarget = false;

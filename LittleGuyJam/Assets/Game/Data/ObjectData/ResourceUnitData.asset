@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 100
   MovementSpeed: 1.5
-  DistanceThreshold: 0.5
+  DistanceThreshold: 1
   MaxResources: 16
   CollectionSpeed: 2
   StorageSpeed: 5

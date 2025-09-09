@@ -51,6 +51,7 @@ public class AttackAction : IAction
         else
         {
             Debug.Log(unit.name + " Attacked " + target.name);
+            GameManager.instance.AudioManager.PlaySFX("Hit1");
         }        
     }
 
